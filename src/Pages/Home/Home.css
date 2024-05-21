@@ -1,0 +1,45 @@
+.challenge .card::after {
+    content: "";
+    width: 20%;
+    height: 4%;
+    position: absolute;
+    top: 96%;
+    background-color: #f57106;
+    z-index: 100;
+    left: 75%;
+}
+.challenge .card:hover::after {
+    
+    background-color: #4f5de4;
+    
+}
+
+.challenge .card::before {
+    content: "";
+    width: 5%;
+    height: 25%;
+    position: absolute;
+    top: 75%;
+    background-color: #f57106;
+    z-index: 100;
+    left: 95%;
+}
+.challenge .card:hover::before, .challenge .card:hover .icon-bg {
+    
+    background-color: #4f5de4;
+   
+}
+
+/* .challenge .card:hover .icons{
+    transition: all 1s ease-in-out;
+} */
+
+.challenge .card .icons {
+   
+    transition: all 2s ease-in-out; 
+}
+
+.challenge .card:hover .icons {
+    font-size: 100px;
+    color: black; 
+}

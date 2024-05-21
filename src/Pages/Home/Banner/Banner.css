@@ -1,0 +1,35 @@
+.card1 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 20%;
+  
+    
+  }
+.card2 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+.card3 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .banner .items-stack{
+    height: fit-content;
+  }
+  
+  
+ 
+  
