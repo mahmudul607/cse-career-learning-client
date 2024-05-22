@@ -7,10 +7,12 @@ import { SiJirasoftware, SiVorondesign  } from "react-icons/si";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { TbNetwork } from "react-icons/tb";
 import LearningTopics from "./LearningTopics/LearningTopics";
+import AboutUs from "../Shared/AboutUs/AboutUs";
 
 
 
 const Home = () => { 
+    
    
     return (
         <div className="max-w-screen-xl mx-auto md:pt-24 pt-12">
@@ -110,6 +112,8 @@ const Home = () => {
             <LearningTopics></LearningTopics>
             {/* learning topics swiperSlide end */}
 
+            {/* Start About us  */}
+            <AboutUs></AboutUs>
 
         </div>
     );
