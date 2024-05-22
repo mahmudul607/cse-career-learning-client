@@ -9,7 +9,7 @@ const TruncatedText = ({ text, maxLength }) => {
   
     return (
       <div>
-        <div className={isExpanded ? 'full-text' : 'truncate'}>
+        <div className={isExpanded ? 'full-text text-white' : 'truncate text-white'}>
           {isExpanded ? text : `${text.slice(0, maxLength)}...`}
         </div>
         <button className={isExpanded ? 'text-red-600' : 'text-green-700'} onClick={toggleExpanded}>

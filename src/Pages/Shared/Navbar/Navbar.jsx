@@ -75,7 +75,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-2">
 
-        <button className="btn-sm sm:btn-md btn btn-secondary ">Support</button>
+        <button className="btn-sm sm:btn-md btn customButton ">
+          <span className="button_curve"></span>
+          Support</button>
         <button className="btn-sm sm:btn-md btn btn-primary">login</button>
       </div>
     </div>

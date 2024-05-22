@@ -1,0 +1,214 @@
+[
+    {
+        "id": 1,
+        "title": "JavaScript",
+        "details": "JavaScript is a versatile programming language commonly used in web development. It allows for interactive and dynamic web pages.",
+        "learning_steps": [
+            "Introduction to JavaScript syntax and data types",
+            "Control structures and functions",
+            "DOM manipulation and events",
+            "Asynchronous programming and APIs"
+        ],
+        "duration": "6 weeks",
+        "imgUrl": "https://i.ibb.co/xDfLbm1/js.webp"
+    },
+    {
+        "id": 2,
+        "title": "ReactJS",
+        "details": "ReactJS is a popular JavaScript library for building user interfaces, especially for single-page applications.",
+        "learning_steps": [
+            "Introduction to React and JSX",
+            "Components and Props",
+            "State and Lifecycle",
+            "Handling Events",
+            "React Hooks",
+            "React Router",
+            "State Management with Redux"
+        ],
+        "duration": "8 weeks",
+        "imgUrl": "https://i.ibb.co/xC4vM6T/react2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Vue.js",
+        "details": "Vue.js is a progressive JavaScript framework used for building user interfaces and single-page applications.",
+        "learning_steps": [
+            "Introduction to Vue and the Vue Instance",
+            "Template Syntax and Directives",
+            "Components and Props",
+            "Reactivity and Computed Properties",
+            "Vue Router",
+            "State Management with Vuex"
+        ],
+        "duration": "6 weeks",
+        "imgUrl": "https://i.ibb.co/Prp3zGb/vueJs.jpg"
+    },
+    {
+        "id": 4,
+        "title": "PHP",
+        "details": "PHP is a widely-used open-source scripting language especially suited for web development and can be embedded into HTML.",
+        "learning_steps": [
+            "Introduction to PHP syntax and variables",
+            "Control structures and functions",
+            "Form handling and validation",
+            "Sessions and cookies",
+            "Working with databases using MySQL"
+        ],
+        "duration": "5 weeks",
+        "imgUrl": "https://i.ibb.co/30nDXXH/php.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Python",
+        "details": "Python is a high-level, interpreted programming language known for its readability and broad applicability in various fields.",
+        "learning_steps": [
+            "Introduction to Python syntax and data types",
+            "Control structures and functions",
+            "Working with modules and packages",
+            "File handling",
+            "Introduction to object-oriented programming",
+            "Python for web development (Flask/Django)"
+        ],
+        "duration": "6 weeks",
+        "imgUrl": "https://i.ibb.co/djmvvTr/python.png"
+    },
+    {
+        "id": 6,
+        "title": "HTML & CSS",
+        "details": "HTML and CSS are the foundational technologies for building web pages. HTML provides the structure, while CSS defines the style.",
+        "learning_steps": [
+            "Introduction to HTML elements and structure",
+            "Styling with CSS",
+            "Responsive design principles",
+            "Advanced CSS techniques (Flexbox, Grid)"
+        ],
+        "duration": "4 weeks",
+        "imgUrl": "https://i.ibb.co/BPqVBgP/html-css1.jpg"
+    },
+    {
+        "id": 7,
+        "title": "C Programming",
+        "details": "C is a powerful general-purpose programming language that is widely used for system programming and developing operating systems.",
+        "learning_steps": [
+            "Introduction to C syntax and data types",
+            "Control structures and functions",
+            "Pointers and memory management",
+            "Structures and unions",
+            "File I/O in C"
+        ],
+        "duration": "6 weeks",
+        "imgUrl": "https://i.ibb.co/cgSrkWB/CC.jpg"
+    },
+    {
+        "id": 8,
+        "title": "C++",
+        "details": "C++ is an extension of C that includes object-oriented features. It is widely used for software development and game programming.",
+        "learning_steps": [
+            "Introduction to C++ syntax and data types",
+            "Object-oriented programming concepts",
+            "Inheritance and polymorphism",
+            "Templates and Standard Template Library (STL)",
+            "File handling and exception handling"
+        ],
+        "duration": "7 weeks",
+        "imgUrl": "https://i.ibb.co/px17Qc6/c-1.png"
+    },
+    {
+        "id": 9,
+        "title": "Networking",
+        "details": "Networking involves the practice of connecting computers and other devices to share resources and information.",
+        "learning_steps": [
+            "Introduction to computer networks",
+            "OSI and TCP/IP models",
+            "IP addressing and subnetting",
+            "Routing and switching concepts",
+            "Network security basics"
+        ],
+        "duration": "8 weeks",
+        "imgUrl": "https://i.ibb.co/BKG6LJQ/networking.png"
+    },
+    {
+        "id": 10,
+        "title": "Machine Learning",
+        "details": "Machine Learning is a branch of artificial intelligence focused on building systems that learn from data and improve their performance over time.",
+        "learning_steps": [
+            "Introduction to machine learning concepts",
+            "Supervised vs. unsupervised learning",
+            "Linear regression and classification",
+            "Neural networks and deep learning",
+            "Model evaluation and validation"
+        ],
+        "duration": "10 weeks",
+        "imgUrl": "https://i.ibb.co/Q8xsvnd/machinel.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Databases",
+        "details": "Databases are structured collections of data that are managed and queried to support various applications.",
+        "learning_steps": [
+            "Introduction to database concepts",
+            "Relational databases and SQL",
+            "Normalization and database design",
+            "Transactions and concurrency control",
+            "NoSQL databases (MongoDB, Redis)"
+        ],
+        "duration": "7 weeks",
+        "imgUrl": "https://i.ibb.co/rHGyjwM/db2.png"
+    },
+    {
+        "id": 12,
+        "title": "Data Structures",
+        "details": "Data Structures are ways of organizing and storing data to enable efficient access and modification.",
+        "learning_steps": [
+            "Introduction to data structures",
+            "Arrays, linked lists, stacks, and queues",
+            "Trees and graphs",
+            "Hash tables",
+            "Advanced data structures (heaps, tries)"
+        ],
+        "duration": "8 weeks",
+        "imgUrl": "https://i.ibb.co/kh1SbXx/dbs2.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Algorithms",
+        "details": "Algorithms are step-by-step procedures or formulas for solving problems, essential for computer programming and data processing.",
+        "learning_steps": [
+            "Introduction to algorithms",
+            "Sorting and searching algorithms",
+            "Dynamic programming",
+            "Greedy algorithms",
+            "Graph algorithms"
+        ],
+        "duration": "8 weeks",
+        "imgUrl": "https://i.ibb.co/Wn76f0S/algorithms.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Operating Systems",
+        "details": "Operating Systems manage computer hardware and software resources and provide common services for computer programs.",
+        "learning_steps": [
+            "Introduction to operating systems",
+            "Processes and threads",
+            "Memory management",
+            "File systems",
+            "Concurrency and synchronization"
+        ],
+        "duration": "9 weeks",
+        "imgUrl": "https://i.ibb.co/zR7y2G9/os2.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Cybersecurity",
+        "details": "Cybersecurity involves protecting computer systems and networks from information disclosure, theft, or damage.",
+        "learning_steps": [
+            "Introduction to cybersecurity concepts",
+            "Cryptography basics",
+            "Network security",
+            "Application security",
+            "Incident response and management"
+        ],
+        "duration": "10 weeks",
+        "imgUrl": "https://i.ibb.co/Gxj630W/sc.jpg"
+    }
+]

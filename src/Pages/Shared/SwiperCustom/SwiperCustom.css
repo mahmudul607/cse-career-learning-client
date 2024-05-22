@@ -1,0 +1,96 @@
+.swiper-pagination-bullet{
+    background-color: #4753d0;
+    opacity: 0.4;
+    padding: 5px;
+
+}
+.swiper-pagination{
+    position: relative;
+    padding-top: 2%;
+}
+.swiper-pagination-bullet-active {
+    opacity:  1;
+    background: #ff52d9;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid green;
+  }
+
+  .card.image-full::before{
+    opacity: 0.80;
+  }
+  .card .card-body .topic-steps p{
+  color: inherit;
+  background-image: linear-gradient(gray, white), linear-gradient(gray, white);
+  background-size: 0% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease;
+
+  }
+  .card:hover .card-body .topic-steps p{
+
+    background-size: 0% 1px, 100% 1px;
+
+  }
+
+
+  .mySwiper .card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mySwiper .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #f57106;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.3s ease;
+    z-index: 1;
+  }
+
+  
+  .mySwiper .card:hover::after, .challenge .card:hover::after{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 5;
+  }
+  
+  
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+  
+  
