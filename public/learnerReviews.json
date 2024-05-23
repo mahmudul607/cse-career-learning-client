@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1001,
+      "name": "Alice Johnson",
+      "topicsLearned": ["React", "JavaScript", "CSS"],
+      "imgUrl": "https://example.com/images/alice.jpg",
+      "shortReview": "The React course was fantastic and very detailed! I was able to build a complete web application from scratch, which boosted my confidence in frontend development."
+    },
+    {
+      "id": 1002,
+      "name": "Bob Smith",
+      "topicsLearned": ["Python", "Data Science", "Machine Learning"],
+      "imgUrl": "https://example.com/images/bob.jpg",
+      "shortReview": "I loved the hands-on projects in the Data Science track. The instructors were knowledgeable, and I feel much more prepared for my data analysis tasks at work."
+    },
+    {
+      "id": 1003,
+      "name": "Charlie Brown",
+      "topicsLearned": ["HTML", "Bootstrap", "Web Design"],
+      "imgUrl": "https://example.com/images/charlie.jpg",
+      "shortReview": "Great introduction to web design with plenty of practical examples. The course helped me understand responsive design principles and build attractive websites."
+    },
+    {
+      "id": 1004,
+      "name": "Dana White",
+      "topicsLearned": ["Java", "Spring Boot", "Microservices"],
+      "imgUrl": "https://example.com/images/dana.jpg",
+      "shortReview": "The Microservices module was challenging but very rewarding. It provided a deep dive into building scalable and maintainable systems using Spring Boot."
+    },
+    {
+      "id": 1005,
+      "name": "Eve Black",
+      "topicsLearned": ["C#", ".NET", "Azure"],
+      "imgUrl": "https://example.com/images/eve.jpg",
+      "shortReview": "Excellent coverage of .NET and Azure fundamentals. The projects were highly relevant, and I now feel confident deploying applications to the cloud."
+    },
+    {
+      "id": 1006,
+      "name": "Frank Green",
+      "topicsLearned": ["PHP", "Laravel", "MySQL"],
+      "imgUrl": "https://example.com/images/frank.jpg",
+      "shortReview": "The Laravel framework was explained very clearly. The course projects were practical and helped me understand database interactions and MVC architecture."
+    },
+    {
+      "id": 1007,
+      "name": "Grace Lee",
+      "topicsLearned": ["Kotlin", "Android Development", "Firebase"],
+      "imgUrl": "https://example.com/images/grace.jpg",
+      "shortReview": "Loved building Android apps with Kotlin and Firebase integration. The lessons were well-structured, and I learned a lot about mobile app development best practices."
+    },
+    {
+      "id": 1008,
+      "name": "Hank Miller",
+      "topicsLearned": ["DevOps", "Docker", "Kubernetes"],
+      "imgUrl": "https://example.com/images/hank.jpg",
+      "shortReview": "The DevOps course provided great insights into CI/CD pipelines. Docker and Kubernetes modules were particularly useful for managing containerized applications."
+    },
+    {
+      "id": 1009,
+      "name": "Ivy Scott",
+      "topicsLearned": ["Ruby", "Rails", "PostgreSQL"],
+      "imgUrl": "https://example.com/images/ivy.jpg",
+      "shortReview": "Comprehensive coverage of Rails for web development. The course materials were well-organized, making it easier to understand and implement CRUD operations."
+    },
+    {
+      "id": 1010,
+      "name": "Jack Turner",
+      "topicsLearned": ["Swift", "iOS Development", "UI/UX Design"],
+      "imgUrl": "https://example.com/images/jack.jpg",
+      "shortReview": "Great course for getting started with iOS app development. The UI/UX design tips were invaluable, and I was able to create polished and user-friendly apps."
+    }
+  ]
+  

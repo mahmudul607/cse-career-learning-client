@@ -8,6 +8,8 @@ import { MdOutlineDeveloperMode } from "react-icons/md";
 import { TbNetwork } from "react-icons/tb";
 import LearningTopics from "./LearningTopics/LearningTopics";
 import AboutUs from "../Shared/AboutUs/AboutUs";
+import LearnerReview from "./LearnerReview/LearnerReview";
+import ELearningSite from "./ELearningSite/ELearningSite";
 
 
 
@@ -112,6 +114,11 @@ const Home = () => {
             <LearningTopics></LearningTopics>
             {/* learning topics swiperSlide end */}
 
+            {/* Learner Reviews */}
+            <LearnerReview></LearnerReview>
+            {/* Languages section E learning official site  */}
+
+            <ELearningSite></ELearningSite>
             {/* Start About us  */}
             <AboutUs></AboutUs>
 

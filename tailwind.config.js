@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      'Roboto': ['Roboto', 'sans-serif']
+      roboto: ['Roboto', 'sans-serif'],
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+      logoFont: ["Merriweather", 'serif'],
     }
   },
   plugins: [

@@ -54,8 +54,8 @@ const Banner = () => {
                                 </span></button>
                         </div>
                     </div>
-                   
-                    <div className="col-span-1 w-full relative">
+                   {/* stack images */}
+                    <div className="col-span-1 w-full relative md:p-0 p-4">
                         <div  className=" w-full h-full stack ">
                           <div className="items-stack h-">
                           <div className="text-center border border-base-content cursor-pointer   card1 w-full h-full  bg-base-100">
