@@ -2,7 +2,7 @@
 // import useAxiosPublic from "../../../Hooks/axiosPublic";
 
 import { useEffect, useState } from "react";
-import { FaComment, FaGripLinesVertical, FaUser } from "react-icons/fa";
+import { FaComment, FaHeart, FaUser } from "react-icons/fa";
 import './LearnerReview.css'
 
 
@@ -28,10 +28,12 @@ const LearnerReview = () => {
    
     return (
         <div className="learnerReview py-8 my-8">
-            <div className="sectionTitle text-center pb-8 text-[#5f92da]">
-                <h1 className="text-3xl font-roboto">Learner Reviews</h1>
-                <span className="text-white">Take Confident From Here</span>
+           
+           <div className="sectionTitle text-center pb-8 text-[#5f92da]  ">
+                <h1 className="text-3xl bg-[#000324] font-roboto customAfter relative inline-block px-8 ">Learner Reviews</h1>
+                <h2 className="text-white">Take Confident From Here</h2>
             </div>
+         
             <div className="parent_grid gap-8 lg:gap-4 px-8 lg:px-4">
 
                 {
@@ -40,7 +42,7 @@ const LearnerReview = () => {
                         {/* <div className="card-header bg-transparent border-success">Header</div> */}
                         <div className="card-body ">
                            
-                            <p className="card-text">
+                            <p className="card-text ">
                                 {
                                     item.shortReview
                                 }
@@ -61,7 +63,7 @@ const LearnerReview = () => {
                                 </div>
                                 </div>
                                 <div className="bar_round text-2xl opacity-20 justify-end flex">
-                                    <FaGripLinesVertical/>
+                                    <FaHeart/>
                                 </div>
                                
                             </div>

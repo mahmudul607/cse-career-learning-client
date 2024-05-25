@@ -31,6 +31,8 @@
 
 
     transition: all 1s ease-in-out;
+   color: rgb(255, 0, 0);
+   
   
 }
 
@@ -47,13 +49,18 @@
 
 @keyframes skewInfinite {
     0% {
-        transform: skewX(60deg);
+        transform: scale(1);
+
     }
     50% {
-        transform: skewX(0deg);
+        transform: skewX(1.2);
+        color: red;
+      
     }
     100%{
-        transform: skewX(60deg);
+        transform: skewX(1);
+        color: red;
+        opacity: 10;
 
     }
 }

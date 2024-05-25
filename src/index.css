@@ -9,3 +9,30 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .customAfter::after{
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    
+    z-index: -10;
+  background: #5f92da;
+  
+
+  }
+  .customAfter::before{
+    position: absolute;
+  content: "";
+  width: calc(100% + 80px);
+  height: 2px;
+  top: 4px;
+  left: -40px;
+  background: #5f92da;
+  z-index: -1;
+ 
+
+
+  }

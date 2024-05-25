@@ -65,14 +65,14 @@ const SwiperCustom = ({ data }) => {
                             <figure><img src={item.imgUrl} className='w-full h-full' alt="img" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-4xl text-[#ff52d9]">{item.title}</h2>
-                                <div className="topic-steps overflow-hidden">
+                                <div className="topic-steps overflow-hidden inline-block">
                                     <h2 className='font-bold'>Learning Steps:</h2>
-                                    <p>{item.learning_steps[0]}</p>
-                                    <p>{item.learning_steps[1]}</p>
-                                    <p>{item.learning_steps[2]}</p>
-                                    <p>{item.learning_steps[3]}</p>
+                                    <p className='inline-block'>{item.learning_steps[0]}</p>
+                                    <p className='inline-block'>{item.learning_steps[1]}</p>
+                                    <p className='inline-block'>{item.learning_steps[2]}</p>
+                                    <p className='inline-block'>{item.learning_steps[3]}</p>
                                 </div>
-                                <div className="card-actions justify-end">
+                                <div className="card-actions justify-end card-footer">
                                     <button className="btn btn-primary">Get More</button>
                                 </div>
                             </div>
