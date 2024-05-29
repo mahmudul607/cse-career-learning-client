@@ -27,10 +27,10 @@ const LearnerReview = () => {
         
    
     return (
-        <div className="learnerReview py-8 my-8">
+        <div className="learnerReview py-8 my-8 ">
            
            <div className="sectionTitle text-center pb-8 text-[#5f92da]  ">
-                <h1 className="text-3xl bg-[#000324] font-roboto customAfter relative inline-block px-8 ">Learner Reviews</h1>
+                <h1 className="text-3xl bg-[#000324] font-roboto customAfter relative inline-block px-8  ">Learner Reviews</h1>
                 <h2 className="text-white">Take Confident From Here</h2>
             </div>
          

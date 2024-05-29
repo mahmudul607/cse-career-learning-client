@@ -10,28 +10,82 @@
     box-sizing: border-box;
   }
 
+  /* Custom Button style */
+
+
+  .customButton {
+    background-color: #f57005;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+
+}
+.btn-outline{
+ 
+  
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+
+}
+
+.btn:hover {
+    background-color: #f57005;
+}
+
+.customButton .button_curve, .btn-outline .button_curve{
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 33px;
+    height: 100%;
+    background: #f58a35;
+    opacity: 0.8;
+    z-index: -1;
+    -webkit-transform: skewX(-22deg);
+    transform: skewX(-22deg);
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.customButton:hover .button_curve, .btn-outline:hover .button_curve {
+    right: 0;
+    width: 100%;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+}
+
+
+
+
+/* Custom after and before style */
   .customAfter::after{
     position: absolute;
-    content: "";
-    width: calc(100% + 120px);
-    height: 2px;
-    bottom: 5px;
-    left: -60px;
+    content: "~~";
     
-    z-index: -10;
-  background: #5f92da;
+    height: 2px;
+    bottom: 4px;
+    left: 100%;
+    top: 0;
+    
+   
+
   
 
   }
   .customAfter::before{
-    position: absolute;
-  content: "";
-  width: calc(100% + 80px);
+  position: absolute;
+  content: "~~";
   height: 2px;
   top: 4px;
-  left: -40px;
-  background: #5f92da;
-  z-index: -1;
+  right: 100%;
+  top: 0;
+ 
+
  
 
 
