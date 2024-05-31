@@ -1,0 +1,47 @@
+.challenge{
+    background: url(../../assets/service-bg-1-dark.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.challenge .card .icons {
+   
+    transition: all 1s ease-in-out; 
+}
+
+.challenge .card:hover .icons {
+    font-size: 50px;
+    color: black; 
+}
+.challenge .card .card-footer svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 118px;
+    height: 129px;
+
+}
+.challenge .card .card-footer svg path{
+    transition: all 0.5s ease-in-out;
+    
+}
+.challenge .card:hover .card-footer svg path{
+    fill: #f57106;
+    
+}
+.challenge .card::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #f57106;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.3s ease;
+    z-index: 1;
+  }
+  
+.challenge .card:hover::after{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }

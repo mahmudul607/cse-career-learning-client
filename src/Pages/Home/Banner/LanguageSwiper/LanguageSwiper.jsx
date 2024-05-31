@@ -3,10 +3,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
-import "./SwiperCustom.css"
+
 import { useEffect, useRef, useState } from 'react';
 
-const SwiperCustom = ({ data, inSliderNum }) => {
+const LanguageSwiper = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -62,15 +62,13 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                 {data ?
                     data?.map(item => <> <SwiperSlide key={item.id}>
                         <div className="card h-[300px] bg-base-100 shadow-xl image-full">
-                            <figure><img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /></figure>
+                            <figure><img src={ item.logo} className='w-full h-full' alt="img" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title text-4xl text-[#ff52d9]">{item.title }</h2>
+                                <h2 className="card-title text-4xl text-[#ff52d9]">{ item.name}</h2>
                                 <div className="topic-steps overflow-hidden inline-block">
-                                    <h2 className='font-bold'>Learning Steps:</h2>
-                                    <p className='inline-block'>{item.learning_steps[0]}</p>
-                                    <p className='inline-block'>{item.learning_steps[1]}</p>
-                                    <p className='inline-block'>{item.learning_steps[2]}</p>
-                                    <p className='inline-block'>{item.learning_steps[3]}</p>
+                                    
+                                    <p className='inline-block'>{item.details}</p>
+                                   
                                 </div>
                                 <div className="card-actions justify-end card-footer">
                                     <button className="btn btn-primary">Get More</button>
@@ -99,4 +97,4 @@ const SwiperCustom = ({ data, inSliderNum }) => {
 
 
 
-export default SwiperCustom;
+export default LanguageSwiper;

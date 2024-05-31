@@ -17,7 +17,7 @@ const Login = () => {
         <div className="register bg-transparent pt[200px]">
            
             <div className="hero  min-h-screen xxs:block pt-4   bg-transparent">
-                <div className="hero-content pb-16 flex-col-reverse md:flex-row-reverse border-box box-content  shadow-2xl   md:mx-24 md:px-8 mx-2 px-2 ">
+                <div className="hero-content pb-16 flex-col-reverse md:flex-row-reverse border-box box-content  shadow-4xl   md:mx-24 md:px-8 mx-2 px-2 ">
                     <div className="text-center md:w-2/5 md:text-left hidden md:block">
 
                         <img src={loginImg} alt="image" />

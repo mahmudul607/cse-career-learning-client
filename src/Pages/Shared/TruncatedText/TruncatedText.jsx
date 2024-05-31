@@ -17,6 +17,6 @@ const TruncatedText = ({ text, maxLength }) => {
         </button>
       </div>
     );
-  };
+  }
 
   export default TruncatedText;

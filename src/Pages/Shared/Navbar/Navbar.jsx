@@ -29,36 +29,35 @@ const Navbar = () => {
     <li><Link to={'/'}>Home</Link></li>
     <li className="has-submenu ">
       <Link to="">Choose Track</Link>
-      <ul className="submenu   lg:left-0 left-3/4 top-0 lg:top-full text-black z-50">
-        <li className="underSubOne"><Link to="/track/sub1">Development</Link>
-          <ul className="underSubmenuOne  md:text-lg text-[3px] md:w-64 lg:w-64">
+      <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
+        <li className="underSubOne"><Link to="/track/sub1">Software Engineer</Link>
+          {/* <ul className="underSubmenuOne  md:text-lg text-[3px] md:w-64 lg:w-64">
             <li><Link to="/track/sub2">Software Development</Link></li>
             <li><Link to="/track/sub2">Web Development</Link></li>
             <li><Link to="/track/sub2">App Development</Link></li>
             <li><Link to="/track/sub2">Game Development</Link></li>
-          </ul> 
+          </ul>  */}
+          
+
+
+
 
         </li>
-        <li className="underSubTwo"><Link to="/track/sub1">Design</Link>
-          <ul className="underSubmenuTwo md:w-64 md:text-lg text-sm lg:w-64">
-          <li><Link to="/track/sub2">Software Design</Link></li>
-            <li><Link to="/track/sub2">Web Design</Link></li>
-            <li><Link to="/track/sub2">App Design</Link></li>
-            <li><Link to="/track/sub2">Template Design</Link></li>
-          </ul>
+        <li className="underSubTwo"><Link to="/track/sub3">Network Engineer</Link>
+          
 
         </li>
-        <li><Link to="/track/sub2">Network Expert</Link></li>
+        <li  className="underSubTwo"><Link to="/track/sub4">Project Management</Link></li>
       </ul>
     </li>
     <li><Link to={'/jobs'}>Jobs</Link></li>
-    <li><Link to={'/companies'}>Popular Companies</Link></li>
-    <li><Link to={'/about'}>About Us</Link></li>
+    <li><Link to={'/companies'}>About Us</Link></li>
+    <li><Link to={'/contactUs'}>Contact Us</Link></li>
   </>
   return (
    
       <div className={`navbar text-white max-w-screen-lx mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
-      <div className="navbar-start w-[25%]">
+      <div className="navbar-start lg:w-[25%]">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -78,7 +77,7 @@ const Navbar = () => {
           }
         </ul>
       </div>
-      <div className="navbar-end w-[30%] gap-2">
+      <div className="navbar-end lg:w-[30%] gap-2">
 
         <button className="btn-sm sm:btn-md btn customButton ">
           <span className="button_curve"></span>
