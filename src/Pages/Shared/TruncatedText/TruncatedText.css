@@ -1,0 +1,11 @@
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; /* You can adjust the width as needed */
+  }
+  .full-text {
+    white-space: normal;
+  }
+  
+  

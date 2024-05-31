@@ -1,0 +1,55 @@
+.card1 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 20%;
+  
+    
+  }
+.card2 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+.card3 {
+    width: 100%;
+    height: 300px;
+    position: sticky;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .banner .items-stack{
+    height: fit-content;
+  }
+  .banner .banner_round_logo .rounded-bg{
+    /* box-shadow: 0 0 0 0 #1a1e41; */
+    animation:  infiniteBounce 2s infinite ease;
+  }
+  .banner .banner_round_logo .rounded-bg .inner-round-bg{
+    animation: infiniteBounce 2s infinite ease;
+  }
+
+  @keyframes infiniteBounce {
+
+    0%{
+      box-shadow: 5px 5px 5px 5px #1a1e41 ;
+
+    }
+   
+    100%{
+      box-shadow: 0 0 40px 40px #1a1e41 ;
+    }
+    
+    
+  }
+  
+ 
+  

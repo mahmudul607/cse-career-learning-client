@@ -1,0 +1,67 @@
+
+.grid-items-1 {grid-area: one;}
+.grid-items-2 {grid-area: two;}
+.grid-items-3 {grid-area: three;}
+.grid-items-4 {grid-area: four;}
+.grid-items-5 {grid-area: five;}
+.grid-items-6 {grid-area: six;}
+.grid-items-7 {grid-area: seven;}
+.grid-items-8 {grid-area: eight;}
+.grid-items-9 {grid-area: nine;}
+.grid-items-10 {grid-area: ten;}
+@media (min-width: 1024px) {
+    .learnerReview .parent_grid{
+        display: grid;
+        
+        grid-template-areas:'one two two three'
+                            'four five six seven '
+                            'eight five nine ten ';
+    }
+    
+}
+
+
+
+
+.learnerReview .grid-item{
+    height: 100%;
+    width: 100%;
+}
+.learnerReview .grid-item .learner_profile .bar_round{
+
+
+    transition: all 1s ease-in-out;
+   color: rgb(255, 0, 0);
+   
+  
+}
+
+.learnerReview .grid-item:hover .comment_icon {
+    
+    border-radius: 50%;
+    box-shadow: 10px 10px 50px 30px #f57005;
+    opacity: 0.1;
+    
+}
+.learnerReview .grid-item:hover .learner_profile .bar_round {
+    animation: skewInfinite 2s infinite ease-in-out;
+}
+
+@keyframes skewInfinite {
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: skewX(1.2);
+        color: red;
+      
+    }
+    100%{
+        transform: skewX(1);
+        color: red;
+        opacity: 10;
+
+    }
+}
+             

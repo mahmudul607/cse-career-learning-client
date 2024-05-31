@@ -1,0 +1,123 @@
+[
+    {
+      "id": "1",
+      "name": "Python",
+      "website": "https://www.python.org",
+      "logo": "https://i.ibb.co/C2M6b95/7578001.webp"
+    },
+    {
+      "id": "2",
+      "name": "JavaScript",
+      "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "logo": "https://i.ibb.co/zRs1hrv/7577991.webp"
+    },
+    {
+      "id": "3",
+      "name": "Java",
+      "website": "https://www.java.com",
+      "logo": "https://www.oracle.com/a/ocom/img/cb71-java-logo.png"
+    },
+    {
+      "id": "4",
+      "name": "C#",
+      "website": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+      "logo": "https://i.ibb.co/CzvGSBp/net-framework-c-net-core-software-framework-mono-studio-thumbnail-removebg-preview.png"
+    },
+    {
+      "id": "5",
+      "name": "PHP",
+      "website": "https://www.php.net",
+      "logo": "https://www.php.net/images/logos/php-logo.svg"
+    },
+    {
+      "id": "6",
+      "name": "Ruby",
+      "website": "https://www.ruby-lang.org",
+      "logo": "https://i.ibb.co/zNcq7Qh/png-transparent-ruby-on-rails-computer-programming-programming-language-ruby-angle-rectangle-logo-th.png"
+    },
+    {
+      "id": "7",
+      "name": "Swift",
+      "website": "https://developer.apple.com/swift/",
+      "logo": "https://developer.apple.com/assets/elements/icons/swift/swift-64x64_2x.png"
+    },
+    {
+      "id": "8",
+      "name": "Kotlin",
+      "website": "https://kotlinlang.org",
+      "logo": "https://i.ibb.co/tKjn8nw/kotlin-2-logo.png"
+    },
+    {
+      "id": "9",
+      "name": "TypeScript",
+      "website": "https://www.typescriptlang.org",
+      "logo": "https://i.ibb.co/dfm81fQ/download-removebg-preview.png"
+    },
+    {
+      "id": "10",
+      "name": "Go",
+      "website": "https://golang.org",
+      "logo": "https://i.ibb.co/h8TjHdk/Go-Logo-Fuchsia.png"
+    },
+    {
+      "id": "11",
+      "name": "ReactJS",
+      "website": "https://reactjs.org",
+      "logo": "https://i.ibb.co/pddJjm6/7578010.webp"
+    },
+    {
+      "id": "12",
+      "name": "Angular",
+      "website": "https://angular.io",
+      "logo": "https://angular.io/assets/images/logos/angular/angular.png"
+    },
+    {
+      "id": "13",
+      "name": "Vue.js",
+      "website": "https://vuejs.org",
+      "logo": "https://vuejs.org/images/logo.png"
+    },
+    {
+      "id": "14",
+      "name": "Django",
+      "website": "https://www.djangoproject.com",
+      "logo": "https://i.ibb.co/X2mWVH7/png-transparent-django-python-computer-icons-logo-python-text-label-rectangle-thumbnail-removebg-pre.png"
+    },
+    {
+      "id": "15",
+      "name": "Spring",
+      "website": "https://spring.io",
+      "logo": "https://i.ibb.co/br7tDvs/Spring-Framework-Logo-wine.png"
+    },
+    {
+      "id": "16",
+      "name": "Laravel",
+      "website": "https://laravel.com",
+      "logo": "https://laravel.com/img/logotype.min.svg"
+    },
+    {
+      "id": "17",
+      "name": "Node.js",
+      "website": "https://nodejs.org",
+      "logo": "https://nodejs.org/static/images/logo.svg"
+    },
+    {
+      "id": "18",
+      "name": "Flask",
+      "website": "https://flask.palletsprojects.com",
+      "logo": "https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png"
+    },
+    {
+      "id": "19",
+      "name": "Ruby on Rails",
+      "website": "https://rubyonrails.org",
+      "logo": "https://i.ibb.co/DC86c7L/images-1-removebg-preview.png"
+    },
+    {
+      "id": "20",
+      "name": "ASP.NET",
+      "website": "https://dotnet.microsoft.com/apps/aspnet",
+      "logo": "https://i.ibb.co/q7RGqtV/main-qimg-24291bda238bc1d868bc35790a17a9f6-pjlq-removebg-preview.png"
+    }
+  ]
+  
