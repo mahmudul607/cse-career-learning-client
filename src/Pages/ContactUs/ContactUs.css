@@ -1,0 +1,20 @@
+.contact .contact-img{
+    background: url('../../assets/about-shape-1-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.contact .green{
+    color: green;
+    
+}
+
+.green[data-content]:after {
+    background: green
+}
+
+.green:before {
+    background: green!important
+}

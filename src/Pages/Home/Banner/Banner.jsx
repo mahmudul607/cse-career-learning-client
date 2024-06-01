@@ -1,11 +1,38 @@
 import "./Banner.css"
 import logo from "../../../assets/logo2.png"
 import { FaLongArrowAltRight } from "react-icons/fa";
-import softwareEng from "../../../assets/how-to-become-a-software-engineer.png"
-import webDeveloper from "../../../assets/how-to-become-a-web-developer.png"
-import networkEng from "../../../assets/images.jpg"
+// import softwareEng from "../../../assets/how-to-become-a-software-engineer.png"
+// import webDeveloper from "../../../assets/how-to-become-a-web-developer.png"
+// import networkEng from "../../../assets/images.jpg"
+import { useEffect, useState } from "react";
+import SwiperCustom from "../../Shared/SwiperCustom/SwiperCustom";
+import LanguageSwiper from "./LanguageSwiper/LanguageSwiper";
+import TrackSwiper from "./TrackSwiper/TrackSwiper";
 
 const Banner = () => {
+
+  const [topicsData, setTopicsData] = useState([])
+  const [languageData, setLanguageData] = useState([])
+  const [trackData, setTrackData] = useState([])
+
+  useEffect(() => {
+      fetch('learningTopics.json')
+          .then(response => response.json())
+          .then(data => setTopicsData(data))
+          .catch(error => console.error('Error fetching the data:', error));
+  }, []);
+  useEffect(() => {
+      fetch('languageData.json')
+          .then(response => response.json())
+          .then(data => setLanguageData(data))
+          .catch(error => console.error('Error fetching the data:', error));
+  }, []);
+  useEffect(() => {
+      fetch('careerTrack.json')
+          .then(response => response.json())
+          .then(data => setTrackData(data))
+          .catch(error => console.error('Error fetching the data:', error));
+  }, []);
 
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -59,19 +86,25 @@ const Banner = () => {
                         <div  className=" w-full h-full stack ">
                           <div className="items-stack h-">
                           <div className="text-center border border-base-content cursor-pointer   card1 w-full h-full  bg-base-100">
-                                <div className=" absolute h-full w-full top-0 p-6 ">
-                                    <img className="w-full h-full   left-0 top-0" src={softwareEng} alt="softwareEng" />
+                                <div className=" absolute h-full w-full top-0 p-6 overflow-hidden">
+                                    {/* <img className="w-full h-full   left-0 top-0" src={softwareEng} alt="softwareEng" /> */}
+                                    {/* <SwiperCustom data={topicsData} inSliderNum={1}></SwiperCustom> */}
+                                    <SwiperCustom data={topicsData} className="w-full h-full" ></SwiperCustom>
                                 </div>
                             </div>
                             <div className="text-center border border-base-content cursor-pointer   card2 h-full w-full  bg-red-600">
-                                <div className=" absolute h-full w-full top-0  p-6 ">
-                                <img className="w-full h-full  left-0 top-0 " src={networkEng} alt="networkEng" />
+                                <div className=" absolute h-full w-full top-0  p-6 overflow-hidden">
+                                {/* <img className="w-full h-full  left-0 top-0 " src={networkEng} alt="networkEng" /> */}
+                                {/* <LanguageSwiper data={languageData} className="w-full h-full"  ></LanguageSwiper> */}
+                                <TrackSwiper data={trackData} className="w-full h-full"></TrackSwiper>
                                 </div>
                             </div>
                             <div className="text-center border border-base-content cursor-pointer   card3 w-full h-full  bg-base-100">
-                                <div className=" absolute h-full w-full top-0  p-6 ">
+                                <div className=" absolute h-full w-full top-0  p-6 overflow-hidden">
                                    
-                                    <img className="w-full h-full   left-0 top-0" src={webDeveloper} alt="webDeveloper" />
+                                    {/* <img className="w-full h-full   left-0 top-0" src={webDeveloper} alt="webDeveloper" /> */}
+                                  
+                                    <LanguageSwiper data={languageData} className="w-full h-full"  ></LanguageSwiper>
                                 </div>
                             </div>
                           </div>
