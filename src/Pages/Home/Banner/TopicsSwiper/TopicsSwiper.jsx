@@ -3,10 +3,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
-import "./SwiperCustom.css"
 import { useEffect, useRef, useState } from 'react';
 
-const SwiperCustom = ({ data, inSliderNum }) => {
+const TopicsSwiper = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -26,9 +25,9 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                 setSlidePerview(1)
             }
             else if (screenWidth < 1024) {
-                setSlidePerview(2)
+                setSlidePerview(1)
             } else {
-                setSlidePerview(3)
+                setSlidePerview(1)
             }
         };
 
@@ -57,11 +56,11 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
 
                 modules={[Pagination, Autoplay]}
-                className="mySwiper h-[300px]"
+                className="mySwiper h-full"
             >
                 {data ?
                     data?.map(item => <> <SwiperSlide key={item.id} className='h-full'>
-                        <div className="card h-[300px]  bg-base-100 shadow-xl image-full">
+                        <div className="card   bg-base-100 shadow-xl image-full">
                             <figure><img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-4xl text-[#ff52d9]">{item.title }</h2>
@@ -99,4 +98,4 @@ const SwiperCustom = ({ data, inSliderNum }) => {
 
 
 
-export default SwiperCustom;
+export default TopicsSwiper;

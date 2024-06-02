@@ -1,5 +1,4 @@
 import "./Home.css"
-
 import Banner from "../Banner/Banner";
 import LearningTopics from "../LearningTopics/LearningTopics";
 import AboutUs from "../../Shared/AboutUs/AboutUs";
@@ -8,6 +7,8 @@ import ELearningSite from "../ELearningSite/ELearningSite";
 import SkillTest from "../SkillTest/SkillTest";
 import UsageStatistics from "../UsageStatistics/UsageStatistics";
 import CareerTrack from "../CareerTrack/CareerTrack";
+import OurMentors from "../OurMentors/OurMentors";
+
 
 
 
@@ -41,6 +42,10 @@ const Home = () => {
             <UsageStatistics></UsageStatistics>
             {/* skill test */}
             <SkillTest></SkillTest>  
+
+            {/* Mentors flip card */}
+
+            <OurMentors></OurMentors>
 
              {/* Start About us  */}
             <AboutUs></AboutUs>

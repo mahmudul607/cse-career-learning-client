@@ -26,9 +26,9 @@ const TrackSwiper = ({ data, inSliderNum }) => {
                 setSlidePerview(1)
             }
             else if (screenWidth < 1024) {
-                setSlidePerview(2)
+                setSlidePerview(1)
             } else {
-                setSlidePerview(3)
+                setSlidePerview(1)
             }
         };
 
