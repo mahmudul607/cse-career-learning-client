@@ -1,0 +1,48 @@
+[
+    {
+      "id": "10001",
+      "name": "Mahmudul Hasan",
+      "role": "Front End Developer",
+      "batch": "E-85",
+      "session": "2020-2021",
+      "profileImage": "https://i.ibb.co/WW8G73S/Capture1.jpg",
+      "details": "Mahmudul specializes in creating responsive and interactive web interfaces. He is skilled in HTML, CSS, and JavaScript, ensuring that the user experience is smooth and engaging."
+    },
+    {
+      "id": "10002",
+      "name": "Mamunur Rashid",
+      "role": "Back End Developer",
+      "batch": "E-85",
+      "session": "2020-2021",
+      "profileImage": "https://i.ibb.co/sQLsvGj/Capture.jpg",
+      "details": "Mamunur handles the server-side logic, databases, and integration of user-facing elements developed by front-end developers. He is proficient in languages like Python, PHP, and Ruby."
+    },
+    {
+      "id": "10003",
+      "name": "Naimur Rahman",
+      "role": "Information Collector",
+      "batch": "E-85",
+      "session": "2020-2021",
+      "profileImage": "https://i.ibb.co/bm8KmYK/Capture4.jpg",
+      "details": "Naimur is responsible for gathering and verifying the necessary information needed for the project. He ensures that all data collected is accurate and up-to-date."
+    },
+    {
+      "id": "10004",
+      "name": "Hasinur Rahman",
+      "role": "Information Collector",
+      "batch": "E-85",
+      "session": "2020-2021",
+      "profileImage": "https://i.ibb.co/yFsbgkj/Capture5.jpg",
+      "details": "Hasinur collaborates with Naimur in collecting and organizing information. He focuses on researching and compiling data that supports the project’s development."
+    },
+    {
+      "id": "10005",
+      "name": "Al-amin Hossain",
+      "role": "Logo Designer",
+      "batch": "E-85",
+      "session": "2020-2021",
+      "profileImage": "https://i.ibb.co/ydWZtNP/Capture3.jpg",
+      "details": "Al-amin is the creative mind behind the visual branding of the project. He designs logos that are both visually appealing and representative of the project's core values."
+    }
+  ]
+  

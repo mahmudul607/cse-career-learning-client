@@ -5,9 +5,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 // import webDeveloper from "../../../assets/how-to-become-a-web-developer.png"
 // import networkEng from "../../../assets/images.jpg"
 import { useEffect, useState } from "react";
-import SwiperCustom from "../../Shared/SwiperCustom/SwiperCustom";
 import LanguageSwiper from "./LanguageSwiper/LanguageSwiper";
 import TrackSwiper from "./TrackSwiper/TrackSwiper";
+import TopicsSwiper from "./TopicsSwiper/TopicsSwiper";
 
 const Banner = () => {
 
@@ -86,10 +86,10 @@ const Banner = () => {
                         <div  className=" w-full h-full stack ">
                           <div className="items-stack h-">
                           <div className="text-center border border-base-content cursor-pointer   card1 w-full h-full  bg-base-100">
-                                <div className=" absolute h-full w-full top-0 p-6 overflow-hidden">
+                                <div className=" absolute h-full w-full top-0 p-6 overflow-hidden ">
                                     {/* <img className="w-full h-full   left-0 top-0" src={softwareEng} alt="softwareEng" /> */}
                                     {/* <SwiperCustom data={topicsData} inSliderNum={1}></SwiperCustom> */}
-                                    <SwiperCustom data={topicsData} className="w-full h-full" ></SwiperCustom>
+                                    <TopicsSwiper data={topicsData} className="w-full h-full mb-6" inSliderNum={1} ></TopicsSwiper>
                                 </div>
                             </div>
                             <div className="text-center border border-base-content cursor-pointer   card2 h-full w-full  bg-red-600">
