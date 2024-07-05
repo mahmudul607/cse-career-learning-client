@@ -10,7 +10,8 @@ import Register from "../../Pages/Register/Register";
 import Login from "../../Pages/Login/Login";
 import ContactUs from "../../Pages/ContactUs/ContactUs";
 import Jobs from "../../Pages/Jobs/Jobs";
-import AboutUs from "../../Pages/AboutUs/AboutUs";
+import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
+
 
 
   const Router = createBrowserRouter([
