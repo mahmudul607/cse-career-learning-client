@@ -28,7 +28,7 @@ let user = "";
             <Link className="btn  btn-outline mr-4 rounded-full text-gray-600" to={path}>
             <span className='button_curve'></span>
                 Give a Test</Link>
-            <Link className="btn btn-outline btn-success rounded-full" to={'/message'}>Get Help</Link>
+            <Link className="btn btn-outline btn-success rounded-full" to={'/contactUs'}>Get Help</Link>
             </div>
 
 

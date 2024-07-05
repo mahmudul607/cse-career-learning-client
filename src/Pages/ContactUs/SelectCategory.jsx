@@ -9,7 +9,7 @@ const SelectCategory = ({ formData, setFormData }) => {
 
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-600 mb-1">
-                        Your Name
+                        Your Identity
                     </label>
                     <select
                         className="select w-full max-w-xs"
@@ -21,8 +21,9 @@ const SelectCategory = ({ formData, setFormData }) => {
 
                     >
                         <option disabled selected>Pick your favorite Simpson</option>
-                        <option >Service Holder</option>
-                        <option>New Car User</option>
+                        <option >Student</option>
+                        <option>Job Finder</option>
+                        <option>New In Here</option>
 
                     </select>
 

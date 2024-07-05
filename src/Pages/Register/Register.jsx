@@ -160,6 +160,26 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Account Type</span>
+                                </label>
+                                <select
+                        className="select w-full "
+                        name='type'
+                        id='type'
+                      
+
+
+                    >
+                        <option disabled selected>Pick your Role</option>
+                        <option >Local User</option>
+                        <option>Instructor</option>
+                        <option>Admin</option>
+
+                    </select>
+                                
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
                                 <div className="relative">
