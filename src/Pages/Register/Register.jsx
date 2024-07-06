@@ -170,8 +170,8 @@ const Register = () => {
 
 
                     >
-                        <option disabled selected>Pick your Role</option>
-                        <option >Local User</option>
+                        <option disabled >Pick your Role</option>
+                        <option selected>Local User</option>
                         <option>Instructor</option>
                         <option>Admin</option>
 

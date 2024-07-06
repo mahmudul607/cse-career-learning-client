@@ -8,6 +8,7 @@ import SkillTest from "../SkillTest/SkillTest";
 import UsageStatistics from "../UsageStatistics/UsageStatistics";
 import CareerTrack from "../CareerTrack/CareerTrack";
 import OurMentors from "../OurMentors/OurMentors";
+import LatestContent from "../../LatestContent/LatestContent";
 
 
 
@@ -29,6 +30,9 @@ const Home = () => {
             {/* learning topics swiperSlide start */}
             <LearningTopics title="Major Topics" subTitle="Various Fields You Have to Choose"></LearningTopics>
             {/* learning topics swiperSlide end */}
+
+            {/* latest Content */}
+            <LatestContent></LatestContent>
 
             {/* Learner Reviews */}
             <LearnerReview></LearnerReview>

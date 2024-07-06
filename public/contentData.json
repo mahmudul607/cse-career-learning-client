@@ -1,0 +1,56 @@
+[
+    {
+      "content_id": "1",
+      "content_type": "blog",
+      "content_details": {
+        "title": "The Future of AI",
+        "description": "An in-depth look at the advancements in artificial intelligence.",
+        "author": {
+          "id": "author_001",
+          "name": "John Doe"
+        },
+        "publish_date": "2024-07-01"
+      }
+    },
+    {
+      "content_id": "2",
+      "content_type": "video",
+      "content_details": {
+        "title": "Understanding Quantum Computing",
+        "description": "A beginner's guide to the concepts of quantum computing.",
+        "creator": {
+          "id": "creator_001",
+          "name": "Jane Smith"
+        },
+        "publish_date": "2024-06-25",
+        "duration": "15:30"
+      }
+    },
+    {
+      "content_id": "3",
+      "content_type": "blog",
+      "content_details": {
+        "title": "Top 10 Programming Languages in 2024",
+        "description": "A comprehensive list of the most popular programming languages this year.",
+        "author": {
+          "id": "author_002",
+          "name": "Alice Johnson"
+        },
+        "publish_date": "2024-05-15"
+      }
+    },
+    {
+      "content_id": "4",
+      "content_type": "video",
+      "content_details": {
+        "title": "The Rise of Autonomous Vehicles",
+        "description": "Exploring the technology and impact of self-driving cars.",
+        "creator": {
+          "id": "creator_002",
+          "name": "Bob Lee"
+        },
+        "publish_date": "2024-04-10",
+        "duration": "22:45"
+      }
+    }
+  ]
