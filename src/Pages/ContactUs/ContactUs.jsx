@@ -54,7 +54,7 @@ const ContactUs = () => {
 
           <p>
             If you have any questions or would like to schedule an appointment, feel free to{' '}
-            <a href="/contact" className="text-blue-500 hover:underline">
+            <a href="https://www.facebook.com/mahmudul607" className="text-blue-500 hover:underline">
               contact us
             </a>
             . We look forward to serving you and your car!
