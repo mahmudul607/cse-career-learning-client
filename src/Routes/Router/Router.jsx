@@ -11,6 +11,7 @@ import Login from "../../Pages/Login/Login";
 import ContactUs from "../../Pages/ContactUs/ContactUs";
 import Jobs from "../../Pages/Jobs/Jobs";
 import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
+import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer";
 
 
 
@@ -42,6 +43,11 @@ import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
         {
           path:"/about",
           element: <AboutUs></AboutUs>
+        },
+        {
+          path:"/track/:id",
+          element: <TracksContainer></TracksContainer>,
+          // loader: () => fetch(`careerTrack.json`),
         }
       
       ]

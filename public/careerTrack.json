@@ -3,21 +3,92 @@
         "id": 1,
         "name": "Software Engineer",
         "details": "A Software Engineer applies principles of software engineering to design, develop, maintain, test, and evaluate computer software. They work on creating software solutions for end-users and are involved in the entire software development lifecycle from requirement analysis to deployment and maintenance.",
-        "icon": "FaCode"
+        "icon": "FaCode",
+        "imgUrl": "https://i.ibb.co/5KKsgJg/images.png",
+        "paths": [
+            {
+                "id": "se-1",
+                "pathName": "Introduction to Software Engineering",
+                "details": "An introductory path to understand the basics of software engineering.",
+                "imgUrl": "path/to/intro_to_software_engineering_image.jpg",
+                "videoLink": "https://example.com/intro_to_software_engineering_video"
+            },
+            {
+                "id": "se-2",
+                "pathName": "Advanced Software Engineering",
+                "details": "An advanced path to delve deeper into software engineering principles.",
+                "imgUrl": "path/to/advanced_software_engineering_image.jpg",
+                "videoLink": "https://example.com/advanced_software_engineering_video"
+            }
+        ]
     },
-    {   "id": 2,
+    {   
+        "id": 2,
         "name": "Network Engineer",
         "details": "A Network Engineer is responsible for designing, implementing, monitoring, and managing the local and wide area networks of an organization to ensure maximum uptime for users. They handle network hardware, software, and configuration management, ensuring efficient network performance and security.",
-        "icon": "FaNetworkWired"
+        "icon": "FaNetworkWired",
+        "imgUrl": "https://i.ibb.co/8bcN8wM/We-Need-Design-Patterns-in-the-Enterprise-Cloud-Era.jpg",
+        "paths": [
+            {
+                "id": "ne-1",
+                "pathName": "Network Fundamentals",
+                "details": "Learn the basics of network engineering.",
+                "imgUrl": "path/to/network_fundamentals_image.jpg",
+                "videoLink": "https://example.com/network_fundamentals_video"
+            },
+            {
+                "id": "ne-2",
+                "pathName": "Advanced Networking",
+                "details": "Advanced concepts in network engineering.",
+                "imgUrl": "path/to/advanced_networking_image.jpg",
+                "videoLink": "https://example.com/advanced_networking_video"
+            }
+        ]
     },
-    {   "id": 3,
+    {   
+        "id": 3,
         "name": "Project Manager",
         "details": "A Project Manager leads projects from inception to completion, ensuring they are completed on time, within budget, and to the desired quality standards. They coordinate with various teams, manage resources, set deadlines, and communicate with stakeholders to keep the project on track.",
-        "icon": "FaTasks"
+        "icon": "FaTasks",
+        "imgUrl": "https://i.ibb.co/9yWJkjw/project-management-banner-5.jpg",
+        "paths": [
+            {
+                "id": "pm-1",
+                "pathName": "Project Management Basics",
+                "details": "An introductory path to project management.",
+                "imgUrl": "path/to/project_management_basics_image.jpg",
+                "videoLink": "https://example.com/project_management_basics_video"
+            },
+            {
+                "id": "pm-2",
+                "pathName": "Advanced Project Management",
+                "details": "Advanced techniques and methodologies in project management.",
+                "imgUrl": "path/to/advanced_project_management_image.jpg",
+                "videoLink": "https://example.com/advanced_project_management_video"
+            }
+        ]
     },
-    {   "id": 4,
+    {   
+        "id": 4,
         "name": "Designer",
         "details": "A Designer creates visual concepts to communicate ideas that inspire, inform, and captivate consumers. They develop layouts, designs, and illustrations for various media, including websites, advertisements, magazines, and product packaging, focusing on both aesthetic appeal and usability.",
-        "icon": "FaPaintBrush"
+        "icon": "FaPaintBrush",
+        "imgUrl": "https://i.ibb.co/fQWGJQ1/202308021690977891.png",
+        "paths": [
+            {
+                "id": "d-1",
+                "pathName": "Graphic Design Basics",
+                "details": "Introduction to graphic design concepts.",
+                "imgUrl": "path/to/graphic_design_basics_image.jpg",
+                "videoLink": "https://example.com/graphic_design_basics_video"
+            },
+            {
+                "id": "d-2",
+                "pathName": "Advanced Graphic Design",
+                "details": "Advanced techniques in graphic design.",
+                "imgUrl": "path/to/advanced_graphic_design_image.jpg",
+                "videoLink": "https://example.com/advanced_graphic_design_video"
+            }
+        ]
     }
 ]

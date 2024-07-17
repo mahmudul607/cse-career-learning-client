@@ -1,9 +1,10 @@
 
 
-const Content = ({content}) => {
-
-    const isVideo = content.content_type === "video";
-    const name = isVideo ? content.content_details.creator.name : content.content_details.author.name;
+const Content = ({content }) => {
+   
+        const isVideo = content.content_type === "video";
+        const name = isVideo ? content.content_details.creator.name : content.content_details.author.name;
+    
     return (
         <div className="hero rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -13,7 +14,7 @@ const Content = ({content}) => {
                 <div className="text-left">
                     <h1 className="text-3xl font-bold">{content.content_details.title}</h1>
                     <p className="py-6">
-                        {content.content_details.description}
+                        { content.content_details.description }
                     </p>
                     <button className="btn btn-primary">Get Started</button>
                     <div className="footer pt-4 text-black">

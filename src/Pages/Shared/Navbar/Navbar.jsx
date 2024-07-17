@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
 
   const [isSticky, setIsSticky] = useState(true);
+  const [trackData, setTrackData] = useState([])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,25 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const link ='../careerTrack.json';
+
+  useEffect(() => {
+  
+
+        const fetchData = async () => {
+          try {
+              const response = await fetch(link);
+              const data = await response.json();
+              setTrackData(data);
+              
+          } catch (error) {
+              console.error('Error fetching the data:', error);
+              
+          }
+      };
+
+      fetchData();
+}, [link]);
 
 
   const menuItems = <>
@@ -30,13 +50,8 @@ const Navbar = () => {
     <li className="has-submenu ">
       <Link to="">Choose Track</Link>
       <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
-        <li className="underSubOne"><Link to="/track/sub1">Software Engineer</Link>
-          {/* <ul className="underSubmenuOne  md:text-lg text-[3px] md:w-64 lg:w-64">
-            <li><Link to="/track/sub2">Software Development</Link></li>
-            <li><Link to="/track/sub2">Web Development</Link></li>
-            <li><Link to="/track/sub2">App Development</Link></li>
-            <li><Link to="/track/sub2">Game Development</Link></li>
-          </ul>  */}
+        {/* <li className="underSubOne"><Link to="/track/sub1">Software Engineer</Link>
+          
           
 
 
@@ -47,7 +62,12 @@ const Navbar = () => {
           
 
         </li>
-        <li  className="underSubTwo"><Link to="/track/sub4">Project Management</Link></li>
+        <li  className="underSubTwo"><Link to="/track/sub4">Project Management</Link></li> */}
+        {
+          trackData.map(item =><li key={item.id} className="underSubOne"><Link to={`track/${item.id}`}>{item.name}</Link>
+
+            </li>)
+        }
       </ul>
     </li>
     <li><Link to={'/jobs'}>Jobs</Link></li>
