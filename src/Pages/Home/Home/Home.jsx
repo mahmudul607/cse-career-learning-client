@@ -2,7 +2,7 @@ import "./Home.css"
 import Banner from "../Banner/Banner";
 import LearningTopics from "../LearningTopics/LearningTopics";
 import AboutUs from "../../Shared/AboutUs/AboutUs";
-import LearnerReview from "../LearnerReview/LearnerReview";
+import LearnerReview from "../../Shared/LearnerReview/LearnerReview";
 import ELearningSite from "../ELearningSite/ELearningSite";
 import SkillTest from "../SkillTest/SkillTest";
 import UsageStatistics from "../UsageStatistics/UsageStatistics";

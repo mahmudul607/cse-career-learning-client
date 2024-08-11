@@ -1,0 +1,98 @@
+[
+    {
+        "pathId": "se-1",
+        "banner": {
+            "careerPathName": "Introduction to Software Engineering",
+            "careerTrack": "Software Engineer",
+            "description": "An introductory path to understand the basics of software engineering.",
+            "applyNowLink": "https://example.com/register/software_engineer_intro",
+            "contentsLink": "https://example.com/learning_contents/software_engineer_intro",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Git", "Java", "Python", "UML"]
+    },
+    {
+        "pathId": "se-2",
+        "banner": {
+            "careerPathName": "Advanced Software Engineering",
+            "careerTrack": "Software Engineer",
+            "description": "An advanced path to delve deeper into software engineering principles.",
+            "applyNowLink": "https://example.com/register/software_engineer_advanced",
+            "contentsLink": "https://example.com/learning_contents/software_engineer_advanced",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Docker", "Kubernetes", "Microservices", "Agile"]
+    },
+    {
+        "pathId": "ne-1",
+        "banner": {
+            "careerPathName": "Network Fundamentals",
+            "careerTrack": "Network Engineer",
+            "description": "Learn the basics of network engineering.",
+            "applyNowLink": "https://example.com/register/network_engineer_intro",
+            "contentsLink": "https://example.com/learning_contents/network_engineer_intro",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Cisco Routers", "TCP/IP", "Wireshark", "Firewalls"]
+    },
+    {
+        "pathId": "ne-2",
+        "banner": {
+            "careerPathName": "Advanced Networking",
+            "careerTrack": "Network Engineer",
+            "description": "Advanced concepts in network engineering.",
+            "applyNowLink": "https://example.com/register/network_engineer_advanced",
+            "contentsLink": "https://example.com/learning_contents/network_engineer_advanced",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["BGP", "OSPF", "VLANs", "VPNs"]
+    },
+    {
+        "pathId": "pm-1",
+        "banner": {
+            "careerPathName": "Project Management Basics",
+            "careerTrack": "Project Manager",
+            "description": "An introductory path to project management.",
+            "applyNowLink": "https://example.com/register/project_manager_intro",
+            "contentsLink": "https://example.com/learning_contents/project_manager_intro",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Gantt Charts", "MS Project", "Risk Management", "Scrum"]
+    },
+    {
+        "pathId": "pm-2",
+        "banner": {
+            "careerPathName": "Advanced Project Management",
+            "careerTrack": "Project Manager",
+            "description": "Advanced techniques and methodologies in project management.",
+            "applyNowLink": "https://example.com/register/project_manager_advanced",
+            "contentsLink": "https://example.com/learning_contents/project_manager_advanced",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Agile", "Kanban", "Lean", "Critical Path Method"]
+    },
+    {
+        "pathId": "d-1",
+        "banner": {
+            "careerPathName": "Graphic Design Basics",
+            "careerTrack": "Designer",
+            "description": "Introduction to graphic design concepts.",
+            "applyNowLink": "https://example.com/register/designer_intro",
+            "contentsLink": "https://example.com/learning_contents/designer_intro",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Adobe Photoshop", "Illustrator", "Color Theory", "Typography"]
+    },
+    {
+        "pathId": "d-2",
+        "banner": {
+            "careerPathName": "Advanced Graphic Design",
+            "careerTrack": "Designer",
+            "description": "Advanced techniques in graphic design.",
+            "applyNowLink": "https://example.com/register/designer_advanced",
+            "contentsLink": "https://example.com/learning_contents/designer_advanced",
+            "imgUrl": "https://i.ibb.co/7G2THnw/20553832.jpg"
+        },
+        "toolsAndTechnology": ["Adobe InDesign", "User Experience (UX)", "Branding", "3D Modeling"]
+    }
+]

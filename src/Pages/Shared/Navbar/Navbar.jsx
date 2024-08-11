@@ -48,7 +48,7 @@ const Navbar = () => {
   const menuItems = <>
     <li><Link to={'/'}>Home</Link></li>
     <li className="has-submenu ">
-      <Link to="">Choose Track</Link>
+      <Link to="">Career Tracks</Link>
       <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
         {/* <li className="underSubOne"><Link to="/track/sub1">Software Engineer</Link>
           
@@ -70,13 +70,13 @@ const Navbar = () => {
         }
       </ul>
     </li>
-    <li><Link to={'/jobs'}>Jobs</Link></li>
+    {/* <li><Link to={'/jobs'}>Jobs</Link></li> */}
     <li><Link to={'/about'}>About Us</Link></li>
     <li><Link to={'/contactUs'}>Contact Us</Link></li>
   </>
   return (
    
-      <div className={`navbar text-white max-w-screen-lx mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
+      <div className={`navbar text-white max-w-screen-xl mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
       <div className="navbar-start lg:w-[25%]">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
         <img className="h-full sm:w-24 w-12" src={logo} alt="logo" />
       </div>
-      <div className="navbar-center hidden  lg:flex">
+      <div className="navbar-center hidden lg:w-2/4 lg:flex">
         <ul className="menu menu-horizontal px-1">
           {
             menuItems

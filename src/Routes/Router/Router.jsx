@@ -12,6 +12,7 @@ import ContactUs from "../../Pages/ContactUs/ContactUs";
 import Jobs from "../../Pages/Jobs/Jobs";
 import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
 import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer";
+import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
 
 
 
@@ -47,6 +48,11 @@ import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer"
         {
           path:"/track/:id",
           element: <TracksContainer></TracksContainer>,
+          // loader: () => fetch(`careerTrack.json`),
+        },
+        {
+          path:"/path/:pathname",
+          element: <CareerPaths></CareerPaths>,
           // loader: () => fetch(`careerTrack.json`),
         }
       

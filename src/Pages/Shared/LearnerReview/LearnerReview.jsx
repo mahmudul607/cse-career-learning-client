@@ -11,19 +11,11 @@ const LearnerReview = () => {
 
         useEffect(() => {
 
-            fetch('learnerReviews.json')
+            fetch('/learnerReviews.json')
             .then(res => res.json())
             .then(data => setReviews(data))
         },[]);
-        // const {data:reviewsData=[]} = useQuery({
-        //     queryKey:["reviews"],
-        //     queryFn:( async()=>{
-        //         const res = await useAxiosPublic.get("/learnerReviews");
-        //         return res.data;
-        //     })
-        // })
-        // console.log(reviewsData)
-        console.log(reviews)
+     
         
    
     return (
