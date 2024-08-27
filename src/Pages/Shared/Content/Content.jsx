@@ -9,7 +9,7 @@ const Content = ({content }) => {
         <div className="hero rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                    src="https://i.ibb.co/Q8xsvnd/machinel.jpg"
                     className="max-w-sm rounded-lg shadow-2xl" />
                 <div className="text-left">
                     <h1 className="text-3xl font-bold">{content.content_details.title}</h1>

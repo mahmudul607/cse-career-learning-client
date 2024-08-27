@@ -17,6 +17,8 @@ const TrackSwiper = ({ data, inSliderNum }) => {
 
     console.log(data)
 
+    
+
     useEffect(() => {
 
 
@@ -58,9 +60,10 @@ const TrackSwiper = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-full"
+                key={data.map(item => item.id).join('-')} 
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item.id}>
+                    data?.map(item => <> <SwiperSlide key={item.name}>
                         <div className="card h-[300px] bg-base-100 shadow-xl image-full">
                             <figure><img src={img} className='w-full h-full' alt="img" /></figure>
                             <div className="card-body">

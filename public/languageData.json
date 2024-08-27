@@ -1,139 +1,139 @@
 [
   {
-    "id": "1",
+    "id": "10001",
     "name": "Python",
     "website": "https://www.python.org",
     "logo": "https://i.ibb.co/C2M6b95/7578001.webp",
     "details": "Python is a high-level, interpreted programming language known for its simplicity and readability."
   },
   {
-    "id": "2",
+    "id": "10002",
     "name": "JavaScript",
     "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     "logo": "https://i.ibb.co/zRs1hrv/7577991.webp",
     "details": "JavaScript is a versatile, high-level programming language primarily used for web development to create interactive effects."
   },
   {
-    "id": "3",
+    "id": "10003",
     "name": "Java",
     "website": "https://www.java.com",
     "logo": "https://www.oracle.com/a/ocom/img/cb71-java-logo.png",
     "details": "Java is a widely-used, class-based, object-oriented programming language designed to have fewer implementation dependencies."
   },
   {
-    "id": "4",
+    "id": "10004",
     "name": "C#",
     "website": "https://learn.microsoft.com/en-us/dotnet/csharp/",
     "logo": "https://i.ibb.co/CzvGSBp/net-framework-c-net-core-software-framework-mono-studio-thumbnail-removebg-preview.png",
     "details": "C# is a modern, object-oriented programming language developed by Microsoft for building a variety of applications that run on the .NET Framework."
   },
   {
-    "id": "5",
+    "id": "10005",
     "name": "PHP",
     "website": "https://www.php.net",
     "logo": "https://www.php.net/images/logos/php-logo.svg",
     "details": "PHP is a popular general-purpose scripting language that is especially suited to web development."
   },
   {
-    "id": "6",
+    "id": "10006",
     "name": "Ruby",
     "website": "https://www.ruby-lang.org",
     "logo": "https://i.ibb.co/zNcq7Qh/png-transparent-ruby-on-rails-computer-programming-programming-language-ruby-angle-rectangle-logo-th.png",
     "details": "Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity, known for its elegant syntax."
   },
   {
-    "id": "7",
+    "id": "10007",
     "name": "Swift",
     "website": "https://developer.apple.com/swift/",
     "logo": "https://developer.apple.com/assets/elements/icons/swift/swift-64x64_2x.png",
     "details": "Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, and tvOS app development."
   },
   {
-    "id": "8",
+    "id": "10008",
     "name": "Kotlin",
     "website": "https://kotlinlang.org",
     "logo": "https://i.ibb.co/tKjn8nw/kotlin-2-logo.png",
     "details": "Kotlin is a modern, statically typed programming language used for developing Android apps and is fully interoperable with Java."
   },
   {
-    "id": "9",
+    "id": "10009",
     "name": "TypeScript",
     "website": "https://www.typescriptlang.org",
     "logo": "https://i.ibb.co/dfm81fQ/download-removebg-preview.png",
     "details": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale."
   },
   {
-    "id": "10",
+    "id": "10010",
     "name": "Go",
     "website": "https://golang.org",
     "logo": "https://i.ibb.co/h8TjHdk/Go-Logo-Fuchsia.png",
     "details": "Go, also known as Golang, is an open-source programming language designed for simplicity and reliability, particularly in system programming."
   },
   {
-    "id": "11",
+    "id": "10011",
     "name": "ReactJS",
     "website": "https://reactjs.org",
     "logo": "https://i.ibb.co/pddJjm6/7578010.webp",
     "details": "ReactJS is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers."
   },
   {
-    "id": "12",
+    "id": "10012",
     "name": "Angular",
     "website": "https://angular.io",
     "logo": "https://angular.io/assets/images/logos/angular/angular.png",
     "details": "Angular is a platform for building mobile and desktop web applications, developed by Google."
   },
   {
-    "id": "13",
+    "id": "10013",
     "name": "Vue.js",
     "website": "https://vuejs.org",
     "logo": "https://vuejs.org/images/logo.png",
     "details": "Vue.js is a progressive JavaScript framework used for building user interfaces and single-page applications."
   },
   {
-    "id": "14",
+    "id": "10014",
     "name": "Django",
     "website": "https://www.djangoproject.com",
     "logo": "https://i.ibb.co/X2mWVH7/png-transparent-django-python-computer-icons-logo-python-text-label-rectangle-thumbnail-removebg-pre.png",
     "details": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design."
   },
   {
-    "id": "15",
+    "id": "10015",
     "name": "Spring",
     "website": "https://spring.io",
     "logo": "https://i.ibb.co/br7tDvs/Spring-Framework-Logo-wine.png",
     "details": "Spring is a comprehensive framework for enterprise Java development, providing infrastructure support for developing Java applications."
   },
   {
-    "id": "16",
+    "id": "10016",
     "name": "Laravel",
     "website": "https://laravel.com",
     "logo": "https://laravel.com/img/logotype.min.svg",
     "details": "Laravel is a PHP framework for web artisans, providing an elegant syntax and a robust set of tools for web development."
   },
   {
-    "id": "17",
+    "id": "10017",
     "name": "Node.js",
     "website": "https://nodejs.org",
     "logo": "https://nodejs.org/static/images/logo.svg",
     "details": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting and building scalable network applications."
   },
   {
-    "id": "18",
+    "id": "10018",
     "name": "Flask",
     "website": "https://flask.palletsprojects.com",
     "logo": "https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png",
     "details": "Flask is a lightweight WSGI web application framework in Python, designed to be quick and easy to use for small to medium applications."
   },
   {
-    "id": "19",
+    "id": "10019",
     "name": "Ruby on Rails",
     "website": "https://rubyonrails.org",
     "logo": "https://i.ibb.co/DC86c7L/images-1-removebg-preview.png",
     "details": "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License, focusing on convention over configuration."
   },
   {
-    "id": "20",
+    "id": "10020",
     "name": "ASP.NET",
     "website": "https://dotnet.microsoft.com/apps/aspnet",
     "logo": "https://i.ibb.co/q7RGqtV/main-qimg-24291bda238bc1d868bc35790a17a9f6-pjlq-removebg-preview.png",

@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "T-1",
         "title": "JavaScript",
         "details": "JavaScript is a versatile programming language commonly used in web development. It allows for interactive and dynamic web pages.",
         "learning_steps": [
@@ -13,7 +13,7 @@
         "imgUrl": "https://i.ibb.co/xDfLbm1/js.webp"
     },
     {
-        "id": 2,
+        "id": "T-2",
         "title": "ReactJS",
         "details": "ReactJS is a popular JavaScript library for building user interfaces, especially for single-page applications.",
         "learning_steps": [
@@ -29,7 +29,7 @@
         "imgUrl": "https://i.ibb.co/xC4vM6T/react2.jpg"
     },
     {
-        "id": 3,
+        "id": "T-3",
         "title": "Vue.js",
         "details": "Vue.js is a progressive JavaScript framework used for building user interfaces and single-page applications.",
         "learning_steps": [
@@ -44,7 +44,7 @@
         "imgUrl": "https://i.ibb.co/Prp3zGb/vueJs.jpg"
     },
     {
-        "id": 4,
+        "id": "T-4",
         "title": "PHP",
         "details": "PHP is a widely-used open-source scripting language especially suited for web development and can be embedded into HTML.",
         "learning_steps": [
@@ -58,7 +58,7 @@
         "imgUrl": "https://i.ibb.co/30nDXXH/php.jpg"
     },
     {
-        "id": 5,
+        "id": "T-5",
         "title": "Python",
         "details": "Python is a high-level, interpreted programming language known for its readability and broad applicability in various fields.",
         "learning_steps": [
@@ -73,7 +73,7 @@
         "imgUrl": "https://i.ibb.co/djmvvTr/python.png"
     },
     {
-        "id": 6,
+        "id": "T-6",
         "title": "HTML & CSS",
         "details": "HTML and CSS are the foundational technologies for building web pages. HTML provides the structure, while CSS defines the style.",
         "learning_steps": [
@@ -86,7 +86,7 @@
         "imgUrl": "https://i.ibb.co/BPqVBgP/html-css1.jpg"
     },
     {
-        "id": 7,
+        "id": "T-7",
         "title": "C Programming",
         "details": "C is a powerful general-purpose programming language that is widely used for system programming and developing operating systems.",
         "learning_steps": [
@@ -100,7 +100,7 @@
         "imgUrl": "https://i.ibb.co/cgSrkWB/CC.jpg"
     },
     {
-        "id": 8,
+        "id": "T-8",
         "title": "C++",
         "details": "C++ is an extension of C that includes object-oriented features. It is widely used for software development and game programming.",
         "learning_steps": [
@@ -114,7 +114,7 @@
         "imgUrl": "https://i.ibb.co/px17Qc6/c-1.png"
     },
     {
-        "id": 9,
+        "id": "T-9",
         "title": "Networking",
         "details": "Networking involves the practice of connecting computers and other devices to share resources and information.",
         "learning_steps": [
@@ -128,7 +128,7 @@
         "imgUrl": "https://i.ibb.co/BKG6LJQ/networking.png"
     },
     {
-        "id": 10,
+        "id": "T-10",
         "title": "Machine Learning",
         "details": "Machine Learning is a branch of artificial intelligence focused on building systems that learn from data and improve their performance over time.",
         "learning_steps": [
@@ -142,7 +142,7 @@
         "imgUrl": "https://i.ibb.co/Q8xsvnd/machinel.jpg"
     },
     {
-        "id": 11,
+        "id": "T-11",
         "title": "Databases",
         "details": "Databases are structured collections of data that are managed and queried to support various applications.",
         "learning_steps": [
@@ -156,7 +156,7 @@
         "imgUrl": "https://i.ibb.co/rHGyjwM/db2.png"
     },
     {
-        "id": 12,
+        "id": "T-12",
         "title": "Data Structures",
         "details": "Data Structures are ways of organizing and storing data to enable efficient access and modification.",
         "learning_steps": [
@@ -170,7 +170,7 @@
         "imgUrl": "https://i.ibb.co/kh1SbXx/dbs2.jpg"
     },
     {
-        "id": 13,
+        "id": "T-13",
         "title": "Algorithms",
         "details": "Algorithms are step-by-step procedures or formulas for solving problems, essential for computer programming and data processing.",
         "learning_steps": [
@@ -184,7 +184,7 @@
         "imgUrl": "https://i.ibb.co/Wn76f0S/algorithms.jpg"
     },
     {
-        "id": 14,
+        "id": "T-14",
         "title": "Operating Systems",
         "details": "Operating Systems manage computer hardware and software resources and provide common services for computer programs.",
         "learning_steps": [
@@ -198,7 +198,7 @@
         "imgUrl": "https://i.ibb.co/zR7y2G9/os2.jpg"
     },
     {
-        "id": 15,
+        "id": "T-15",
         "title": "Cybersecurity",
         "details": "Cybersecurity involves protecting computer systems and networks from information disclosure, theft, or damage.",
         "learning_steps": [

@@ -9,10 +9,11 @@ import Home from "../../Pages/Home/Home/Home";
 import Register from "../../Pages/Register/Register";
 import Login from "../../Pages/Login/Login";
 import ContactUs from "../../Pages/ContactUs/ContactUs";
-import Jobs from "../../Pages/Jobs/Jobs";
 import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
 import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer";
 import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
+import LearningContent from "../../Pages/LearningContent/LearningContent/LearningContent";
+import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
 
 
 
@@ -37,10 +38,7 @@ import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
           path:"/contactUs",
           element: <ContactUs></ContactUs>
         },
-        {
-          path: "/jobs",
-          element: <Jobs></Jobs>
-        },
+       
         {
           path:"/about",
           element: <AboutUs></AboutUs>
@@ -54,6 +52,14 @@ import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
           path:"/path/:pathname",
           element: <CareerPaths></CareerPaths>,
           // loader: () => fetch(`careerTrack.json`),
+        },
+        {
+          path:"/learningContents",
+          element: <LearningContent></LearningContent>
+        },
+        {
+          path:"/learningContents/:id",
+          element: <BlogContentV></BlogContentV>
         }
       
       ]

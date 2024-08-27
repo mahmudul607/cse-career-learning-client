@@ -8,6 +8,28 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(true);
   const [trackData, setTrackData] = useState([])
 
+  const handleActiveMenu = (e) => {
+    e.preventDefault();
+  
+    // Remove 'active' class from all menu items
+    const allMenus = document.querySelectorAll("a");
+    allMenus.forEach(element => {
+      element.classList.remove('active');
+    });
+  
+    // Add 'active' class to the clicked menu item
+    e.target.classList.add('active');
+  };
+  
+  // Assuming you have event listeners set up for your menu items
+  // const menuAllItems = document.querySelectorAll(".myMenuList");
+
+  // menuAllItems.forEach(item => {
+  //   item.addEventListener('click', handleActiveMenu);
+  // });
+
+ 
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -45,24 +67,13 @@ const Navbar = () => {
 }, [link]);
 
 
-  const menuItems = <>
+  const menuItems = <div className="myMenuList flex"  onClick={(e)=>handleActiveMenu(e)}>
+ 
     <li><Link to={'/'}>Home</Link></li>
-    <li className="has-submenu ">
+    <li className="has-submenu " >
       <Link to="">Career Tracks</Link>
       <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
-        {/* <li className="underSubOne"><Link to="/track/sub1">Software Engineer</Link>
-          
-          
-
-
-
-
-        </li>
-        <li className="underSubTwo"><Link to="/track/sub3">Network Engineer</Link>
-          
-
-        </li>
-        <li  className="underSubTwo"><Link to="/track/sub4">Project Management</Link></li> */}
+        
         {
           trackData.map(item =><li key={item.id} className="underSubOne"><Link to={`track/${item.id}`}>{item.name}</Link>
 
@@ -70,10 +81,12 @@ const Navbar = () => {
         }
       </ul>
     </li>
-    {/* <li><Link to={'/jobs'}>Jobs</Link></li> */}
+    
     <li><Link to={'/about'}>About Us</Link></li>
     <li><Link to={'/contactUs'}>Contact Us</Link></li>
-  </>
+
+   
+  </div>
   return (
    
       <div className={`navbar text-white max-w-screen-xl mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
@@ -82,7 +95,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-          <ul tabIndex={0} className="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:w-52 w-40">
+          <ul tabIndex={0} className="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:w-52 w-40" >
             {
               menuItems
             }
@@ -91,7 +104,7 @@ const Navbar = () => {
         <img className="h-full sm:w-24 w-12" src={logo} alt="logo" />
       </div>
       <div className="navbar-center hidden lg:w-2/4 lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul  className="menu menu-horizontal px-1" >
           {
             menuItems
           }

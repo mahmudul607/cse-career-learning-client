@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Understanding React Components",
+      "description": "A comprehensive guide to building and using React components effectively.",
+      "content": "This blog covers everything from functional components to class components...",
+      "imgUrl": "https://i.ibb.co/9yWJkjw/project-management-banner-5.jpg",
+      "author": "Jane Doe",
+      "publishedDate": "2024-08-15"
+    },
+    {
+      "id": 2,
+      "title": "State Management in React",
+      "description": "Learn the best practices for managing state in React applications.",
+      "content": "State is one of the most important concepts in React, and this blog covers...",
+      "imgUrl": "https://i.ibb.co/8bcN8wM/We-Need-Design-Patterns-in-the-Enterprise-Cloud-Era.jpg",
+      "author": "John Smith",
+      "publishedDate": "2024-07-22"
+    },
+    {
+      "id": 3,
+      "title": "React Hooks - A Deep Dive",
+      "description": "This blog explores the power of React Hooks and how to leverage them in your projects.",
+      "content": "Hooks allow you to use state and other React features without writing a class...",
+      "imgUrl": "https://i.ibb.co/fQWGJQ1/202308021690977891.png",
+      "author": "Alice Johnson",
+      "publishedDate": "2024-06-30"
+    }
+  ]
+  

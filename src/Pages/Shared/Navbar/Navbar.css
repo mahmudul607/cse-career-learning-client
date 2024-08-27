@@ -1,3 +1,8 @@
+.navbar .menu li a:focus, .navbar .menu li .active{
+  color: Green;
+
+
+}
 .navbar .has-submenu .submenu  {
     display: none;
     position: absolute;

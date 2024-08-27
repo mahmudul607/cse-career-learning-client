@@ -1,6 +1,6 @@
 [
     {   
-        "id": 1,
+        "id": "c-1",
         "name": "Software Engineer",
         "details": "A Software Engineer applies principles of software engineering to design, develop, maintain, test, and evaluate computer software. They work on creating software solutions for end-users and are involved in the entire software development lifecycle from requirement analysis to deployment and maintenance.",
         "icon": "FaCode",
@@ -23,7 +23,7 @@
         ]
     },
     {   
-        "id": 2,
+        "id": "c-2",
         "name": "Network Engineer",
         "details": "A Network Engineer is responsible for designing, implementing, monitoring, and managing the local and wide area networks of an organization to ensure maximum uptime for users. They handle network hardware, software, and configuration management, ensuring efficient network performance and security.",
         "icon": "FaNetworkWired",
@@ -46,7 +46,7 @@
         ]
     },
     {   
-        "id": 3,
+        "id": "c-3",
         "name": "Project Manager",
         "details": "A Project Manager leads projects from inception to completion, ensuring they are completed on time, within budget, and to the desired quality standards. They coordinate with various teams, manage resources, set deadlines, and communicate with stakeholders to keep the project on track.",
         "icon": "FaTasks",
@@ -69,7 +69,7 @@
         ]
     },
     {   
-        "id": 4,
+        "id": "c-4",
         "name": "Designer",
         "details": "A Designer creates visual concepts to communicate ideas that inspire, inform, and captivate consumers. They develop layouts, designs, and illustrations for various media, including websites, advertisements, magazines, and product packaging, focusing on both aesthetic appeal and usability.",
         "icon": "FaPaintBrush",

@@ -3,7 +3,7 @@ import './AboutUs.css'
 
 const AboutUs = () => {
     return (
-        <div className="aboutUs py-8 my-8">
+        <div className="aboutUs py-8 ">
             <div className="lg:flex  ">
                 <div className="flex flex-item lg:w-1/2 lg:h-[500px]  h-[400px] items-center   relative">
                     <div className="members mx-auto  w-[300px] h-[300px] rounded-full">

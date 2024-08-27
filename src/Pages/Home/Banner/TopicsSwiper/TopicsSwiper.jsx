@@ -57,6 +57,7 @@ const TopicsSwiper = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-full"
+                key={data.id}
             >
                 {data ?
                     data?.map(item => <> <SwiperSlide key={item.id} className='h-full'>

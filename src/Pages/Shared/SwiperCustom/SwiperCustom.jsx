@@ -58,6 +58,8 @@ const SwiperCustom = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-[300px]"
+                key={data.id}
+                
             >
                 {data ?
                     data?.map(item => <> <SwiperSlide key={item.id} className='h-full'>

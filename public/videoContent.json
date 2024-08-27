@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "React Component Basics",
+      "description": "An introductory video explaining the basics of React components.",
+      "url": "https://www.example.com/videos/react-component-basics.mp4",
+      "coverUrl": "https://i.ibb.co/RP7pKS4/b-xciwkk8pc-scaled.jpg",
+      "duration": "10:45"
+    },
+    {
+      "id": 2,
+      "title": "State and Props in React",
+      "description": "A video tutorial covering state and props in React with examples.",
+      "url": "https://www.example.com/videos/state-and-props.mp4",
+      "coverUrl": "https://i.ibb.co/RP7pKS4/b-xciwkk8pc-scaled.jpg",
+      "duration": "15:20"
+    },
+    {
+      "id": 3,
+      "title": "Building a Todo App with React",
+      "description": "A step-by-step guide on building a simple Todo app using React.",
+      "url": "https://www.example.com/videos/building-todo-app.mp4",
+      "coverUrl": "https://i.ibb.co/RP7pKS4/b-xciwkk8pc-scaled.jpg",
+      "duration": "20:30"
+    }
+  ]
+  

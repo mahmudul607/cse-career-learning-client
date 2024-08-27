@@ -1,0 +1,299 @@
+[
+  {
+    "pathId": "se-1",
+    "pathTitle": "Introduction to Software Engineering",
+    "contents": [
+      {
+        "contentId": "se1-101",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "What is Software Engineering?",
+          "description": "A beginner’s guide to understanding the fundamentals of software engineering.",
+          "bannerImage": "https://example.com/images/intro_software_engineering_101.jpg",
+          "author": {
+            "id": "author_001",
+            "name": "John Doe"
+          },
+          "link": "https://example.com/blog/what-is-software-engineering",
+          "publishDate": "2024-01-10"
+        }
+      },
+      {
+        "contentId": "se1-102",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Introduction to Software Development Lifecycle (SDLC)",
+          "description": "Learn the key stages of SDLC in software engineering.",
+          "bannerImage": "https://example.com/images/sdlc_intro.jpg",
+          "creator": {
+            "id": "creator_001",
+            "name": "Jane Smith"
+          },
+          "link": "https://example.com/video/introduction-sdlc",
+          "publishDate": "2024-02-15",
+          "duration": "20:45"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "se-2",
+    "pathTitle": "Advanced Software Engineering",
+    "contents": [
+      {
+        "contentId": "se2-201",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Microservices Architecture Explained",
+          "description": "Deep dive into microservices and how they revolutionize software engineering.",
+          "bannerImage": "https://example.com/images/microservices_architecture.jpg",
+          "author": {
+            "id": "author_002",
+            "name": "Alice Johnson"
+          },
+          "link": "https://example.com/blog/microservices-architecture-explained",
+          "publishDate": "2024-03-20"
+        }
+      },
+      {
+        "contentId": "se2-202",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Docker and Kubernetes: A Practical Guide",
+          "description": "Hands-on tutorial on containerization using Docker and Kubernetes.",
+          "bannerImage": "https://example.com/images/docker_kubernetes_guide.jpg",
+          "creator": {
+            "id": "creator_002",
+            "name": "Bob Lee"
+          },
+          "link": "https://example.com/video/docker-kubernetes-guide",
+          "publishDate": "2024-04-10",
+          "duration": "25:30"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "ne-1",
+    "pathTitle": "Network Fundamentals",
+    "contents": [
+      {
+        "contentId": "ne1-301",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Basics of TCP/IP Networking",
+          "description": "Understand the key concepts behind TCP/IP and how it powers modern networking.",
+          "bannerImage": "https://example.com/images/tcpip_networking.jpg",
+          "author": {
+            "id": "author_003",
+            "name": "Michael Scott"
+          },
+          "link": "https://example.com/blog/tcp-ip-networking-basics",
+          "publishDate": "2024-05-05"
+        }
+      },
+      {
+        "contentId": "ne1-302",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Introduction to Cisco Routers and Configuration",
+          "description": "A practical guide to configuring Cisco routers for beginners.",
+          "bannerImage": "https://example.com/images/cisco_router_intro.jpg",
+          "creator": {
+            "id": "creator_003",
+            "name": "Pam Beesly"
+          },
+          "link": "https://example.com/video/cisco-router-configuration",
+          "publishDate": "2024-06-12",
+          "duration": "18:00"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "ne-2",
+    "pathTitle": "Advanced Networking",
+    "contents": [
+      {
+        "contentId": "ne2-401",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Mastering BGP for Enterprise Networks",
+          "description": "A detailed guide on BGP and its role in large-scale enterprise networks.",
+          "bannerImage": "https://example.com/images/bgp_enterprise_networks.jpg",
+          "author": {
+            "id": "author_004",
+            "name": "Dwight Schrute"
+          },
+          "link": "https://example.com/blog/mastering-bgp-enterprise-networks",
+          "publishDate": "2024-07-15"
+        }
+      },
+      {
+        "contentId": "ne2-402",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Implementing VLANs and VPNs in Your Network",
+          "description": "Learn how to set up VLANs and VPNs for secure and efficient networking.",
+          "bannerImage": "https://example.com/images/vlans_vpns.jpg",
+          "creator": {
+            "id": "creator_004",
+            "name": "Jim Halpert"
+          },
+          "link": "https://example.com/video/implementing-vlans-vpns",
+          "publishDate": "2024-08-01",
+          "duration": "22:15"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "pm-1",
+    "pathTitle": "Project Management Basics",
+    "contents": [
+      {
+        "contentId": "pm1-501",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Introduction to Project Management Tools",
+          "description": "Explore key tools used by project managers and how they streamline processes.",
+          "bannerImage": "https://example.com/images/project_management_tools.jpg",
+          "author": {
+            "id": "author_005",
+            "name": "Angela Martin"
+          },
+          "link": "https://example.com/blog/introduction-project-management-tools",
+          "publishDate": "2024-08-05"
+        }
+      },
+      {
+        "contentId": "pm1-502",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Understanding Gantt Charts and MS Project",
+          "description": "Learn how to use Gantt charts and MS Project for effective project planning.",
+          "bannerImage": "https://example.com/images/gantt_charts_msproject.jpg",
+          "creator": {
+            "id": "creator_005",
+            "name": "Oscar Martinez"
+          },
+          "link": "https://example.com/video/understanding-gantt-charts",
+          "publishDate": "2024-09-01",
+          "duration": "15:30"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "pm-2",
+    "pathTitle": "Advanced Project Management",
+    "contents": [
+      {
+        "contentId": "pm2-601",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Implementing Agile Methodologies in Projects",
+          "description": "A practical guide to successfully applying Agile principles in your projects.",
+          "bannerImage": "https://example.com/images/agile_project_management.jpg",
+          "author": {
+            "id": "author_006",
+            "name": "Stanley Hudson"
+          },
+          "link": "https://example.com/blog/implementing-agile-methodologies",
+          "publishDate": "2024-10-01"
+        }
+      },
+      {
+        "contentId": "pm2-602",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Critical Path Method for Project Managers",
+          "description": "Learn how to apply the Critical Path Method for effective project planning.",
+          "bannerImage": "https://example.com/images/critical_path_method.jpg",
+          "creator": {
+            "id": "creator_006",
+            "name": "Phyllis Vance"
+          },
+          "link": "https://example.com/video/critical-path-method",
+          "publishDate": "2024-11-10",
+          "duration": "17:45"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "d-1",
+    "pathTitle": "Graphic Design Basics",
+    "contents": [
+      {
+        "contentId": "d1-701",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Understanding Color Theory in Design",
+          "description": "Learn the principles of color theory and how to apply them in your designs.",
+          "bannerImage": "https://example.com/images/color_theory_design.jpg",
+          "author": {
+            "id": "author_007",
+            "name": "Kelly Kapoor"
+          },
+          "link": "https://example.com/blog/understanding-color-theory",
+          "publishDate": "2024-08-20"
+        }
+      },
+      {
+        "contentId": "d1-702",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Introduction to Adobe Photoshop",
+          "description": "Get started with Adobe Photoshop and learn the essential tools.",
+          "bannerImage": "https://example.com/images/photoshop_intro.jpg",
+          "creator": {
+            "id": "creator_007",
+            "name": "Ryan Howard"
+          },
+          "link": "https://example.com/video/adobe-photoshop-intro",
+          "publishDate": "2024-09-10",
+          "duration": "16:20"
+        }
+      }
+    ]
+  },
+  {
+    "pathId": "d-2",
+    "pathTitle": "Advanced Graphic Design",
+    "contents": [
+      {
+        "contentId": "d2-801",
+        "contentType": "blog",
+        "contentDetails": {
+          "title": "Branding and Identity Design",
+          "description": "Explore the principles of branding and how to create a unique identity for businesses.",
+          "bannerImage": "https://example.com/images/branding_identity.jpg",
+          "author": {
+            "id": "author_008",
+            "name": "Meredith Palmer"
+          },
+          "link": "https://example.com/blog/branding-identity-design",
+          "publishDate": "2024-10-15"
+        }
+      },
+      {
+        "contentId": "d2-802",
+        "contentType": "video",
+        "contentDetails": {
+          "title": "Creating 3D Models for Graphic Design",
+          "description": "Learn how to create and use 3D models in your graphic design projects.",
+          "bannerImage": "https://example.com/images/3d_modeling_graphic_design.jpg",
+          "creator": {
+            "id": "creator_008",
+            "name": "Toby Flenderson"
+          },
+          "link": "https://example.com/video/3d-modeling-graphic-design",
+          "publishDate": "2024-11-25",
+          "duration": "19:30"
+        }
+      }
+    ]
+  }
+]
+

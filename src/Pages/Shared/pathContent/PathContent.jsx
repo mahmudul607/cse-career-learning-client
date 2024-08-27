@@ -1,7 +1,10 @@
 
 import { Link } from "react-router-dom";
-import LearnerReview from "../LearnerReview/LearnerReview";
-import ContentModal from "../ContentModal/ContentModal";
+
+
+import LatestReviewCarousel from "../LatestReviewCarousel/LatestReviewCarousel";
+
+
 
 
 const PathContent = ({finalPath}) => {
@@ -10,27 +13,43 @@ const PathContent = ({finalPath}) => {
     
     return (
         <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
-            <div className="flex flex-col gap-4 w-3/4">
-               <div className="w-full h-66">
-               <img
+            <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
+               <div className="w-full h-66 relative">
+              
+              <img
                     src={finalPath.banner?.imgUrl}
                     className="w-full h-full rounded-lg shadow-2xl" />
-                  
-               </div>
-                <div className="text-left absolute  pt-10 pl-6 ">
+              
+
+                    <div className="text-left absolute  pt-10 pl-6 top-0 h-full">
+                    <div className="flex justify-between flex-col h-full">
+                    <div>
                     <h1 className="text-3xl font-bold">{finalPath.banner?.careerPathName}</h1>
                     <p className="py-6">
                         {finalPath.banner?.description}
                     </p>
-                    <button className="btn  btn-primary bottom-0 absolute top-full" onClick={()=>document.getElementById('my_modal_5').showModal()}>See Content</button>
-                    <ContentModal></ContentModal>
+                    </div>
+
+                    <div className="absolute bottom-6">
+                    <button className="btn  btn-primary  p-4  mx-2" >Apply Now</button>
+                    <Link className="btn  btn-primary  p-4  " to={"/learningContents"}>See Contents</Link>
+                   
+                    </div>
+                    </div>
+                   
                     {/* <button className="btn btn-primary bottom-0 absolute top-full"></button> */}
-                    <div className="footer pt-4 text-black">
+                    
+                    
                   
+                
                 </div>
-                </div>
+                  
+               </div>
+                
             <div className="w-full">
-            <LearnerReview></LearnerReview>
+            <div>
+              <LatestReviewCarousel></LatestReviewCarousel>
+            </div>
             </div>
                 
             </div>
