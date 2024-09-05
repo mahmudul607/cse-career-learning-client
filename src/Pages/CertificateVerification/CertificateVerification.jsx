@@ -35,7 +35,7 @@ const CertificateVerification = () => {
             <h1 className="text-3xl text-green-600 pb-12">Verification Successful</h1>
             <h1 className="text-xl">This Certificate goes to: <span className="text-xl font-semibold text-[#f58a35]">{info.name}</span> </h1>
             <p>Verified By: CSE Career Learning</p>
-            
+            <img src="https://i.ibb.co/7G2THnw/20553832.jpg" alt="" />
             
         </div>
     );
