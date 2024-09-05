@@ -12,7 +12,7 @@ const useCareerPaths = () => {
     const {refetch, data: careerPaths=[]} = useQuery({
         queryKey:['careerPaths'],
         queryFn: async () =>{
-            const res = await axiosPublic.get('/careerPathsData.json');
+            const res = await axiosPublic.get('/api/v1/web/career-paths');
             return res.data;
         },
     })

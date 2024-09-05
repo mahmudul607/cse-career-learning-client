@@ -42,7 +42,7 @@ const ContactUs = () => {
 
 
   return (
-    <div className="flex contact ">
+    <div className="flex contact text-white">
       <div className="contact-img sm:relative absolute w-full  sm:w-1/2 p-4">
 
           <img src={logo} alt="" />

@@ -15,7 +15,7 @@ const TrackSwiper = ({ data, inSliderNum }) => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
 
-    console.log(data)
+   
 
     
 

@@ -127,7 +127,7 @@ const Register = () => {
     //     console.log('hello changed')
     // }
     return (
-        <div className="register bg-transparent">
+        <div className="register bg-transparent text-white">
            
             <div className="hero  min-h-screen xxs:block pt-4   bg-transparent">
                 <div className="hero-content pb-16 flex-col-reverse md:flex-row-reverse border-box box-content  shadow-2xl   md:mx-24 md:px-8 mx-2 px-2 ">
@@ -142,7 +142,7 @@ const Register = () => {
                         <form className="card-body  py-0" onSubmit={handleSubmit()}>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text text-white">Name</span>
                                 </label>
                                 <input type="name" placeholder="Name" name="name" {...register("name", { required: true })} className="input input-bordered" />
                                 {errors.name?.type === "required" && (
@@ -151,7 +151,7 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-white">Email</span>
                                 </label>
                                 <input type="email" placeholder="email" name="email" {...register("email", { required: true })} className="input input-bordered" />
                                 {errors.email?.type === "required" && (
@@ -160,10 +160,10 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Account Type</span>
+                                    <span className="label-text text-white">Account Type</span>
                                 </label>
                                 <select
-                        className="select w-full "
+                        className="select w-full text-black"
                         name='type'
                         id='type'
                       
@@ -180,7 +180,7 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-white">Password</span>
                                 </label>
                                 <div className="relative">
                                     <input  type={show ? 'text' : 'password'} placeholder="password" name="password" {...register("password", {

@@ -14,6 +14,7 @@ import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer"
 import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
 import LearningContent from "../../Pages/LearningContent/LearningContent/LearningContent";
 import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
+import CertificateVerification from "../../Pages/CertificateVerification/CertificateVerification";
 
 
 
@@ -21,6 +22,8 @@ import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
     {
       path: "/",
       element: <Main></Main>,
+
+     
       children:[
         {
           path: "/",
@@ -61,8 +64,13 @@ import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
           path:"/learningContents/:id",
           element: <BlogContentV></BlogContentV>
         }
+        
       
       ]
+    },
+    {
+      path:"/get-certificate-info/:id",
+      element: <CertificateVerification></CertificateVerification>
     },
   ]);
 

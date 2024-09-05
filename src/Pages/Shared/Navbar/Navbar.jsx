@@ -21,12 +21,7 @@ const Navbar = () => {
     e.target.classList.add('active');
   };
   
-  // Assuming you have event listeners set up for your menu items
-  // const menuAllItems = document.querySelectorAll(".myMenuList");
-
-  // menuAllItems.forEach(item => {
-  //   item.addEventListener('click', handleActiveMenu);
-  // });
+ 
 
  
 
@@ -46,7 +41,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const link ='../careerTrack.json';
+  const link ='/public/careerTrack.json';
 
   useEffect(() => {
   

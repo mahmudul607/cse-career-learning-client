@@ -8,7 +8,7 @@ const VideoContent = ({video}) => {
                <div className="h-1/4 w-full mb-4">
                <img className="h-full w-full cursor-pointer" src={video.coverUrl} alt="" />
                </div>
-            <h3>{video.title}</h3>
+            <h2 className="text-[#f57005]">{video.title}</h2>
             <p>{video.description}</p>
             </div>
 
