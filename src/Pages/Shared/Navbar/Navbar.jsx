@@ -41,7 +41,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const link ='/public/careerTrack.json';
+  const link ='http://85.31.235.79:5000/api/v1/web/career-tracks';
 
   useEffect(() => {
   
@@ -50,7 +50,7 @@ const Navbar = () => {
           try {
               const response = await fetch(link);
               const data = await response.json();
-              setTrackData(data);
+              setTrackData(data.data);
               
           } catch (error) {
               console.error('Error fetching the data:', error);
@@ -62,6 +62,8 @@ const Navbar = () => {
 }, [link]);
 
 
+
+
   const menuItems = <div className="myMenuList flex"  onClick={(e)=>handleActiveMenu(e)}>
  
     <li><Link to={'/'}>Home</Link></li>
@@ -70,7 +72,7 @@ const Navbar = () => {
       <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
         
         {
-          trackData.map(item =><li key={item.id} className="underSubOne"><Link to={`track/${item.id}`}>{item.name}</Link>
+          trackData?.map(item =><li key={item.id} className="underSubOne"><Link to={`career-track/${item.id}`}>{item.name}</Link>
 
             </li>)
         }

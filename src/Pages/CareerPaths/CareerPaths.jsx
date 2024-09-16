@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+
 
 import PathContent from "../Shared/pathContent/PathContent";
 
 
 const CareerPaths = () => {
-    const [careerData, setCareerPathsData]= useState([]);
+    
     const [isLoading, setIsLoading] = useState(true);
-    const location = useLocation();
-    const query2 = location.pathname.split("/")[2];
+    
     const [data , setData] =useState([]);
 
-    
-    // useEffect(() => {
-    //     fetch('/careerPathsData.json')
-    //         .then(response => response.json())
-    //         .then(data => setData(data))
-    //         .catch(error => console.error('Error fetching the data:', error));
-    // }, []);
+  
+   
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/public/careerPathsData.json');
+                const response = await fetch('http://85.31.235.79:5000/api/v1/web/career-paths');
                 const data = await response.json();
-                setData(data);
+                setData(data.data);
                 
                 setIsLoading(false);
             } catch (error) {
@@ -36,19 +30,7 @@ const CareerPaths = () => {
     }, []);
 
     
-    useEffect(() => {
-        
-        const careerPathData =  () => {
-
-            if (data.length > 0) {
-                const uniqueData =  data.find(path => path.pathId === query2);
-                setCareerPathsData(uniqueData );
-            }
-            
-        };
-
-        careerPathData();
-    }, [query2, data]);
+    
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -59,7 +41,7 @@ const CareerPaths = () => {
             {data? (
                 <div>
                
-                <PathContent finalPath={careerData}></PathContent>
+                <PathContent finalPath={data} ></PathContent>
                 </div>
             ) : (
                 <p>Track not found</p>

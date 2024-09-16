@@ -15,6 +15,7 @@ import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
 import LearningContent from "../../Pages/LearningContent/LearningContent/LearningContent";
 import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
 import CertificateVerification from "../../Pages/CertificateVerification/CertificateVerification";
+import ToolsTechnology from "../../Pages/ToolsTechnology/ToolsTechnology";
 
 
 
@@ -47,21 +48,26 @@ import CertificateVerification from "../../Pages/CertificateVerification/Certifi
           element: <AboutUs></AboutUs>
         },
         {
-          path:"/track/:id",
+          path:"/career-track/:id",
           element: <TracksContainer></TracksContainer>,
           // loader: () => fetch(`careerTrack.json`),
         },
         {
-          path:"/path/:pathname",
+          path:"/career-path/:id",
           element: <CareerPaths></CareerPaths>,
           // loader: () => fetch(`careerTrack.json`),
         },
         {
-          path:"/learningContents",
-          element: <LearningContent></LearningContent>
+          path:"/tools-technologies/:id",
+          element: <ToolsTechnology></ToolsTechnology>,
+          // loader: () => fetch(`careerTrack.json`),
         },
         {
           path:"/learningContents/:id",
+          element: <LearningContent></LearningContent>
+        },
+        {
+          path:"/blogContent/:id",
           element: <BlogContentV></BlogContentV>
         }
         

@@ -1,64 +1,83 @@
-import { useEffect, useState } from "react";
+
 import { useLocation } from "react-router-dom";
 import TrackContent from "../../Shared/TrackContent/TrackContent";
+import useCareerPaths from "../../../Hooks/useCareerPaths";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
+
 
 
 
 
 const TracksContainer = () => {
-    const [trackData, setTrackData] = useState([]);
-    const [finalData, setFinalData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    
+    // const [trackData, setTrackData] = useState([]);
+    // const [finalData, setFinalData] = useState(null);
+    // const [finalPaths, setFinalPaths] = useState([]);
+    // const [isLoading, setIsLoading] = useState(true);
+    const [careerPaths] = useCareerPaths()
     const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const query = location.pathname.split("/")[2];
    
 
+console.log(careerPaths)
+
+const { data: careerTracks=[]} = useQuery({
+    queryKey:['trackData'],
+    queryFn: async () =>{
+        const res = await axiosPublic.get(`/career-tracks/${query}`);
+        return res.data.data;
+    },
+})
 
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/public/careerTrack.json');
-                const data = await response.json();
-                setTrackData(data);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //              fetch('./careerTrack.json')
+    //             .then(res => res.json())
+    //             .then(data =>setTrackData(data))
                 
-                setIsLoading(false);
-            } catch (error) {
-                console.error('Error fetching the data:', error);
-                setIsLoading(false);
-            }
-        };
+                
+    //             setIsLoading(false);
+    //         } catch (error) {
+    //             console.error('Error fetching the data:', error);
+    //             setIsLoading(false);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        const findData = async () => {
+    //     const findData = async () => {
 
-            if (trackData.length > 0) {
-                const uniqueData = trackData.find(track => track.id == query);
-                setFinalData(uniqueData );
-            }
+    //         if (careerTracks.length > 0) {
+    //             // const uniqueData = careerTracks.find(track => track.id == query);
+             
+    //             const uniquePaths = careerPaths.find(path => path.careerTrackId == query);
+    //             setFinalPaths(uniquePaths);
+    //         }
+
             
-        };
+    //     };
 
-        findData();
-    }, [query, trackData]);
+    //     findData();
+    // }, [query, careerTracks, careerPaths]);
    
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+    // if (isLoading) {
+    //     return <div>Loading...</div>;
+    // }
 
     return (
         <div >
-            {finalData ? (
+            {careerTracks ? (
                 <div>
                
-                <TrackContent finalTrack={finalData}  ></TrackContent>
+                <TrackContent finalTrack={careerTracks} careerPaths={careerPaths}  ></TrackContent>
                 </div>
             ) : (
                 <p>Track not found</p>

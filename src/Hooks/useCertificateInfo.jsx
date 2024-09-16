@@ -14,7 +14,7 @@ const useCertificateInfo = () => {
     const {refetch, data: certificateInfo=[]} = useQuery({
         queryKey:['certificateInfo'],
         queryFn: async () =>{
-            const res = await axiosPublic.get(`/api/v1/web/get-certificate-info/${userId}`);
+            const res = await axiosPublic.get(`/get-certificate-info/${userId}`);
             return res.data.data;
         },
     })

@@ -4,13 +4,13 @@ import TruncatedText from "../../Shared/TruncatedText/TruncatedText";
 import { FaCode, FaNetworkWired, FaTasks, FaPaintBrush } from 'react-icons/fa';
 import { useEffect, useState } from "react";
 import "./CareerTrack.css";
-import useCareerPaths from "../../../Hooks/useCareerPaths";
+
 
 const CareerTrack = () => {
     const [trackData, setTrackData] = useState([])
-    const [careerPaths] = useCareerPaths([]);
+  
 
-    console.log(careerPaths);
+   
 const occupationIcons = {
     FaCode: <FaCode />,
     FaNetworkWired: <FaNetworkWired />,

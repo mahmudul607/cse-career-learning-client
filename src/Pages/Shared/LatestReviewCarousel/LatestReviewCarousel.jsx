@@ -13,7 +13,7 @@ const LatestReviewCarousel = () => {
             .then(data => setLatestContent(data))
             .catch(error => console.error('Error fetching the data:', error));
     }, []);
-    console.log(LatestContent)
+
 
 
     return (

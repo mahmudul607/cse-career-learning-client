@@ -4,10 +4,50 @@ import Blog from '../Blog/Blog';
 import VideoContent from '../VideoContent/VideoContent';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 
 const LearningContent = () => {
+    // const [blogContentData, setBlogContentData] = useState([]);
+    // const [videoContentData, setVideoContentData] = useState([]);
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
+   
+    const query2 = location.pathname.split("/")[2];
+    const query = query2.split('%')[0];
+    
+
+  
+        const { data: pathBlog =[]} = useQuery({
+            queryKey:['pathBlog'],
+            queryFn: async () =>{
+                if(query === query2){
+                    const res = await axiosPublic.get(`/learning-contents?toolsTechnologyId=${query2}`);
+                     return res.data.data;
+                    
+                  
+                }
+                 else {
+                    const res = await axiosPublic.get(`/learning-contents?careerPathId=${query}`);
+                    return res.data.data;
+                    
+
+                }
+            },
+        })
+        
+
+        
+
+        console.log(pathBlog);
+  
+    
+
+    
+   
+
+
 
     const handleGoBack = () => {
 
@@ -17,8 +57,15 @@ const LearningContent = () => {
             navigate('/');
         }
     };
-    const [blogContentData, setBlogContentData] = useState([]);
-    const [videoContentData, setVideoContentData] = useState([]);
+    const handleGoBack2 = () => {
+
+        if (location.key !== 'default') {
+            navigate(-2); // Go back to the previous path
+        } else {
+            navigate('/');
+        }
+    };
+    
 
 
 
@@ -37,8 +84,9 @@ const LearningContent = () => {
             fetch('/blogContent.json')
                 .then(res => res.json())
                 .then(data => {
-                    setBlogContentData(data)
-                    setVideoContentData([])
+                    console.log(data)
+                    
+                    
 
 
                 })
@@ -48,8 +96,8 @@ const LearningContent = () => {
             fetch('/videoContent.json')
                 .then(res => res.json())
                 .then(data => {
-                    setVideoContentData(data)
-                    setBlogContentData([])
+                   console.log(data)
+                    
 
 
                 })
@@ -69,10 +117,18 @@ const LearningContent = () => {
     const handleCloseModal = () => {
         setShowModal(false);
     };
-    console.log(blogContentData.length)
+ 
     return (
-        <div className='h-screen'>
+        <div className=''>
             {/* Tab Navigation */}
+
+            <div>
+                <div className="header text-white text-center pb-6">
+                    <h2><span className='cursor-pointer' onClick={handleGoBack2}>{pathBlog[0]?.careerTrack.name}</span> <span>{`>`}</span> <span className='cursor-pointer' onClick={handleGoBack}>{pathBlog[0]?.careerPath.name}</span></h2>
+                </div>
+
+            </div>
+
             <div className="tabs flex mx-4 mb-4 w-full">
 
                 <div className='w-5/6'>
@@ -96,7 +152,7 @@ const LearningContent = () => {
                     <ul className="blog-content py-2 text-white">
                         <h1 className="text-xl text-[#f57005]">List of Content:</h1>
                         {
-                            blogContentData.map(blog => (
+                            pathBlog.map(blog => (
                                 <Blog key={blog.id} blog={blog} className="blog-item">
 
                                 </Blog>
@@ -106,7 +162,7 @@ const LearningContent = () => {
 
                 {activeTab === 'video' && (
                     <div className="video-content flex justify-between">
-                        {videoContentData.map(video => (
+                        {pathBlog.map(video => (
                             <VideoContent key={video.id} video={video} className="video-item" onClick={() => handleVideoClick(video)}>
 
                             </VideoContent>
