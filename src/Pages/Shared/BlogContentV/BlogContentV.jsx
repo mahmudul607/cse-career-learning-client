@@ -1,19 +1,18 @@
-import { useQuery } from "@tanstack/react-query";
+
 
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
 
 
 const BlogContentV = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
-    // const [currentBlog, setCurrentBlog] = useState([]);
-    // const [isLoading, setIsLoading] = useState(true);
     const queryBlog = location.pathname.split("/")[2];
 
-    console.log(queryBlog)
+ 
   
 
     const handleGoBack = () => {
@@ -25,33 +24,15 @@ const BlogContentV = () => {
         }
     };
 
-    const {data: blogContent} = useQuery({
-        queryKey: 'blogContent',
+    const {data: blogContent=[]} = useQuery({
+        queryKey: ['blogContent'],
         queryFn: async () =>{
             const res = await axiosPublic.get(`/learning-contents?id=${queryBlog}`)
             return res.data.data[0];
         }
     })
 
-    console.log(blogContent)
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await fetch(`/learning-contents?toolsTechnologyId=${queryBlog}`);
-    //             const data = await response.json();
-    //             const uniqueData = data.find(blog => blog.id == queryBlog);
-    //             setCurrentBlog(uniqueData);
-
-    //             setIsLoading(false);
-    //         } catch (error) {
-    //             console.error('Error fetching the data:', error);
-    //             setIsLoading(false);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, [queryBlog]);
 
     
     return (
@@ -59,22 +40,22 @@ const BlogContentV = () => {
 
             <div className="w-full h-96 relative ">
                 <img
-                    src={blogContent.imgUrl}
+                    src={blogContent.imgUrl || "https://i.ibb.co/8bcN8wM/We-Need-Design-Patterns-in-the-Enterprise-Cloud-Era.jpg"}
                     className="w-full h-full rounded-lg shadow-2xl" />
                 <button className='btn mr-2 absolute top-0 left-0' onClick={handleGoBack}>
                     <FaArrowLeftLong />Back pre
                 </button>
-                <h1 className="text-3xl font-bold absolute top-16 left-1/4">{blogContent.title}</h1>
+                <h1 className="text-3xl font-bold text-[#f57005] absolute top-16 left-1/4">{blogContent?.title}</h1>
             </div>
             <div className="text-left py-4">
-                <h1 className="text-3xl font-bold py-4">{blogContent.title}</h1>
-                <p> {blogContent.description}</p>
-                <p>{blogContent.short_description
+                <h1 className="text-3xl font-bold py-4 text-[#f57005]">{blogContent?.title}</h1>
+                <p> {blogContent?.description}</p>
+                <p>{blogContent?.short_description
                 }</p>
-                <p className="text-sm py-4">By: {blogContent.author}</p>
-                <button className="btn btn-primary">Apply Now</button>
+                {/* <p className="text-sm py-4">By: {blogContent?.author}</p> */}
+                
                 <div className="footer pt-4 text-black">
-
+                 <button className="btn btn-primary p-4">Apply Now</button>
                 </div>
             </div>
 

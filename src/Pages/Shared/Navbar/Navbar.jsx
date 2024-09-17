@@ -2,11 +2,15 @@ import { Link } from "react-router-dom"
 import logo from "../../../assets/logo2.png"
 import "./Navbar.css"
 import { useEffect, useState } from "react";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
 
 const Navbar = () => {
 
   const [isSticky, setIsSticky] = useState(true);
-  const [trackData, setTrackData] = useState([])
+  // const [trackData, setTrackData] = useState([])
+
+  const axiosPublic = useAxiosPublic();
 
   const handleActiveMenu = (e) => {
     e.preventDefault();
@@ -41,25 +45,33 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const link ='http://85.31.235.79:5000/api/v1/web/career-tracks';
+  // const link ='/career-tracks';
 
-  useEffect(() => {
+//   useEffect(() => {
   
 
-        const fetchData = async () => {
-          try {
-              const response = await fetch(link);
-              const data = await response.json();
-              setTrackData(data.data);
+//         const fetchData = async () => {
+//           try {
+//               const response = await axiosPublic.fetch(link);
+//               const data = await response.json();
+//               setTrackData(data.data);
               
-          } catch (error) {
-              console.error('Error fetching the data:', error);
+//           } catch (error) {
+//               console.error('Error fetching the data:', error);
               
-          }
-      };
+//           }
+//       };
 
-      fetchData();
-}, [link]);
+//       fetchData();
+// }, [link, axiosPublic]);
+
+const {data: tracksData=[]} = useQuery({
+  queryKey: ['tracksData'],
+  queryFn: async () =>{
+    const res = await axiosPublic.get('/career-tracks')
+    return res.data.data;
+  }
+})
 
 
 
@@ -72,7 +84,7 @@ const Navbar = () => {
       <ul className="submenu lg:w-[200px]  lg:left-0 left-3/4 w-full top-0 lg:top-full text-black z-50">
         
         {
-          trackData?.map(item =><li key={item.id} className="underSubOne"><Link to={`career-track/${item.id}`}>{item.name}</Link>
+          tracksData?.map(item =><li key={item.id} className="underSubOne"><Link to={`career-track/${item.id}`}>{item.name}</Link>
 
             </li>)
         }

@@ -17,9 +17,9 @@ const TrackContent = ({ finalTrack, careerPaths }) => {
 
                 </div>
                 <div className="text-left">
-                    <h1 className="text-3xl font-bold">{finalTrack.name}</h1>
+                    <h1 className="text-3xl font-bold">{finalTrack?.name}</h1>
                     <p className="py-6">
-                        {finalTrack.details}
+                        {finalTrack?.description}
                     </p>
                     <button className="btn btn-primary">Apply Now</button>
                     <div className="footer pt-4 text-black">

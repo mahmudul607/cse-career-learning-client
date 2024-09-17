@@ -10,10 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 
 
 const TracksContainer = () => {
-    // const [trackData, setTrackData] = useState([]);
-    // const [finalData, setFinalData] = useState(null);
-    // const [finalPaths, setFinalPaths] = useState([]);
-    // const [isLoading, setIsLoading] = useState(true);
+   
     const [careerPaths] = useCareerPaths()
     const location = useLocation();
     const axiosPublic = useAxiosPublic();
@@ -21,9 +18,9 @@ const TracksContainer = () => {
     const query = location.pathname.split("/")[2];
    
 
-console.log(careerPaths)
 
-const { data: careerTracks=[]} = useQuery({
+
+const {isPending, data: careerTracks={}} = useQuery({
     queryKey:['trackData'],
     queryFn: async () =>{
         const res = await axiosPublic.get(`/career-tracks/${query}`);
@@ -31,46 +28,10 @@ const { data: careerTracks=[]} = useQuery({
     },
 })
 
+if(isPending){
+    return <span className="loading loading-spinner text-primary text-center"></span>
+}
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //              fetch('./careerTrack.json')
-    //             .then(res => res.json())
-    //             .then(data =>setTrackData(data))
-                
-                
-    //             setIsLoading(false);
-    //         } catch (error) {
-    //             console.error('Error fetching the data:', error);
-    //             setIsLoading(false);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, []);
-
-    // useEffect(() => {
-        
-    //     const findData = async () => {
-
-    //         if (careerTracks.length > 0) {
-    //             // const uniqueData = careerTracks.find(track => track.id == query);
-             
-    //             const uniquePaths = careerPaths.find(path => path.careerTrackId == query);
-    //             setFinalPaths(uniquePaths);
-    //         }
-
-            
-    //     };
-
-    //     findData();
-    // }, [query, careerTracks, careerPaths]);
-   
-
-    // if (isLoading) {
-    //     return <div>Loading...</div>;
-    // }
 
     return (
         <div >

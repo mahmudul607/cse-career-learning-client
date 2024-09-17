@@ -23,7 +23,7 @@ const PathContent = ({finalPath}) => {
     })
     
   
-    console.log(finalPath)
+  
     return (
         <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
@@ -58,7 +58,7 @@ const PathContent = ({finalPath}) => {
                 
                </div>
                <div>
-                    
+               <h1 className="text-3xl font-bold">{finalPath[0]?.name}</h1>
                     <p className="py-6">
                         {finalPath[0]?.description}
                     </p>

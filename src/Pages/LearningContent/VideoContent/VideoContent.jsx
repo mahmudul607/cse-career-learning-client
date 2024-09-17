@@ -3,7 +3,7 @@ import ContentModal from "../../Shared/ContentModal/ContentModal";
 
 const VideoContent = ({video}) => {
 
-    console.log(video)
+  
     return (
         <div className="border m-2 rounded-lg text-white" onClick={()=>document.getElementById('my_modal_5').showModal()}>
             <div className="p-2 mb-2">

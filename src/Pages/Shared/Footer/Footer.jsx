@@ -30,8 +30,8 @@ const Footer = () => {
                     </label>
                     <div className="join">
                         <input type="text" placeholder="username@site.com" className="p-2 input-bordered join-item" />
-                        <button className="btn customButton join-item ">
-                            <span className="button_curve"></span>
+                        <button className="btn  join-item ">
+                            <span className="button_curve "></span>
                             Subscribe</button>
                     </div>
                 </fieldset>

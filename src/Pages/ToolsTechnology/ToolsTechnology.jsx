@@ -16,7 +16,7 @@ const ToolsTechnology = () => {
             return res.data.data;
         },
     })
-   console.log(uniqueTools)
+
 
  
     return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { Modal } from 'react-bootstrap'; // Example using react-bootstrap for modal
 import Blog from '../Blog/Blog';
 import VideoContent from '../VideoContent/VideoContent';
@@ -8,8 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 
 const LearningContent = () => {
-    // const [blogContentData, setBlogContentData] = useState([]);
-    // const [videoContentData, setVideoContentData] = useState([]);
+    
     const location = useLocation();
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
@@ -40,7 +39,7 @@ const LearningContent = () => {
 
         
 
-        console.log(pathBlog);
+    
   
     
 
@@ -78,32 +77,7 @@ const LearningContent = () => {
     const [selectedVideo, setSelectedVideo] = useState(null); // State to track the selected video
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
-    useEffect(() => {
-
-        if (activeTab === 'blog') {
-            fetch('/blogContent.json')
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    
-                    
-
-
-                })
-
-        }
-        else if (activeTab === 'video') {
-            fetch('/videoContent.json')
-                .then(res => res.json())
-                .then(data => {
-                   console.log(data)
-                    
-
-
-                })
-
-        }
-    }, [activeTab])
+   
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
