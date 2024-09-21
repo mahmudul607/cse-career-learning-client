@@ -4,6 +4,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import ImageWithFallback from "../ImageWithFallback/ImageWithFallback";
 
 
 const BlogContentV = () => {
@@ -39,9 +40,17 @@ const BlogContentV = () => {
         <div className="max-w-screen-lx  mx-auto rounded bg-transparent bg-[#1e203e] text-white ">
 
             <div className="w-full h-96 relative ">
-                <img
+                {/* <img
                     src={blogContent.imgUrl || "https://i.ibb.co/8bcN8wM/We-Need-Design-Patterns-in-the-Enterprise-Cloud-Era.jpg"}
-                    className="w-full h-full rounded-lg shadow-2xl" />
+                    className="w-full h-full rounded-lg shadow-2xl" /> */}
+                 <ImageWithFallback
+                     src={blogContent.attachment}
+                     alt="Description"
+                     defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
+                     className="w-full h-full rounded-lg shadow-2xl"
+                    
+                    
+                    ></ImageWithFallback>
                 <button className='btn mr-2 absolute top-0 left-0' onClick={handleGoBack}>
                     <FaArrowLeftLong />Back pre
                 </button>

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link, useLocation } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import ImageWithFallback from "../Shared/ImageWithFallback/ImageWithFallback";
 
 
 const ToolsTechnology = () => {
@@ -17,16 +18,21 @@ const ToolsTechnology = () => {
         },
     })
 
-
+   
  
     return (
-        <div className="h-screen">
+        <div className="">
         <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
                <div className="w-full min-h-66  relative">
-              
-              <img
-                    src={uniqueTools?.coverImgUrl || "https://i.ibb.co.com/Lz8HVNN/vs.jpg"}
-                    className="w-full h-full rounded-lg shadow-2xl" />
+
+                      <ImageWithFallback
+                     src={uniqueTools?.attachment}
+                     alt="Description"
+                     defaultSrc="https://i.ibb.co.com/Lz8HVNN/vs.jpg"
+                     className="w-full h-full rounded-lg shadow-2xl"
+                    
+                    
+                    ></ImageWithFallback>
               
 
                     <div className="text-left  pt-10 pl-6 top-0 h-full">
@@ -51,16 +57,12 @@ const ToolsTechnology = () => {
                </div>
                <div>
                     <h1 className="text-3xl font-bold">{uniqueTools?.name}</h1>
-                    <p className="py-6">
+                    <p className="pt-6">
                         {uniqueTools?.description}
                     </p>
                     </div>
                 
-            <div className="w-full h-full">
-            <div>
-             
-            </div>
-            </div>
+           
                 
             </div>
 

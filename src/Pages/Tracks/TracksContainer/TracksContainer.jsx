@@ -1,7 +1,7 @@
 
 import { useLocation } from "react-router-dom";
 import TrackContent from "../../Shared/TrackContent/TrackContent";
-import useCareerPaths from "../../../Hooks/useCareerPaths";
+
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 
@@ -11,7 +11,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const TracksContainer = () => {
    
-    const [careerPaths] = useCareerPaths()
+    
     const location = useLocation();
     const axiosPublic = useAxiosPublic();
 
@@ -38,7 +38,7 @@ if(isPending){
             {careerTracks ? (
                 <div>
                
-                <TrackContent finalTrack={careerTracks} careerPaths={careerPaths}  ></TrackContent>
+                <TrackContent finalTrack={careerTracks}  ></TrackContent>
                 </div>
             ) : (
                 <p>Track not found</p>

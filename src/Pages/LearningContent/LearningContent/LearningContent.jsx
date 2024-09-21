@@ -93,7 +93,7 @@ const LearningContent = () => {
     };
  
     return (
-        <div className=''>
+        <div className='h-screen'>
             {/* Tab Navigation */}
 
             <div>

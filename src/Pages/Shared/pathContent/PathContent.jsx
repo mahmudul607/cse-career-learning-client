@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import LatestReviewCarousel from "../LatestReviewCarousel/LatestReviewCarousel";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import ImageWithFallback from "../ImageWithFallback/ImageWithFallback";
 
 
 
@@ -23,15 +24,25 @@ const PathContent = ({finalPath}) => {
     })
     
   
-  
+    
     return (
         <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
                <div className="w-full min-h-66  relative">
               
-              <img
-                    src={finalPath[0]?.imageUrl || "https://i.ibb.co/7G2THnw/20553832.jpg"}
-                    className="w-full h-full rounded-lg shadow-2xl" />
+              {/* <img
+                    src=
+                    defaultSrc= ,
+                     /> */}
+
+                    <ImageWithFallback
+                     src={finalPath[0]?.attachment}
+                     alt="Description"
+                     defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
+                     className="w-full h-full rounded-lg shadow-2xl"
+                    
+                    
+                    ></ImageWithFallback>
               <div className="absolute top-12 left-6">
                     <h1 className="text-3xl font-bold">{finalPath[0]?.name}</h1>
                     </div>
@@ -66,12 +77,13 @@ const PathContent = ({finalPath}) => {
                 
             <div className="w-full h-full">
             <div>
+                <h2 className="text-xl text-center py-6 text-[#f5842b]">Most Recent Review:</h2>
               <LatestReviewCarousel></LatestReviewCarousel>
             </div>
             </div>
                 
             </div>
-            <div className="w-1/5 fixed right-24 z-10 top-24">
+            <div className="w-1/5 fixed right-14 z-10 top-24">
                         <ul className="flex flex-col gap-2   py-6">
                            <span className="text-[#f57106]">Tools And Technology:</span>
                            { toolsAndTechnology ? toolsAndTechnology.map((item, i) => <Link key={i}   to={`/tools-technologies/${item.id}`} className="bg-gray-700 px-4 py-2 hover:text-white customButton  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">
