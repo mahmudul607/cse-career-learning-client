@@ -18,7 +18,7 @@ const PathContent = ({finalPath}) => {
     const { data: toolsAndTechnology =[]} = useQuery({
         queryKey:['toolsAndTechnology'],
         queryFn: async () =>{
-            const res = await axiosPublic.get(`/tools-technologies?careerPathId=${query2}`);
+            const res = await axiosPublic.get(`/api/v1/web/tools-technologies?careerPathId=${query2}`);
             return res.data.data;
         },
     })

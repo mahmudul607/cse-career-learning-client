@@ -49,7 +49,7 @@ const Navbar = () => {
 const {data: tracksData=[]} = useQuery({
   queryKey: ['tracksData'],
   queryFn: async () =>{
-    const res = await axiosPublic.get('/career-tracks')
+    const res = await axiosPublic.get('/api/v1/web/career-tracks')
     return res.data.data;
   }
 })

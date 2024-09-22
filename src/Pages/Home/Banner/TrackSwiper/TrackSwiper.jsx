@@ -3,8 +3,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
-import img from "../../../../assets/logo1.png"
 import { useEffect, useRef, useState } from 'react';
+import ImageWithFallback from '../../../Shared/ImageWithFallback/ImageWithFallback';
 
 const TrackSwiper = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
@@ -43,6 +43,8 @@ const TrackSwiper = ({ data, inSliderNum }) => {
     }, [])
 
 
+
+
     return (
         <>
             <Swiper
@@ -60,18 +62,33 @@ const TrackSwiper = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-full"
-                key={data.map(item => item.id).join('-')} 
+                key={data.map(item => item?.id).join('-')} 
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item.name}>
+                    data?.map(item => <> <SwiperSlide key={item?.name}>
                         <div className="card h-[300px] bg-base-100 shadow-xl image-full">
-                            <figure><img src={img} className='w-full h-full' alt="img" /></figure>
+                            <figure>
+                                
+                                <ImageWithFallback
+                                    src={item?.imgUrl || item?.attachment}
+                                    alt="image"
+                                    defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
+                                    className="w-full h-full"
+
+
+                                ></ImageWithFallback>
+                                </figure>
                             <div className="card-body">
-                                <h2 className="card-title text-4xl text-[#ff52d9]">{ item.name}</h2>
-                                <div className="topic-steps overflow-hidden inline-block">
-                                    
-                                    <p className='inline-block'>{item.details}</p>
-                                   
+                                <h2 className="card-title text-4xl text-[#ff52d9]">{ item?.name}</h2>
+                                <div className="topic-steps overflow-hidden inline-block ">
+                                    {
+                                        item?.description === undefined ? <div className='inline-block text-left '>{`${item?.details?.slice(0, 200)}`} </div>: ""
+                                    }
+                                    {
+                                        item?.details === undefined ? <div className='inline-block text-left '>{`${item?.description?.slice(0, 200)}`}</div>:""
+                                    }
+                               
+                                  
                                 </div>
                                 <div className="card-actions justify-end card-footer">
                                     <button className="btn btn-primary">Get More</button>

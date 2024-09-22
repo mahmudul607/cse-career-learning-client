@@ -23,7 +23,7 @@ const TracksContainer = () => {
 const {isPending, data: careerTracks={}} = useQuery({
     queryKey:['trackData'],
     queryFn: async () =>{
-        const res = await axiosPublic.get(`/career-tracks/${query}`);
+        const res = await axiosPublic.get(`/api/v1/web/career-tracks/${query}`);
         return res.data.data;
     },
 })

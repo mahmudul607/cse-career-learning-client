@@ -5,6 +5,8 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import "./SwiperCustom.css"
 import { useEffect, useRef, useState } from 'react';
+import ImageWithFallback from '../ImageWithFallback/ImageWithFallback';
+
 
 const SwiperCustom = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
@@ -15,7 +17,7 @@ const SwiperCustom = ({ data, inSliderNum }) => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
 
-    
+    console.log(data)
 
     useEffect(() => {
 
@@ -58,21 +60,38 @@ const SwiperCustom = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-[300px]"
-                key={data.id}
+                key={data?.id}
                 
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item.id} className='h-full'>
+                    data?.map(item => <> <SwiperSlide key={item?.id} className='h-full'>
                         <div className="card h-[300px]  bg-base-100 shadow-xl image-full">
-                            <figure><img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /></figure>
+                            <figure>
+                                {/* <img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /> */}
+                                <ImageWithFallback
+                                    src={item?.attachment}
+                                    alt="image"
+                                    defaultSrc="https://i.ibb.co/zR7y2G9/os2.jpg"
+                                    className="w-full h-full"
+
+
+                                ></ImageWithFallback>
+                                </figure>
                             <div className="card-body">
-                                <h2 className="card-title text-4xl text-[#ff52d9]">{item.title }</h2>
+                                <h2 className="card-title text-2xl text-[#ff52d9]">{item?.title }</h2>
                                 <div className="topic-steps overflow-hidden inline-block">
                                     <h2 className='font-bold'>Learning Steps:</h2>
-                                    <p className='inline-block'>{item.learning_steps[0]}</p>
-                                    <p className='inline-block'>{item.learning_steps[1]}</p>
-                                    <p className='inline-block'>{item.learning_steps[2]}</p>
-                                    <p className='inline-block'>{item.learning_steps[3]}</p>
+                               
+                                    {
+                                        item?.description === "" ? <p className='inline-block'>{ "Details will be Coming Soon"}</p> : ""
+                                    }
+                                    {
+                                        item?.description === undefined ? <div className='inline-block text-left '>{`${item?.details?.slice(0, 150)}`} </div>: ""
+                                    }
+                                    {
+                                        item?.details === undefined ? <div className='inline-block text-left '>{`${item?.description?.slice(0, 150)}`}</div>:""
+                                    }
+                                    
                                 </div>
                                 <div className="card-actions justify-end card-footer">
                                     <button className="btn btn-primary">Get More</button>

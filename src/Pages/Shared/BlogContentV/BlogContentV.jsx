@@ -28,7 +28,7 @@ const BlogContentV = () => {
     const {data: blogContent=[]} = useQuery({
         queryKey: ['blogContent'],
         queryFn: async () =>{
-            const res = await axiosPublic.get(`/learning-contents?id=${queryBlog}`)
+            const res = await axiosPublic.get(`/api/v1/web/learning-contents?id=${queryBlog}`)
             return res.data.data[0];
         }
     })

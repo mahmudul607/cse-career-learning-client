@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const TrackContent = ({ finalTrack}) => {
 
-    // /api/v1/web/career-paths?careerTrackId=6679d9a30cadce716260e929
+  
 
     const axiosPublic = useAxiosPublic();
     const location = useLocation();
@@ -16,7 +16,7 @@ const TrackContent = ({ finalTrack}) => {
     const { data: careerPaths =[]} = useQuery({
         queryKey:['careerPaths'],
         queryFn: async () =>{
-            const res = await axiosPublic.get(`/career-paths?careerTrackId=${query2}`);
+            const res = await axiosPublic.get(`/api/v1/web/career-paths?careerTrackId=${query2}`);
             return res.data.data;
         },
     })
@@ -57,9 +57,9 @@ console.log(careerPaths)
             <div className="w-1/5 fixed right-14 z-10 top-24">
                 <ul className="flex flex-col gap-2   py-6">
                     <span className="text-[#f57106]">Choose Career Paths:</span>
-                    { careerPaths?.map(item => <Link key={item.id} rel="#" type="" to={`/career-path/${item.id}`} className="bg-gray-700 px-2 text-sm py-2 hover:text-white customButton  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">
+                    { careerPaths?.map(item => <Link key={item?.id} rel="#" type="" to={`/career-path/${item?.id}`} className="bg-gray-700 px-2 text-sm py-2 hover:text-white customButton  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">
                         <span className="button_curve"></span>
-                        {item.name}</Link>) }
+                        {item?.name}</Link>) }
 
                 </ul>
             </div>

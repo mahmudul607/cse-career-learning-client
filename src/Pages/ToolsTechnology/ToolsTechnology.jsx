@@ -13,7 +13,7 @@ const ToolsTechnology = () => {
     const { data: uniqueTools =[]} = useQuery({
         queryKey:['uniqueTools'],
         queryFn: async () =>{
-            const res = await axiosPublic.get(`/tools-technologies/${query2}`);
+            const res = await axiosPublic.get(`/api/v1/web/tools-technologies/${query2}`);
             return res.data.data;
         },
     })

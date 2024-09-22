@@ -1,27 +1,5 @@
 [
-    {   
-        "id": "c-1",
-        "name": "Software Engineer",
-        "details": "A Software Engineer applies principles of software engineering to design, develop, maintain, test, and evaluate computer software. They work on creating software solutions for end-users and are involved in the entire software development lifecycle from requirement analysis to deployment and maintenance.",
-        "icon": "FaCode",
-        "imgUrl": "https://i.ibb.co/5KKsgJg/images.png",
-        "paths": [
-            {
-                "id": "se-1",
-                "pathName": "Introduction to Software Engineering",
-                "details": "An introductory path to understand the basics of software engineering.",
-                "imgUrl": "path/to/intro_to_software_engineering_image.jpg",
-                "videoLink": "https://example.com/intro_to_software_engineering_video"
-            },
-            {
-                "id": "se-2",
-                "pathName": "Advanced Software Engineering",
-                "details": "An advanced path to delve deeper into software engineering principles.",
-                "imgUrl": "path/to/advanced_software_engineering_image.jpg",
-                "videoLink": "https://example.com/advanced_software_engineering_video"
-            }
-        ]
-    },
+    
     {   
         "id": "c-2",
         "name": "Network Engineer",
