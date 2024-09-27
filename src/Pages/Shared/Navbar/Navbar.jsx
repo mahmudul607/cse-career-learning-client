@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 const Navbar = () => {
 
   const [isSticky, setIsSticky] = useState(true);
-  // const [trackData, setTrackData] = useState([])
+
 
   const axiosPublic = useAxiosPublic();
 
@@ -45,30 +45,11 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // const link ='/career-tracks';
-
-//   useEffect(() => {
-  
-
-//         const fetchData = async () => {
-//           try {
-//               const response = await axiosPublic.fetch(link);
-//               const data = await response.json();
-//               setTrackData(data.data);
-              
-//           } catch (error) {
-//               console.error('Error fetching the data:', error);
-              
-//           }
-//       };
-
-//       fetchData();
-// }, [link, axiosPublic]);
 
 const {data: tracksData=[]} = useQuery({
   queryKey: ['tracksData'],
   queryFn: async () =>{
-    const res = await axiosPublic.get('/career-tracks')
+    const res = await axiosPublic.get('/api/v1/web/career-tracks')
     return res.data.data;
   }
 })
@@ -92,7 +73,7 @@ const {data: tracksData=[]} = useQuery({
     </li>
     
     <li><Link to={'/about'}>About Us</Link></li>
-    <li><Link to={'/contactUs'}>Contact Us</Link></li>
+    
 
    
   </div>
@@ -123,7 +104,7 @@ const {data: tracksData=[]} = useQuery({
 
         <button className="btn-sm sm:btn-md btn customButton ">
           <span className="button_curve"></span>
-          Support</button>
+         <Link to={'/contactUs'}>Contact Us</Link></button>
         <Link className="btn-sm sm:btn-md btn btn-primary" to={"/login"}>login</Link>
       </div>
     </div>

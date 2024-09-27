@@ -3,11 +3,16 @@ import TitleSection from "../../Shared/TitleSection/TitleSection";
 import TruncatedText from "../../Shared/TruncatedText/TruncatedText";
 import { FaCode, FaNetworkWired, FaTasks, FaPaintBrush } from 'react-icons/fa';
 import { useEffect, useState } from "react";
-import "./CareerTrack.css";
+import "./CareerTrackSection.css";
+import useCareerTrack from "../../../Hooks/useCareerTrack";
 
 
-const CareerTrack = () => {
+
+
+const CareerTrackSection = () => {
     const [trackData, setTrackData] = useState([])
+    const [careerTrack] = useCareerTrack();
+
   
 
    
@@ -26,6 +31,22 @@ const occupationIcons = {
             .then(data => setTrackData(data))
             .catch(error => console.error('Error fetching the data:', error));
     }, []);
+
+    
+
+    let careerTracks = []
+
+    if(careerTrack.length < 2){
+        careerTracks = [careerTrack[0], ...trackData]
+    }else if(careerTrack.length > 4){
+        careerTracks = [careerTrack.slice(0, 3)];
+    }else{
+        careerTracks = [...careerTrack];
+    }
+  
+
+console.log(careerTracks)
+   
     return (
         <div className="challenge p-8">
                 <TitleSection header="Choose Your Journey Track" subHeader="Take a Challenge" color="text-white"></TitleSection>
@@ -33,14 +54,14 @@ const occupationIcons = {
                     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-4 gap-2">
 
                         {
-                            trackData.map(item => <div key={item.id} className="col-span-1 card-items">
+                            careerTracks.map(item => <div key={item?.id} className="col-span-1 card-items">
                             <div className="card overflow-hidden  bg-[#121534] shadow-xl">
 
                                 <div className="card-body">
-                                    <span className="text-4xl icon-bg mask mask-hexagon  p-4 bg-[#f57106] h-20 w-20   flex justify-center items-center"><span className="icons ">{occupationIcons[item.icon]}</span> </span>
-                                    <h2 className="card-title text-secondary">{item.name}</h2>
+                                    <span className="text-4xl icon-bg mask mask-hexagon  p-4 bg-[#f57106] h-20 w-20   flex justify-center items-center"><span className="icons ">{occupationIcons[item?.icon] || occupationIcons['FaCode']}</span> </span>
+                                    <h2 className="card-title text-secondary">{item?.name}</h2>
                                     <p>
-                                        <TruncatedText text={item.details} maxLength={150} />
+                                        <TruncatedText text={item?.details || item?.description || "Details Coming Soon"} maxLength={150} />
                                     </p>
                                     <div className="card-actions ">
                                         <button className="btn btn-primary">Start Journey</button>
@@ -62,4 +83,4 @@ const occupationIcons = {
     );
 };
 
-export default CareerTrack;
+export default CareerTrackSection;

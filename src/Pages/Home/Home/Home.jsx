@@ -6,9 +6,11 @@ import LearnerReview from "../../Shared/LearnerReview/LearnerReview";
 import ELearningSite from "../ELearningSite/ELearningSite";
 import SkillTest from "../SkillTest/SkillTest";
 import UsageStatistics from "../UsageStatistics/UsageStatistics";
-import CareerTrack from "../CareerTrack/CareerTrack";
+
 import OurMentors from "../OurMentors/OurMentors";
 import LatestContent from "../../LatestContent/LatestContent";
+import CareerTrackSection from "../CareerTrackSection/CareerTrackSection";
+
 
 
 
@@ -23,7 +25,7 @@ const Home = () => {
 
             <Banner></Banner>
             {/* Career Track */}
-            <CareerTrack></CareerTrack>
+            <CareerTrackSection></CareerTrackSection>
             
             {/* Challenge end */}
 

@@ -1,3 +1,4 @@
+import VideoWithFallback from "../VideoWithFallback/VideoWithFallback";
 
 
 const ContentModal = ({videoUrl}) => {
@@ -9,7 +10,15 @@ const ContentModal = ({videoUrl}) => {
             
 
             <div className=" h-full w-full  absolute">
-              <iframe className="w-full h-full" src={videoUrl || "https://www.youtube.com/embed/siACuIcNikE"} title="YouTube video" ></iframe>
+              {/* <iframe className="w-full h-full" src={videoUrl || "https://www.youtube.com/embed/siACuIcNikE"} title="YouTube video" ></iframe> */}
+
+              <VideoWithFallback
+              className ="w-full h-full"
+              videoUrl={videoUrl}
+              defaultUrl="https://www.youtube.com/embed/siACuIcNikE"
+              
+              
+              ></VideoWithFallback>
             </div>
           </div>
           <div className="absolute top-0 right-0">

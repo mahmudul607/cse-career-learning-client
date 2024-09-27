@@ -22,13 +22,13 @@ const LearningContent = () => {
             queryKey:['pathBlog'],
             queryFn: async () =>{
                 if(query === query2){
-                    const res = await axiosPublic.get(`/learning-contents?toolsTechnologyId=${query2}`);
+                    const res = await axiosPublic.get(`/api/v1/web/learning-contents?toolsTechnologyId=${query2}`);
                      return res.data.data;
                     
                   
                 }
                  else {
-                    const res = await axiosPublic.get(`/learning-contents?careerPathId=${query}`);
+                    const res = await axiosPublic.get(`/api/v1/web/learning-contents?careerPathId=${query}`);
                     return res.data.data;
                     
 
@@ -93,7 +93,7 @@ const LearningContent = () => {
     };
  
     return (
-        <div className=''>
+        <div className='h-screen'>
             {/* Tab Navigation */}
 
             <div>

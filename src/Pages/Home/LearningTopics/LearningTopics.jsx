@@ -1,16 +1,19 @@
-
-import { useEffect, useState } from 'react';
+import useLearningContent from '../../../Hooks/useLearningContent';
 import SwiperCustom from '../../Shared/SwiperCustom/SwiperCustom';
 import "./LearningTopics.css"
 const LearningTopics = ({title, subTitle}) => {
-    const [topicsData, setTopicsData] = useState([])
+    const [learningContents] = useLearningContent();
 
-    useEffect(() => {
-        fetch('learningTopics.json')
-            .then(response => response.json())
-            .then(data => setTopicsData(data))
-            .catch(error => console.error('Error fetching the data:', error));
-    }, []);
+    let learningContentData = [];
+   
+if(learningContents.length < 4){
+    learningContentData = [learningContents[0], ...learningContents, ...learningContents]
+
+}else{
+    learningContentData = [...learningContents]
+}
+
+console.log(learningContentData);
     return (
         <>
         <div className='learnignTopics text-center py-8'>
@@ -24,7 +27,7 @@ const LearningTopics = ({title, subTitle}) => {
             }
         </div>
         <div className="p-4">
-        <SwiperCustom data={topicsData} inSliderNum={3}></SwiperCustom>
+        <SwiperCustom data={learningContentData} inSliderNum={3}></SwiperCustom>
         </div>
         <div className='text-center'>
             <button className='customButton btn '>
