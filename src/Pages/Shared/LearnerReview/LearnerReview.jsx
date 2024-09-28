@@ -19,14 +19,14 @@ const LearnerReview = () => {
         
    
     return (
-        <div className="learnerReview py-8 my-8 ">
+        <div className="learnerReview py-2 sm:py-8 my-8 max-sm:text-xs">
            
            <div className="sectionTitle text-center pb-8 text-[#5f92da]  ">
-                <h1 className="text-3xl bg-[#000324] font-roboto customAfter relative inline-block px-8  ">Learner Reviews</h1>
-                <h2 className="text-white">Take Confident From Here</h2>
+                <h1 className="md:text-3xl text-lg bg-[#000324] font-roboto customAfter relative inline-block lg:px-8 px-2 ">Learner Reviews</h1>
+                <h2 className="text-white md:text-lg text-sm">Take Confident From Here</h2>
             </div>
          
-            <div className="parent_grid gap-8 lg:gap-4 px-8 lg:px-4">
+            <div className="parent_grid gap-8 lg:gap-4 sm:px-4 px-2 ">
 
                 {
                     reviews.map((item, index) => <div className={`grid-item relative h-full w-full bg-[#121534] text-white rounded-md grid-items-${index +1}`} key={item.id}>

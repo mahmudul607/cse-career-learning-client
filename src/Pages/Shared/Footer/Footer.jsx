@@ -2,7 +2,7 @@
 import logo from "../../../assets/logo2.png"
 const Footer = () => {
     return (
-        <footer className="grid gap-4 p-10 grid-cols-1 sm:grid-cols-3 lg:grid-rows-1 sm:grid-rows-2 lg:grid-cols-4 text-white ">
+        <footer className="grid text-xs sm:text-sm md:text-md gap-4 lg:p-10 p-4 grid-cols-1 sm:grid-cols-3 lg:grid-rows-1 sm:grid-rows-2 lg:grid-cols-4 text-white ">
             <div className="col-span-1 sm:row-span-2">
             <aside className="w-48 ">
                 <img className="w-full h-full" src={logo} alt="logo" />
@@ -28,9 +28,9 @@ const Footer = () => {
                     <label className="">
                         <span className="">Enter your email address</span>
                     </label>
-                    <div className="join">
-                        <input type="text" placeholder="username@site.com" className="p-2 input-bordered join-item" />
-                        <button className="btn  join-item ">
+                    <div className="join overflow-hidden max-sm:flex-col max-sm:gap-2">
+                        <input type="text" placeholder="username@site.com" className="p-2  input-bordered join-item" />
+                        <button className="btn p-2 join-item ">
                             <span className="button_curve "></span>
                             Subscribe</button>
                     </div>

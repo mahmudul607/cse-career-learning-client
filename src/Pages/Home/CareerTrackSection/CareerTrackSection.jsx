@@ -5,6 +5,7 @@ import { FaCode, FaNetworkWired, FaTasks, FaPaintBrush } from 'react-icons/fa';
 import { useEffect, useState } from "react";
 import "./CareerTrackSection.css";
 import useCareerTrack from "../../../Hooks/useCareerTrack";
+import { Link } from "react-router-dom";
 
 
 
@@ -38,14 +39,13 @@ const occupationIcons = {
 
     if(careerTrack.length < 2){
         careerTracks = [careerTrack[0], ...trackData]
-    }else if(careerTrack.length > 4){
-        careerTracks = [careerTrack.slice(0, 3)];
-    }else{
-        careerTracks = [...careerTrack];
+    }
+    else{
+        careerTracks = careerTrack;
     }
   
 
-console.log(careerTracks)
+
    
     return (
         <div className="challenge p-8">
@@ -64,7 +64,7 @@ console.log(careerTracks)
                                         <TruncatedText text={item?.details || item?.description || "Details Coming Soon"} maxLength={150} />
                                     </p>
                                     <div className="card-actions ">
-                                        <button className="btn btn-primary">Start Journey</button>
+                                        <Link to={`career-track/${item?.id}`} className="btn btn-primary">Start Journey</Link>
                                     </div>
                                 </div>
                                 <div className="card-footer">

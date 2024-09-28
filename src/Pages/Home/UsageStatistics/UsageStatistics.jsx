@@ -22,7 +22,7 @@ const UsageStatistics = () => {
     return (
         <div className="p-4 pt-24 ">
             <div className="text-center ">
-                <h1 className="customAfter   relative inline-block text-[#5bbdf2] px-4 text-3xl">Facility Usage Statistics</h1>
+                <h1 className="customAfter   relative inline-block text-[#5bbdf2] lg:px-4 text-lx lg:text-3xl">Facility Usage Statistics</h1>
                 <p>{`Don't waste your time start your journey`}</p>
             </div>
             <div className="grid sm:grid-cols-3 grid-cols-1 p-4 pt-8 gap-2 ">

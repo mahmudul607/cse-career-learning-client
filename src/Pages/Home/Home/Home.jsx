@@ -1,15 +1,15 @@
 import "./Home.css"
 import Banner from "../Banner/Banner";
 import LearningTopics from "../LearningTopics/LearningTopics";
-import AboutUs from "../../Shared/AboutUs/AboutUs";
+import AboutUs from "../../AboutUs/AboutUs";
 import LearnerReview from "../../Shared/LearnerReview/LearnerReview";
 import ELearningSite from "../ELearningSite/ELearningSite";
 import SkillTest from "../SkillTest/SkillTest";
-import UsageStatistics from "../UsageStatistics/UsageStatistics";
-
-import OurMentors from "../OurMentors/OurMentors";
-import LatestContent from "../../LatestContent/LatestContent";
 import CareerTrackSection from "../CareerTrackSection/CareerTrackSection";
+import LatestContent from "../../../components/LatestContent/LatestContent";
+import UsageStatistics from "../UsageStatistics/UsageStatistics";
+import OurMentors from "../OurMentors/OurMentors";
+
 
 
 

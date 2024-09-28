@@ -24,17 +24,17 @@ const ELearningSite = () => {
             
 
             {
-                languages.map(lan => <div key={lan.id} className="indicator  h-full w-full flex"> 
+                languages?.map(lan => <div key={lan?.id} className="indicator  h-full w-full flex"> 
 
-                    <div className="text-[#f57005] text-xl indicator-item indicator-center badge  ">{lan.name}</div>
+                    <div className="text-[#f57005] text-xl indicator-item indicator-center badge   max-md:hidden">{lan?.name}</div>
                 
                 <div  className="lan_card w-full h-full   mask mask-circle p-2 relative place-items-center bg-[#f5710560]">
-                    <img className="w-full h-full p-2" src={lan.logo} />
+                    <img className="w-full h-full p-2" src={lan?.logo} />
 
                     <div className="live_link hidden absolute top-[38%]
   left-[33%]">
                         
-                    <span className="" title={lan.nama}><Link to={lan.website} target="_blank"  className="text-center flex justify-center place-items-center items-center text-[35px] sm:text-[40px] "  ><FaEye className="" />  </Link> </span>
+                    <span className="" title={lan?.nama}><Link to={lan?.website} target="_blank"  className="text-center flex justify-center place-items-center items-center text-[35px] sm:text-[40px] "  ><FaEye className="" />  </Link> </span>
 
                     </div>
 

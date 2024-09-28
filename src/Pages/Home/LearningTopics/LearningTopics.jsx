@@ -13,14 +13,13 @@ if(learningContents.length < 4){
     learningContentData = [...learningContents]
 }
 
-console.log(learningContentData);
     return (
         <>
         <div className='learnignTopics text-center py-8'>
             {
                 title && subTitle ? <>
-                <h6 className='text-bold text-[#4f5de4] text-2xl'>{title}</h6>
-            <h2 className='text-4xl text-bold text-white'>{subTitle}</h2> 
+                <h6 className='text-bold text-[#4f5de4] md:text-2xl text-lg'>{title}</h6>
+            <h2 className='md:text-4xl text-xl text-bold text-white'>{subTitle}</h2> 
                 
                 
                 </>: null
@@ -29,11 +28,11 @@ console.log(learningContentData);
         <div className="p-4">
         <SwiperCustom data={learningContentData} inSliderNum={3}></SwiperCustom>
         </div>
-        <div className='text-center'>
+        {/* <div className='text-center'>
             <button className='customButton btn '>
                 <span className='button_curve'></span>
                 Discover All Topics</button>
-        </div>
+        </div> */}
         </>
         
     );

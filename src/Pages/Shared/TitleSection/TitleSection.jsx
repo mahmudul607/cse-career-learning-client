@@ -1,7 +1,7 @@
 
 const TitleSection = ({header, color, subHeader}) => {
     return (
-         <div className="text-center max-w-72   mx-auto">
+         <div className="text-center sm:max-w-72 max-w-48  mx-auto">
             {
                 subHeader ? <p className="text-[#D99904] pb-2 "> {subHeader} </p>:null
             }

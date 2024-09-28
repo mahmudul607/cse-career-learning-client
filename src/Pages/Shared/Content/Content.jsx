@@ -16,8 +16,8 @@ const Content = ({content }) => {
                     <p className="py-6">
                         { content.content_details.description }
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
-                    <div className="footer pt-4 text-black">
+                 
+                    <div className="footer pt-4 ">
                     <p >By: {name}</p>
                 </div>
                 </div>

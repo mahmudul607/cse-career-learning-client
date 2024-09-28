@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { Link, useLocation } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import ImageWithFallback from "../Shared/ImageWithFallback/ImageWithFallback";
+import { Link, useLocation } from "react-router-dom";
+import ImageWithFallback from "../../Pages/Shared/ImageWithFallback/ImageWithFallback";
 
 
 const ToolsTechnology = () => {
@@ -23,7 +23,7 @@ const ToolsTechnology = () => {
     return (
         <div className="">
         <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
-               <div className="w-full min-h-66  relative">
+               <div className="w-full h-96  relative">
 
                       <ImageWithFallback
                      src={uniqueTools?.attachment}

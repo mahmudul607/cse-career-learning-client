@@ -1,33 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
   /* Custom Button style */
-
-
   .customButton {
     background-color: #f57005;
     color: black;
     position: relative;
     overflow: hidden;
-    z-index: 100;
+    z-index: 40;
 
 }
 .btn-outline{
- 
-  
   position: relative;
   overflow: hidden;
-  z-index: 100;
-
+  z-index: 40;
 }
 
 .btn:hover {
@@ -58,24 +52,14 @@
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
 }
-
-
-
-
 /* Custom after and before style */
   .customAfter::after{
     position: absolute;
     content: "~~";
-    
     height: 2px;
     bottom: 4px;
     left: 100%;
     top: 0;
-    
-   
-
-  
-
   }
   .customAfter::before{
   position: absolute;
@@ -84,9 +68,4 @@
   top: 4px;
   right: 100%;
   top: 0;
- 
-
- 
-
-
   }

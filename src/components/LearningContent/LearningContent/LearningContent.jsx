@@ -1,11 +1,11 @@
 import {  useState } from 'react';
 import { Modal } from 'react-bootstrap'; // Example using react-bootstrap for modal
-import Blog from '../Blog/Blog';
 import VideoContent from '../VideoContent/VideoContent';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
+import Blog from '../Blog/Blog';
 
 const LearningContent = () => {
     
@@ -37,15 +37,6 @@ const LearningContent = () => {
         })
         
 
-        
-
-    
-  
-    
-
-    
-   
-
 
 
     const handleGoBack = () => {
@@ -65,12 +56,6 @@ const LearningContent = () => {
         }
     };
     
-
-
-
-
-
-
 
 
     const [activeTab, setActiveTab] = useState('blog'); // State to track active tab
@@ -127,7 +112,7 @@ const LearningContent = () => {
                         <h1 className="text-xl text-[#f57005]">List of Content:</h1>
                         {
                             pathBlog.map(blog => (
-                                <Blog key={blog.id} blog={blog} className="blog-item">
+                                <Blog key={blog?.id} blog={blog} className="blog-item">
 
                                 </Blog>
                             ))}
@@ -135,9 +120,9 @@ const LearningContent = () => {
                 )}
 
                 {activeTab === 'video' && (
-                    <div className="video-content flex justify-between">
+                    <div className="video-content grid-cols-3 grid grid-gap-2">
                         {pathBlog.map(video => (
-                            <VideoContent key={video.id} video={video} className="video-item" onClick={() => handleVideoClick(video)}>
+                            <VideoContent key={video?.id} video={video} className="video-item" onClick={() => handleVideoClick(video)}>
 
                             </VideoContent>
                         ))}

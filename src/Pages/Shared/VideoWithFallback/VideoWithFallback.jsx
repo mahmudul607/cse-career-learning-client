@@ -25,7 +25,7 @@ const VideoWithFallback = ({ videoUrl, defaultUrl, className }) => {
     <iframe
       
       className ={className}
-      src={src}
+      src={`http://85.31.235.79:5000/${src}`}
       title="Video"
       
       allowFullScreen

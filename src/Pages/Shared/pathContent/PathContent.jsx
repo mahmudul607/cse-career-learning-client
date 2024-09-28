@@ -23,20 +23,17 @@ const PathContent = ({finalPath}) => {
         },
     })
     
-  
+  console.log(finalPath?.attachment)
     
     return (
         <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
-               <div className="w-full min-h-66  relative">
+               <div className="w-full h-96  relative">
               
-              {/* <img
-                    src=
-                    defaultSrc= ,
-                     /> */}
+              
 
                     <ImageWithFallback
-                     src={finalPath[0]?.attachment}
+                     src={finalPath?.attachment}
                      alt="Description"
                      defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
                      className="w-full h-full rounded-lg shadow-2xl"
@@ -44,7 +41,7 @@ const PathContent = ({finalPath}) => {
                     
                     ></ImageWithFallback>
               <div className="absolute top-12 left-6">
-                    <h1 className="text-3xl font-bold">{finalPath[0]?.name}</h1>
+                    <h1 className="text-3xl font-bold">{finalPath?.name}</h1>
                     </div>
 
                     <div className="text-left  pt-10 pl-6 top-0 h-full">
@@ -54,7 +51,7 @@ const PathContent = ({finalPath}) => {
                     <div className="absolute bottom-6">
                     
                     <button className="btn  btn-primary  p-4  mx-2" >Apply Now</button>
-                    <Link className="btn  btn-primary  p-4  " to={`/learningContents/${finalPath[0].id}}`}>See Contents</Link>
+                    <Link className="btn  btn-primary  p-4  " to={`/learningContents/${finalPath?.id}}`}>See Contents</Link>
                    
                     </div>
                     </div>

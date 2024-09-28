@@ -1,5 +1,5 @@
-.navbar .menu li a:focus, .navbar .menu li .active{
-  color: Green;
+.navbar .menu li a:focus, .navbar .menu li .active{ 
+  color: Green; 
 
 
 }
@@ -9,6 +9,8 @@
     background-color: white;
     list-style-type: none;
     padding: 5px;
+   
+ 
     
     
    
@@ -16,8 +18,11 @@
 
   .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu .underSubOne:hover .underSubmenuOne,  .navbar .has-submenu .submenu .underSubTwo:hover .underSubmenuTwo {
     display: block;
+    
 
   }
+
+  
 /* .navbar .has-submenu .underSubmenuOne, .navbar .has-submenu .underSubmenuTwo {
     display: none;
     position: absolute;
@@ -37,7 +42,7 @@
   /* Existing styles */
   .navbar {
     transition: top 0.5s ease-in-out;
-  top: -100px;
+  top: 0;
   }
 
 .sticky-top {
@@ -55,5 +60,7 @@
 
   
 }
-  
+
+
+
 

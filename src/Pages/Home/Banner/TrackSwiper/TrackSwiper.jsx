@@ -5,6 +5,7 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { useEffect, useRef, useState } from 'react';
 import ImageWithFallback from '../../../Shared/ImageWithFallback/ImageWithFallback';
+import { Link } from 'react-router-dom';
 
 const TrackSwiper = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
@@ -91,7 +92,7 @@ const TrackSwiper = ({ data, inSliderNum }) => {
                                   
                                 </div>
                                 <div className="card-actions justify-end card-footer">
-                                    <button className="btn btn-primary">Get More</button>
+                                    <Link to={`career-track/${item?.id}`} className="btn btn-primary">Get More</Link>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Content from "../Shared/Content/Content";
-import TitleSection from "../Shared/TitleSection/TitleSection";
+import Content from "../../Pages/Shared/Content/Content";
+import TitleSection from "../../Pages/Shared/TitleSection/TitleSection";
 
 
 const LatestContent = () => {

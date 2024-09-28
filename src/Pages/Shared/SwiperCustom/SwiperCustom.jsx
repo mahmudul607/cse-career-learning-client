@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import "./SwiperCustom.css"
 import { useEffect, useRef, useState } from 'react';
 import ImageWithFallback from '../ImageWithFallback/ImageWithFallback';
+import { Link } from 'react-router-dom';
 
 
 const SwiperCustom = ({ data, inSliderNum }) => {
@@ -17,7 +18,7 @@ const SwiperCustom = ({ data, inSliderNum }) => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
 
-    console.log(data)
+   
 
     useEffect(() => {
 
@@ -94,7 +95,7 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                                     
                                 </div>
                                 <div className="card-actions justify-end card-footer">
-                                    <button className="btn btn-primary">Get More</button>
+                                    <Link to={`/blogContent/${item?.id}`} className="btn btn-primary">Get More</Link>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 
-import PathContent from "../Shared/pathContent/PathContent";
+import PathContent from "../../Pages/Shared/pathContent/PathContent";
+import { useLocation } from "react-router-dom";
 
 
 const CareerPaths = () => {
@@ -9,13 +10,14 @@ const CareerPaths = () => {
     const [isLoading, setIsLoading] = useState(true);
     
     const [data , setData] =useState([]);
-
+    const location = useLocation();
+    const query = location.pathname.split("/")[2];
   
    
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://85.31.235.79:5000/api/v1/web/career-paths');
+                const response = await fetch(`http://85.31.235.79:5000/api/v1/web/career-paths/${query}`);
                 const data = await response.json();
                 setData(data.data);
                 
@@ -27,9 +29,9 @@ const CareerPaths = () => {
         };
 
         fetchData();
-    }, []);
+    }, [query]);
 
-    
+
     
 
     if (isLoading) {

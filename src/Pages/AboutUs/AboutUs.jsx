@@ -3,20 +3,20 @@ import './AboutUs.css'
 
 const AboutUs = () => {
     return (
-        <div className="aboutUs py-8 ">
+        <div className="aboutUs py-8 max-sm:px-4 max-sm:text-xs">
             <div className="lg:flex  ">
-                <div className="flex flex-item lg:w-1/2 lg:h-[500px]  h-[400px] items-center   relative">
-                    <div className="members mx-auto  w-[300px] h-[300px] rounded-full">
+                <div className="flex flex-item lg:w-1/2 lg:h-[500px]  md:h-[400px] h-[300px] items-center   relative">
+                    <div className="members mx-auto w-[150px]  md:w-[300px] md:h-[300px] h-[150px] rounded-full">
 
                     </div>
                     <div className="indicator absolute top-[75%] left-[30%]">
                         <span className="indicator-item h-20 w-20 indicator-start badge badge-secondary text-4xl"><FaPhone></FaPhone></span>
-                        <div className="grid w-48 h-20 rounded-tr-full rounded-bl-full text-black bg-green-600 place-items-center content">
-                            <h2>02154645778</h2>
+                        <div className="grid sm:w-48 sm:h-20 w-36 h-12 rounded-tr-full rounded-bl-full text-black bg-green-600 place-items-center content">
+                            <h2 className='pl-6 pt-4'>01797692607</h2>
                         </div>
                     </div>
                 </div>
-                <div className="flex-item font-Roboto p-8">
+                <div className="flex-item font-Roboto sm:p-8 p-2">
                     <h1 className='text-4xl text-[#ff52d9]'>About Us</h1>
                     <h1 className='text-white'>Create Life long Learning</h1>
                     <p className='text-white'>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks</p>

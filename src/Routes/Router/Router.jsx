@@ -3,19 +3,20 @@ import {
     createBrowserRouter,
    
   } from "react-router-dom";
-
 import Main from "../../Layout/Main/Main";
 import Home from "../../Pages/Home/Home/Home";
 import Register from "../../Pages/Register/Register";
 import Login from "../../Pages/Login/Login";
 import ContactUs from "../../Pages/ContactUs/ContactUs";
-import AboutUs from "../../Pages/Shared/AboutUs/AboutUs";
+import AboutUs from "../../Pages/AboutUs/AboutUs";
 import TracksContainer from "../../Pages/Tracks/TracksContainer/TracksContainer";
-import CareerPaths from "../../Pages/CareerPaths/CareerPaths";
-import LearningContent from "../../Pages/LearningContent/LearningContent/LearningContent";
+import CareerPaths from "../../components/CareerPaths/CareerPaths";
+import ToolsTechnology from "../../components/ToolsTechnology/ToolsTechnology";
+import LearningContent from "../../components/LearningContent/LearningContent/LearningContent";
 import BlogContentV from "../../Pages/Shared/BlogContentV/BlogContentV";
-import CertificateVerification from "../../Pages/CertificateVerification/CertificateVerification";
-import ToolsTechnology from "../../Pages/ToolsTechnology/ToolsTechnology";
+import CertificateVerification from "../../components/CertificateVerification/CertificateVerification";
+
+
 
 
 
