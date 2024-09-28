@@ -23,17 +23,7 @@
   }
 
   
-/* .navbar .has-submenu .underSubmenuOne, .navbar .has-submenu .underSubmenuTwo {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 80%;
-    background-color: white;
-    list-style-type: none;
-    padding: 10px;
-    
 
-  } */
   .navbar .has-submenu .submenu .underSubOne:hover,  .navbar .has-submenu .submenu .underSubTwo:hover  {
     background-color: lightgray ;
   }

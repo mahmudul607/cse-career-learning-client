@@ -14,7 +14,7 @@ const TrackContent = ({ finalTrack}) => {
     const query2 = location.pathname.split("/")[2];
 
     const { data: careerPaths =[]} = useQuery({
-        queryKey:['careerPaths'],
+        queryKey:['careerPaths', query2],
         queryFn: async () =>{
             const res = await axiosPublic.get(`/api/v1/web/career-paths?careerTrackId=${query2}`);
             return res.data.data;
@@ -41,8 +41,8 @@ console.log(careerPaths)
                 </div>
                 <div className="text-left">
                     <h1 className="text-3xl font-bold">{finalTrack?.name}</h1>
-                    <p className="py-6">
-                        {finalTrack?.description}
+                    <p className="py-6" dangerouslySetInnerHTML={{__html:finalTrack?.description.replace(/\n/g, '<br/>')}}>
+                    
                     </p>
                     <button className="btn btn-primary">Apply Now</button>
                     <div className="footer pt-4 text-black">

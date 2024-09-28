@@ -16,14 +16,14 @@ const PathContent = ({finalPath}) => {
     const query2 = location.pathname.split("/")[2];
 
     const { data: toolsAndTechnology =[]} = useQuery({
-        queryKey:['toolsAndTechnology'],
+        queryKey:['toolsAndTechnology', query2],
         queryFn: async () =>{
             const res = await axiosPublic.get(`/api/v1/web/tools-technologies?careerPathId=${query2}`);
             return res.data.data;
         },
     })
     
-  console.log(finalPath?.attachment)
+
     
     return (
         <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
@@ -66,9 +66,9 @@ const PathContent = ({finalPath}) => {
                 
                </div>
                <div>
-               <h1 className="text-3xl font-bold">{finalPath[0]?.name}</h1>
-                    <p className="py-6">
-                        {finalPath[0]?.description}
+               <h1 className="text-3xl font-bold" >{finalPath?.name}</h1>
+                    <p className="py-6" dangerouslySetInnerHTML={{__html:finalPath?.description.replace(/\n/g, '<br/>')}}>
+                        
                     </p>
                     </div>
                 
@@ -80,7 +80,7 @@ const PathContent = ({finalPath}) => {
             </div>
                 
             </div>
-            <div className="w-1/5 fixed right-14 z-10 top-24">
+            <div className="w-1/5  z-10 left-8 relative">
                         <ul className="flex flex-col gap-2   py-6">
                            <span className="text-[#f57106]">Tools And Technology:</span>
                            { toolsAndTechnology ? toolsAndTechnology.map((item, i) => <Link key={i}   to={`/tools-technologies/${item.id}`} className="bg-gray-700 px-4 py-2 hover:text-white customButton  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">

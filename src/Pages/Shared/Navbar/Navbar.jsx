@@ -62,7 +62,7 @@ const {data: tracksData=[]} = useQuery({
     <li><Link to={'/'}>Home</Link></li>
     <li className="has-submenu" >
       <Link to="">Career Tracks</Link>
-      <ul className="submenu   lg:left-0 left-3/4  top-0 lg:top-full text-black z-[100]">
+      <ul className="submenu md:w-[200px]  lg:left-0 left-3/4  top-0 lg:top-full text-black z-[100]">
         
         {
           tracksData?.map(item =><li key={item.id} className="underSubOne "><Link to={`career-track/${item.id}`}>{item.name}</Link>

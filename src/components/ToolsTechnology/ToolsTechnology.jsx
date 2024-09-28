@@ -11,7 +11,7 @@ const ToolsTechnology = () => {
     const query2 = location.pathname.split("/")[2];
 
     const { data: uniqueTools =[]} = useQuery({
-        queryKey:['uniqueTools'],
+        queryKey:['uniqueTools', query2],
         queryFn: async () =>{
             const res = await axiosPublic.get(`/api/v1/web/tools-technologies/${query2}`);
             return res.data.data;
