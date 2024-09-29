@@ -27,7 +27,7 @@ const BlogContentV = () => {
     };
 
     const {data: blogContent=[]} = useQuery({
-        queryKey: ['blogContent'],
+        queryKey: ['blogContent', queryBlog],
         queryFn: async () =>{
             const res = await axiosPublic.get(`/api/v1/web/learning-contents?id=${queryBlog}`)
             return res.data.data[0];
@@ -41,11 +41,9 @@ const BlogContentV = () => {
         <div className="max-w-screen-lx  mx-auto rounded bg-transparent bg-[#1e203e] text-white ">
 
             <div className="w-full h-96 relative ">
-                {/* <img
-                    src={blogContent.imgUrl || "https://i.ibb.co/8bcN8wM/We-Need-Design-Patterns-in-the-Enterprise-Cloud-Era.jpg"}
-                    className="w-full h-full rounded-lg shadow-2xl" /> */}
+                
                  <ImageWithFallback
-                     src={blogContent.attachment}
+                     src={blogContent?.attachment}
                      alt="Description"
                      defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
                      className="w-full h-full rounded-lg shadow-2xl"
@@ -59,13 +57,16 @@ const BlogContentV = () => {
             </div>
             <div className="text-left py-4">
                 <h1 className="text-3xl font-bold py-4 text-[#f57005]">{blogContent?.title}</h1>
-                <p> {blogContent?.description}</p>
-                <p>{blogContent?.short_description
-                }</p>
+                <p dangerouslySetInnerHTML={{__html:(blogContent?.description || "").replace(/\n/g, '<br/>')}}> 
+                
+                </p>
+                <p dangerouslySetInnerHTML={{__html:(blogContent?.short_description || "").replace(/\n/g, '<br/>')}}>
+                
+                </p>
                 {/* <p className="text-sm py-4">By: {blogContent?.author}</p> */}
                 
                 <div className="footer pt-4 text-black">
-                 <button className="btn btn-primary p-4">Apply Now</button>
+              
                 </div>
             </div>
 

@@ -66,12 +66,12 @@ const TrackSwiper = ({ data, inSliderNum }) => {
                 key={data.map(item => item?.id).join('-')} 
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item?.name}>
+                    data?.map((item, index) =>  <SwiperSlide key={index}>
                         <div className="card h-[300px] bg-base-100 shadow-xl image-full">
                             <figure>
                                 
                                 <ImageWithFallback
-                                    src={item?.imgUrl || item?.attachment}
+                                    src={item?.attachment}
                                     alt="image"
                                     defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
                                     className="w-full h-full"
@@ -100,7 +100,7 @@ const TrackSwiper = ({ data, inSliderNum }) => {
                        
 
 
-                    </>) : null
+                    ) : null
                 }
                  <div className="autoplay-progress" slot="container-end">
                             <svg viewBox="0 0 48 48" ref={progressCircle}>

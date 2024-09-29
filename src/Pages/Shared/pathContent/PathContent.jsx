@@ -66,8 +66,8 @@ const PathContent = ({finalPath}) => {
                 
                </div>
                <div>
-               <h1 className="text-3xl font-bold" >{finalPath?.name}</h1>
-                    <p className="py-6" dangerouslySetInnerHTML={{__html:finalPath?.description.replace(/\n/g, '<br/>')}}>
+               <h1 className="text-3xl font-bold text-[#f58a35]" >{finalPath?.name}</h1>
+                    <p className="py-6" dangerouslySetInnerHTML={{__html:(finalPath?.description || "").replace(/\n/g, '<br/>')}}>
                         
                     </p>
                     </div>

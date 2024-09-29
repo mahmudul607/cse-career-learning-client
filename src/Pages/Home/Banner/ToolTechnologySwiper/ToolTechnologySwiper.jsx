@@ -5,8 +5,9 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import { useEffect, useRef, useState } from 'react';
-import ImageWithFallback from '../../../Shared/ImageWithFallback/ImageWithFallback';
+
 import { Link } from 'react-router-dom';
+import ImageWithFallback from '../../../Shared/ImageWithFallback/ImageWithFallback';
 
 const ToolTechnologySwiper = ({ data, inSliderNum }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
@@ -16,7 +17,6 @@ const ToolTechnologySwiper = ({ data, inSliderNum }) => {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
-
 
 
     useEffect(() => {
@@ -62,13 +62,13 @@ const ToolTechnologySwiper = ({ data, inSliderNum }) => {
                 className="mySwiper h-full"
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item?.id}>
+                    data?.map(item =>  <SwiperSlide key={item?.id}>
                         <div className="card h-[300px] bg-base-100 shadow-xl image-full">
                             <figure>
                                 {/* <img src={ item} className='w-full h-full' alt="img" /> */}
 
                                 <ImageWithFallback
-                                    src={ item?.attachment}
+                                    src={item?.imgUrl || item?.attachment}
                                     alt="image"
                                     defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
                                     className="w-full h-full"
@@ -102,7 +102,7 @@ const ToolTechnologySwiper = ({ data, inSliderNum }) => {
 
 
 
-                    </>) : null
+                    ) : null
                 }
                 <div className="autoplay-progress" slot="container-end">
                     <svg viewBox="0 0 48 48" ref={progressCircle}>

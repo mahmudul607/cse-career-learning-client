@@ -65,7 +65,7 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                 
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item?.id} className='h-full'>
+                    data?.map((item, index) =>  <SwiperSlide key={index} className='h-full'>
                         <div className="card h-[300px]  bg-base-100 shadow-xl image-full">
                             <figure>
                                 {/* <img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /> */}
@@ -103,7 +103,7 @@ const SwiperCustom = ({ data, inSliderNum }) => {
                        
 
 
-                    </>) : null
+                    ) : null
                 }
                  <div className="autoplay-progress" slot="container-end">
                             <svg viewBox="0 0 48 48" ref={progressCircle}>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const ImageWithFallback = ({ src, alt, defaultSrc, className , baseUrl='http://85.31.235.79:5000/' }) => {
   const [imageSrc, setImageSrc] = useState(`${baseUrl}${src}`);
 
-  console.log(imageSrc)
+
 
   useEffect(() => {
     const fullSrc = `${baseUrl}${src}`

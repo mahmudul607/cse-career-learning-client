@@ -18,7 +18,7 @@ const LatestContent = () => {
 
             <div className="py-6 grid md:grid-cols-2 grid-cols-1  gap-2">
             {
-                content.map(item => <Content key={item.id} content={item}></Content>)
+                content?.map((item, index) => <Content key={index} content={item}></Content>)
             }
         </div>
         </div>

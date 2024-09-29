@@ -92,7 +92,7 @@ else{
                           <div className="text-center border border-base-content cursor-pointer   card1 w-full h-full  bg-base-100">
                                 <div className=" absolute h-full w-full top-0 p-6 overflow-hidden ">
                                   
-                                    <TopicsSwiper data={learningContents} className="w-full h-full mb-6" inSliderNum={1} ></TopicsSwiper>
+                                    <TopicsSwiper data={learningContents}  className="w-full h-full mb-6" inSliderNum={1} ></TopicsSwiper>
                                 </div>
                             </div>
                             <div className="text-center border border-base-content cursor-pointer   card2 h-full w-full  bg-red-600">

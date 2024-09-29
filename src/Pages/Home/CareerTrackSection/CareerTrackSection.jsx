@@ -24,6 +24,8 @@ const occupationIcons = {
     FaPaintBrush: <FaPaintBrush />
 };
 
+const iconName = [FaCode, FaNetworkWired, FaTasks, FaPaintBrush];
+
    
 
     useEffect(() => {
@@ -45,7 +47,6 @@ const occupationIcons = {
     }
   
 
-
    
     return (
         <div className="challenge p-8">
@@ -54,15 +55,17 @@ const occupationIcons = {
                     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-4 gap-2">
 
                         {
-                            careerTracks.map(item => <div key={item?.id} className="col-span-1 card-items">
+                            careerTracks.map((item, index) => <div key={index} className="col-span-1 card-items">
                             <div className="card overflow-hidden  bg-[#121534] shadow-xl">
 
                                 <div className="card-body">
-                                    <span className="text-4xl icon-bg mask mask-hexagon  p-4 bg-[#f57106] h-20 w-20   flex justify-center items-center"><span className="icons ">{occupationIcons[item?.icon] || occupationIcons['FaCode']}</span> </span>
+                                    <span className="text-4xl icon-bg mask mask-hexagon  p-4 bg-[#f57106] h-20 w-20   flex justify-center items-center"><span className="icons ">{occupationIcons[`${iconName[index]}`] || occupationIcons['FaCode']}</span> </span>
+                                    <div>
                                     <h2 className="card-title text-secondary">{item?.name}</h2>
                                     <p>
                                         <TruncatedText text={item?.details || item?.description || "Details Coming Soon"} maxLength={150} />
                                     </p>
+                                    </div>
                                     <div className="card-actions ">
                                         <Link to={`career-track/${item?.id}`} className="btn btn-primary">Start Journey</Link>
                                     </div>

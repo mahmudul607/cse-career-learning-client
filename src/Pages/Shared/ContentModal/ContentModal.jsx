@@ -11,7 +11,6 @@ const ContentModal = ({videoUrl}) => {
             
 
             <div className=" h-full w-full  ">
-              {/* <iframe className="w-full h-full" src={videoUrl || "https://www.youtube.com/embed/siACuIcNikE"} title="YouTube video" ></iframe> */}
 
               <VideoWithFallback
               className ="w-full h-full"

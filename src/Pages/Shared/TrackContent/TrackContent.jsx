@@ -27,9 +27,7 @@ console.log(careerPaths)
         <div className="max-w-screen-lx mx-auto md:flex flex flex-col-reverse rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-4 md:w-3/4 w-full sm:p-6 p-2">
                 <div className="w-full h-72 ">
-                    {/* <img
-                        src={finalTrack?.imageUrl? finalTrack.imageUrl:"https://i.ibb.co/5KKsgJg/images.png"}
-                        className="w-full h-full rounded-lg shadow-2xl" /> */}
+                   
                     <ImageWithFallback
                      src={finalTrack?.attachment}
                      alt="Description"
@@ -41,7 +39,7 @@ console.log(careerPaths)
                 </div>
                 <div className="text-left">
                     <h1 className="text-3xl font-bold">{finalTrack?.name}</h1>
-                    <p className="py-6" dangerouslySetInnerHTML={{__html:finalTrack?.description.replace(/\n/g, '<br/>')}}>
+                    <p className="py-6" dangerouslySetInnerHTML={{__html:(finalTrack?.description || "").replace(/\n/g, '<br/>')}}>
                     
                     </p>
                     <button className="btn btn-primary">Apply Now</button>

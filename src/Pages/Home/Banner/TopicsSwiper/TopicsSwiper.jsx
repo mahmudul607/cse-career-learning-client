@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import ImageWithFallback from '../../../Shared/ImageWithFallback/ImageWithFallback';
 import { Link } from 'react-router-dom';
 
-const TopicsSwiper = ({ data, inSliderNum }) => {
+const TopicsSwiper = ({ data, inSliderNum  }) => {
     const [slidePerview, setSlidePerview] = useState(inSliderNum);
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -43,7 +43,7 @@ const TopicsSwiper = ({ data, inSliderNum }) => {
 
 
     return (
-        <>
+    
             <Swiper
                 slidesPerView={slidePerview}
                 spaceBetween={30}
@@ -59,15 +59,15 @@ const TopicsSwiper = ({ data, inSliderNum }) => {
 
                 modules={[Pagination, Autoplay]}
                 className="mySwiper h-full"
-                key={data.id}
+              
             >
                 {data ?
-                    data?.map(item => <> <SwiperSlide key={item?.id} className='h-full'>
+                    data?.map(item  => <SwiperSlide key={item.id} className='h-full'>
                         <div className="card   bg-base-100 shadow-xl image-full">
                             <figure>
                                 {/* <img src={item.imgUrl || item.logo} className='w-full h-full' alt="img" /> */}
                                 <ImageWithFallback
-                                    src={item?.imgUrl}
+                                    src={item?.attachment}
                                     alt="image"
                                     defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
                                     className="w-full h-full"
@@ -102,7 +102,7 @@ const TopicsSwiper = ({ data, inSliderNum }) => {
                        
 
 
-                    </>) : null
+                    ) : null
                 }
                  <div className="autoplay-progress" slot="container-end">
                             <svg viewBox="0 0 48 48" ref={progressCircle}>
@@ -113,8 +113,8 @@ const TopicsSwiper = ({ data, inSliderNum }) => {
 
             </Swiper>
 
-
-        </>
+       
+       
     );
 };
 
