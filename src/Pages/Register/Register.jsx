@@ -1,5 +1,5 @@
 import { Link} from "react-router-dom";
-import loginImg from '../../assets/logo1.png'
+import loginImg from '../../assets/cse_logo.png'
 import {  useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
@@ -132,8 +132,11 @@ const Register = () => {
             <div className="hero  min-h-screen xxs:block pt-4   bg-transparent">
                 <div className="hero-content pb-16 flex-col-reverse md:flex-row-reverse border-box box-content  shadow-2xl   md:mx-24 md:px-8 mx-2 px-2 ">
                     <div className="text-center md:w-2/5 md:text-left hidden md:block">
-
-                        <img src={loginImg} alt="image" />
+                    <span className="text-center h-full sm:w-24 w-48 relative" >
+                        <img className=" pb-0 " src={loginImg} alt="logo" />
+                        <p className="text-white text-2xl font-extrabold relative -right-24 bottom-2">Career</p>
+                    </span>
+                        
                     </div>
                     <div className="card w-full md:pt-4  md:w-3/5  shadow-2xl  pb-24 ">
                         <div className="text-center pt-2">

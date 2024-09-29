@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from "../../../assets/logo2.png"
+import logo from "../../../assets/cse_logo.png"
 import "./Navbar.css"
 import { useEffect, useState } from "react";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
@@ -91,7 +91,10 @@ const {data: tracksData=[]} = useQuery({
             }
           </ul>
         </div>
-        <img className="h-full sm:w-24 w-12" src={logo} alt="logo" />
+        <Link className="text-center h-full sm:w-24 w-48 relative" to={'/'}>
+        <img className=" pb-0 " src={logo} alt="logo" />
+        <p className=" text-xl font-extrabold absolute -right-20 top-1">Career</p>
+        </Link>
       </div>
       <div className="navbar-center hidden  lg:w-2/4  lg:flex">
         <ul  className="menu menu-horizontal px-1" >

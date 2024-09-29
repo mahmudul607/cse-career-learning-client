@@ -5,7 +5,7 @@ import SelectCategory from "./SelectCategory";
 import Other from "./Other";
 import Swal from "sweetalert2";
 import Comple from "./Comple";
-import logo from "../../assets/logo1.png"
+import logo from "../../assets/cse_logo.png"
 
 const ContactUs = () => {
   const [page, setPage] = useState(0)
