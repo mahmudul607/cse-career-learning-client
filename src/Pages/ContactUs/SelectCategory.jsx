@@ -12,7 +12,7 @@ const SelectCategory = ({ formData, setFormData }) => {
                         Your Identity
                     </label>
                     <select
-                        className="select w-full max-w-xs"
+                        className="select w-full max-w-xs text-black"
                         name='category'
                         id='category'
                         value={formData.category}
@@ -29,7 +29,7 @@ const SelectCategory = ({ formData, setFormData }) => {
 
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 text-black">
                     <label htmlFor="message" className="block text-sm font-semibold text-gray-600 mb-1">
                         Your Message
                     </label>

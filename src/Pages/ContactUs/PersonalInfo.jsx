@@ -15,7 +15,7 @@ const PersonalInfo = ({formData, setFormData}) => {
            
             value={formData.name}
             onChange={(event) => setFormData({...formData, name: event.target.value})}
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded text-black"
             required
           />
         </div>
@@ -32,7 +32,7 @@ const PersonalInfo = ({formData, setFormData}) => {
             value={formData.email}
             onChange={(event) => setFormData({...formData, email: event.target.value})}
            
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded text-black"
             required
           />
         </div>

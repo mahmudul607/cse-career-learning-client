@@ -5,7 +5,7 @@ const Other = ({formData, setFormData}) => {
     return (
         <div>
             <form  className="max-w-md">
-        <div className="mb-4">
+        <div className="mb-4 text-black">
           <label htmlFor="comment" className="block text-sm font-semibold text-gray-600 mb-1">
             Your Comment
           </label>
@@ -21,7 +21,7 @@ const Other = ({formData, setFormData}) => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 text-black">
           <label htmlFor="ratings" className="block text-sm font-semibold text-gray-600 mb-1">
             Your Ratings
           </label>

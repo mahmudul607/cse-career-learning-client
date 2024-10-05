@@ -6,11 +6,11 @@ import ImageWithFallback from "../../../Pages/Shared/ImageWithFallback/ImageWith
 
 const VideoContent = ({video}) => {
 
-  
+ 
     return (
-        <div className="border h-full m-2 rounded-lg text-white" onClick={()=>document.getElementById('my_modal_5').showModal()}>
-            <div className="p-2 mb-2">
-               <div className="h-full  w-full mb-4">
+        <div className="border h-[300px] m-2 rounded-lg text-white" onClick={()=>document.getElementById('my_modal_5').showModal()}>
+            <div className="p-2 mb-2 h-full">
+               <div className="h-4/5  w-full mb-4">
 
                <ImageWithFallback
                      src={video.attachment}
@@ -21,9 +21,11 @@ const VideoContent = ({video}) => {
                     
                     ></ImageWithFallback>
                </div>
+            <div className="h-1/5">
             <h2 className="text-[#f57005]">{video?.title}</h2>
-            <p>{video?.short_description
-            }</p>
+           
+            
+            </div>
             </div>
 
             <ContentModal videoUrl={video?.video_url}></ContentModal>

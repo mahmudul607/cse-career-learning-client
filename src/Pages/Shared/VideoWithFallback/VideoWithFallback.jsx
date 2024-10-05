@@ -5,12 +5,14 @@ const VideoWithFallback = ({ videoUrl, defaultUrl, className }) => {
 
   useEffect(() => {
     // Check if the video URL is accessible by creating an <iframe> element
+    
     const iframe = document.createElement('iframe');
     iframe.src = videoUrl;
 
     // This will trigger if the iframe fails to load
     iframe.onload = () => {
       setSrc(videoUrl);
+      console.log(videoUrl)
     };
 
     iframe.onerror = () => {
@@ -19,13 +21,13 @@ const VideoWithFallback = ({ videoUrl, defaultUrl, className }) => {
 
     // Fallback after setting
     setSrc(videoUrl || defaultUrl);
-  }, [videoUrl, defaultUrl]);
+  }, [videoUrl, defaultUrl,  className]);
 
   return (
     <iframe
       
       className ={className}
-      src={`http://85.31.235.79:5000/${src}`}
+      src={src}
       title="Video"
       
       allowFullScreen

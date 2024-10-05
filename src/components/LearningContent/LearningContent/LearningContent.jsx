@@ -106,7 +106,7 @@ const LearningContent = () => {
             </div>
 
             {/* Content Display */}
-            <div className="content">
+            <div className="content min-h-screen">
                 {activeTab === 'blog' && (
                     <ul className="blog-content py-2 text-white">
                         <h1 className="text-xl text-[#f57005]">List of Content:</h1>
@@ -120,7 +120,7 @@ const LearningContent = () => {
                 )}
 
                 {activeTab === 'video' && (
-                    <div className="video-content grid-cols-3 grid grid-gap-2">
+                    <div className="video-content grid-cols-3 grid grid-gap-2  ">
                         {pathBlog.map(video => (
                             <VideoContent key={video?.id} video={video} className="video-item" onClick={() => handleVideoClick(video)}>
 

@@ -27,13 +27,13 @@ const Login = () => {
                     </div>
                     <div className="card w-full md:pt-4  md:w-3/5  shadow-2xl  pb-24 ">
                         <div className="text-center pt-2">
-                            <h1 className="sm:text-4xl  text-xl font-bold">Login Here</h1>
+                            <h1 className="sm:text-4xl  text-xl font-bold text-white">Login Here</h1>
                         </div>
                         <form className="card-body  py-0" onSubmit={handleSubmit()}>
                            
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-white">Email</span>
                                 </label>
                                 <input type="email" placeholder="email" name="email" {...register("email", { required: true })} className="input input-bordered" />
                                 {errors.email?.type === "required" && (
@@ -42,7 +42,7 @@ const Login = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-white">Password</span>
                                 </label>
                                 <div className="relative">
                                     <input  type={show ? 'text' : 'password'} placeholder="password" name="password" {...register("password", {
@@ -71,7 +71,7 @@ const Login = () => {
 
                                 <input type="submit" className="btn btn-primary" value="Login" />
                             </div>
-                            <div>
+                            <div className="text-white">
                                 <p>If You New Here? <Link to={'/register'} className="text-green-600 font-semibold">Please Sign Up</Link></p>
                                     
                             </div>
