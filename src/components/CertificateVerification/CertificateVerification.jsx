@@ -20,7 +20,7 @@ const CertificateVerification = () => {
         }
     })
 
-    console.log(info)
+   
 
  
   
@@ -34,7 +34,7 @@ const CertificateVerification = () => {
         <div className="h-screen text-white mx-auto text-center pt-32">
             <h1 className="text-3xl text-green-600 pb-12">Verification Successful</h1>
             <h1 className="text-xl">This Certificate goes to: <span className="text-xl font-semibold text-[#f58a35]">{info.name}</span> </h1>
-            <p>Verified By: CSE Career Learning</p>
+            <p>Verified By: CSE Career</p>
           
             
         </div>

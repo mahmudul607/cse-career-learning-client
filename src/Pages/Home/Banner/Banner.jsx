@@ -8,6 +8,7 @@ import TopicsSwiper from "./TopicsSwiper/TopicsSwiper";
 import useCareerTrack from "../../../Hooks/useCareerTrack";
 import useTechnology from "../../../Hooks/useTechnology";
 import useLearningContent from "../../../Hooks/useLearningContent";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
 
@@ -82,10 +83,10 @@ const Banner = () => {
               </div>
             </div>
             <div className="p-12 h-[100px]">
-              <button className="btn btn-secondary">Start Your Journey <span>
+              <Link to={'http://admin.csecareer.com'} className="btn btn-secondary">Start Your Journey <span>
 
                 <FaLongArrowAltRight></FaLongArrowAltRight>
-              </span></button>
+              </span></Link>
             </div>
           </div>
           {/* stack images */}

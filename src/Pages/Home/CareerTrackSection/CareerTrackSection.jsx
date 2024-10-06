@@ -67,7 +67,7 @@ const iconName = [FaCode, FaNetworkWired, FaTasks, FaPaintBrush];
                                     </p>
                                     </div>
                                     <div className="card-actions ">
-                                        <Link to={`career-track/${item?.id}`} className="btn btn-primary">Start Journey</Link>
+                                        <Link to={`career-track/${item?.id}`} className="btn btn-primary">Get Details</Link>
                                     </div>
                                 </div>
                                 <div className="card-footer">
