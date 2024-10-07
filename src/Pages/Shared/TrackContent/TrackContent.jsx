@@ -21,18 +21,18 @@ const TrackContent = ({ finalTrack}) => {
         },
     })
 
-console.log(careerPaths)
+
 
     return (
         <div className="max-w-screen-lx mx-auto flex flex-col-reverse md:flex-row rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-4 md:w-3/4 w-full sm:p-6 p-2">
-                <div className="w-full h-72 ">
+                <div className="w-full  ">
                    
                     <ImageWithFallback
                      src={finalTrack?.attachment}
                      alt="Description"
                      defaultSrc="https://i.ibb.co/5KKsgJg/images.png"
-                     className="w-full  h-full rounded-lg shadow-2xl"
+                     className="w-full  max-h-96 rounded-lg shadow-2xl"
                     
                     
                     ></ImageWithFallback>

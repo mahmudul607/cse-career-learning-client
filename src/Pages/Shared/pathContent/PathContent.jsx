@@ -28,7 +28,7 @@ const PathContent = ({finalPath}) => {
     return (
         <div className="max-w-screen-lx mx-auto flex flex-col-reverse md:flex-row rounded bg-transparent bg-[#1e203e] text-white ">
             <div className="flex flex-col gap-4 md:w-3/4 w-full sm:p-6 p-2">
-               <div className="w-full h-96  relative">
+               <div className="w-full   relative">
               
               
 
@@ -36,12 +36,12 @@ const PathContent = ({finalPath}) => {
                      src={finalPath?.attachment}
                      alt="Description"
                      defaultSrc="https://i.ibb.co/7G2THnw/20553832.jpg"
-                     className="w-full h-full rounded-lg shadow-2xl"
+                     className="w-full max-h-96 rounded-lg shadow-2xl"
                     
                     
                     ></ImageWithFallback>
               <div className="absolute top-12 left-6">
-                    <h1 className="text-3xl font-bold">{finalPath?.name}</h1>
+                    <h1 className="md:text-3xl sm:text-sm font-bold">{finalPath?.name}</h1>
                     </div>
 
                     <div className="text-left  pt-10 pl-6 top-0 h-full">
@@ -50,8 +50,8 @@ const PathContent = ({finalPath}) => {
                     
                     <div className="absolute sm:bottom-6 sm:flex-none flex sm:flex-row  flex-col gap-2  bottom-0">
                     
-                    <Link to={'/register'} className="btn md:btn btn-sm  btn-primary  p-4  mx-2" ><span className="text-white">Apply Now</span></Link>
-                    <Link className="btn  btn-primary  p-4  " to={`/learningContents/${finalPath?.id}}`}><span className="text-white">See Contents</span></Link>
+                    <Link to={'/register'} className="btn md:btn btn-sm  btn-primary  md:p-4  mx-2" ><span className="text-white">Apply Now</span></Link>
+                    <Link className="btn md:btn  btn-primary btn-sm  md:p-4  " to={`/learningContents/${finalPath?.id}}`}><span className="text-white">See Contents</span></Link>
                    
                     </div>
                     </div>
