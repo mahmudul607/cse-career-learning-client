@@ -70,15 +70,16 @@ import Login from "../../Pages/Login/Login";
         {
           path:"/blogContent/:id",
           element: <BlogContentV></BlogContentV>
+        },
+        {
+          path:"/get-certificate-info/:id",
+          element: <CertificateVerification></CertificateVerification>
         }
         
       
       ]
-    },
-    {
-      path:"/get-certificate-info/:id",
-      element: <CertificateVerification></CertificateVerification>
-    },
+    }
+    
   ]);
 
 

@@ -10,7 +10,7 @@ const Footer = () => {
                         <Link to={'/'}><img className=" pb-0 w-full" src={logo} alt="logo" />
                         <p className=" text-xs md:text-xl font-extrabold absolute md:left-44 md:bottom-4 left-12 bottom-3">Career</p></Link>
                     </div>
-                    <p>CSE Career Learning<br />Providing reliable tech since 2020</p>
+                    <p>CSE Career Learning<br />Providing reliable tech since 2024</p>
                 </aside>
             </div>
             <div className=" col-span-1 sm:row-span-1 flex flex-col">

@@ -71,7 +71,7 @@ const {data: tracksData=[]} = useQuery({
         }
       </ul>
     </li>
-    
+    <li><Link to={'/contactUs'}>Contact Us</Link></li>
     <li><Link to={'/about'}>About Us</Link></li>
     
 
@@ -115,7 +115,7 @@ const {data: tracksData=[]} = useQuery({
 
         <button className="btn-sm sm:btn-md btn customButton sm:block hidden ">
           <span className="button_curve"></span>
-         <Link to={'/contactUs'}>Contact Us</Link></button>
+         <Link to={'/register'}>Sign Up</Link></button>
         <Link className="btn-sm sm:btn-md btn btn-primary mr-2" to={"http://admin.csecareer.com/login"}>login</Link>
       </div>
     </div>
