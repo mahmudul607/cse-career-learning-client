@@ -26,8 +26,8 @@ const PathContent = ({finalPath}) => {
 
     
     return (
-        <div className="max-w-screen-lx mx-auto flex rounded bg-transparent bg-[#1e203e] text-white ">
-            <div className="flex flex-col gap-6 w-3/4 h-full justify-between ">
+        <div className="max-w-screen-lx mx-auto flex flex-col-reverse md:flex-row rounded bg-transparent bg-[#1e203e] text-white ">
+            <div className="flex flex-col gap-4 md:w-3/4 w-full sm:p-6 p-2">
                <div className="w-full h-96  relative">
               
               
@@ -48,10 +48,10 @@ const PathContent = ({finalPath}) => {
                     <div className="flex justify-between flex-col h-full">
                     
                     
-                    <div className="absolute bottom-6">
+                    <div className="absolute sm:bottom-6 sm:flex-none flex sm:flex-row  flex-col gap-2  bottom-0">
                     
-                    <button className="btn  btn-primary  p-4  mx-2" >Apply Now</button>
-                    <Link className="btn  btn-primary  p-4  " to={`/learningContents/${finalPath?.id}}`}>See Contents</Link>
+                    <Link to={'/register'} className="btn md:btn btn-sm  btn-primary  p-4  mx-2" ><span className="text-white">Apply Now</span></Link>
+                    <Link className="btn  btn-primary  p-4  " to={`/learningContents/${finalPath?.id}}`}><span className="text-white">See Contents</span></Link>
                    
                     </div>
                     </div>
@@ -66,8 +66,8 @@ const PathContent = ({finalPath}) => {
                 
                </div>
                <div>
-               <h1 className="text-3xl font-bold text-[#f58a35]" >{finalPath?.name}</h1>
-                    <p className="py-6" dangerouslySetInnerHTML={{__html:(finalPath?.description || "").replace(/\n/g, '<br/>')}}>
+               <h1 className="lg:text-3xl md:text-lg sm:text-sm text-xs font-bold text-[#f58a35]" >{finalPath?.name}</h1>
+                    <p className="py-6 lg:text-md md:text-sm sm:text-xs text-[10px]" dangerouslySetInnerHTML={{__html:(finalPath?.description || "").replace(/\n/g, '<br/>')}}>
                         
                     </p>
                     </div>
@@ -80,11 +80,11 @@ const PathContent = ({finalPath}) => {
             </div>
                 
             </div>
-            <div className="w-1/5  z-10 left-8 relative">
-                        <ul className="flex flex-col gap-2   py-6">
+            <div className="md:w-1/5 w-[90%]   md:z-10  relative left-8 md:left-2">
+                        <ul className="flex md:flex-col flex-row flex-wrap md:flex-nowrap gap-2   lg:py-6 py-2">
                            <span className="text-[#f57106]">Tools And Technology:</span>
-                           { toolsAndTechnology ? toolsAndTechnology.map((item, i) => <Link key={i}   to={`/tools-technologies/${item.id}`} className="bg-gray-700 px-4 py-2 hover:text-white customButton  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">
-                           <span className="button_curve"></span>
+                           { toolsAndTechnology ? toolsAndTechnology.map((item, i) => <Link key={i}   to={`/tools-technologies/${item.id}`} className="bg-gray-700 px-1 py-1 hover:text-white customButton lg:text-md md:text-sm sm:text-xs text-[10px]  rounded-r-3xl hover:border-[#f57106] border-r-4 cursor-pointer">
+                           <span className="button_curve "></span>
                            {item.name}
                            </Link>):""
                            }

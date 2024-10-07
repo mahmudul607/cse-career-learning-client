@@ -1,25 +1,26 @@
 import {  useState } from 'react';
-import { Modal } from 'react-bootstrap'; // Example using react-bootstrap for modal
+// import { Modal } from 'react-bootstrap'; // Example using react-bootstrap for modal
 import VideoContent from '../VideoContent/VideoContent';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 import Blog from '../Blog/Blog';
+import ContentModal from '../../../Pages/Shared/ContentModal/ContentModal';
 
 const LearningContent = () => {
     
     const location = useLocation();
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
-   
     const query2 = location.pathname.split("/")[2];
     const query = query2.split('%')[0];
-    
+    const [activeTab, setActiveTab] = useState('blog'); 
+    const [videoUrl, setVideoUrl] = useState(null)
 
   
         const { data: pathBlog =[]} = useQuery({
-            queryKey:['pathBlog'],
+            queryKey:['pathBlog', query2, query],
             queryFn: async () =>{
                 if(query === query2){
                     const res = await axiosPublic.get(`/api/v1/web/learning-contents?toolsTechnologyId=${query2}`);
@@ -35,7 +36,8 @@ const LearningContent = () => {
                 }
             },
         })
-        
+        const videos = pathBlog.filter(content => content.type == 2);
+        const blogs = pathBlog.filter(content => content.type == 1);
 
 
 
@@ -55,12 +57,9 @@ const LearningContent = () => {
             navigate('/');
         }
     };
-    
 
+  // State to track active tab
 
-    const [activeTab, setActiveTab] = useState('blog'); // State to track active tab
-    const [selectedVideo, setSelectedVideo] = useState(null); // State to track the selected video
-    const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
    
 
@@ -68,17 +67,26 @@ const LearningContent = () => {
         setActiveTab(tab);
     };
 
-    const handleVideoClick = (video) => {
-        setSelectedVideo(video);
-        setShowModal(true);
-    };
+    const handleVideoClick = (selectedVideo) => {
+        setVideoUrl(selectedVideo?.video_url)
+        console.log(selectedVideo)
+            document.getElementById('my_modal_5').showModal()
+            
+        
+           
+            
+        };
 
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
+        const closeModal = () => {
+            setVideoUrl(null); // Clear the video URL to stop playback
+            document.getElementById('my_modal_5').close(); // Close the modal
+          };
+ 
+
+    
  
     return (
-        <div className='h-screen'>
+        <div className='min-h-screen'>
             {/* Tab Navigation */}
 
             <div>
@@ -88,30 +96,30 @@ const LearningContent = () => {
 
             </div>
 
-            <div className="tabs flex mx-4 mb-4 w-full">
+            <div className="tabs flex mx-4 mb-4 w-full ">
 
-                <div className='w-5/6'>
-                    <button onClick={() => handleTabChange('blog')} className={activeTab === 'blog' ? 'active btn mr-2 bg-[#f57005]' : 'btn mr-2'}>
+                <div className='w-5/6 sm:flex-col gap-2'>
+                    <button onClick={() => handleTabChange('blog')} className={activeTab === 'blog' ? 'active btn btn-sm md:btn-md mr-2 bg-[#f57005]' : 'btn btn-sm md:btn-md mr-2'}>
                         Blog Content
                     </button>
-                    <button onClick={() => handleTabChange('video')} className={activeTab === 'video' ? 'active btn bg-[#f57005]' : ' btn'}>
+                    <button onClick={() => handleTabChange('video')} className={activeTab === 'video' ? 'active btn-sm md:btn-md btn bg-[#f57005]' : ' btn btn-sm md:btn-md'}>
                         Video Content
                     </button>
                 </div>
-                <div className='w-1/6'>
-                    <button className='btn mr-2' onClick={handleGoBack}>
-                        <FaArrowLeftLong />Back pre
+                <div className='md:w-1/6 text-[2px] md:text-md'>
+                    <button className='btn btn-xs md:btn md:mr-2 mr-0' title='Back Pre' onClick={handleGoBack}>
+                        <FaArrowLeftLong /><span className="hidden md:block">Back pre</span>
                     </button>
                 </div>
             </div>
 
             {/* Content Display */}
-            <div className="content min-h-screen">
+            <div className="content min-h-screen relative">
                 {activeTab === 'blog' && (
                     <ul className="blog-content py-2 text-white">
                         <h1 className="text-xl text-[#f57005]">List of Content:</h1>
                         {
-                            pathBlog.map(blog => (
+                            blogs.map(blog => (
                                 <Blog key={blog?.id} blog={blog} className="blog-item">
 
                                 </Blog>
@@ -120,9 +128,9 @@ const LearningContent = () => {
                 )}
 
                 {activeTab === 'video' && (
-                    <div className="video-content grid-cols-3 grid grid-gap-2  ">
-                        {pathBlog.map(video => (
-                            <VideoContent key={video?.id} video={video} className="video-item" onClick={() => handleVideoClick(video)}>
+                    <div className="video-content md:grid-cols-4 sm:grid-cols-3 grid-cols-1 grid grid-gap-2  ">
+                        {videos?.map(video => (
+                            <VideoContent key={video?.id} video={video} className="video-item" handleVideoClick={handleVideoClick}>
 
                             </VideoContent>
                         ))}
@@ -131,19 +139,8 @@ const LearningContent = () => {
             </div>
 
             {/* Video Modal */}
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>{selectedVideo?.title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    {selectedVideo && (
-                        <video width="100%" controls>
-                            <source src={selectedVideo.url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    )}
-                </Modal.Body>
-            </Modal>
+            <ContentModal src={videoUrl} onClose={closeModal}></ContentModal>
+          
         </div>
     );
 };

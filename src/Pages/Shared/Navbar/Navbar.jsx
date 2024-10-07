@@ -79,36 +79,44 @@ const {data: tracksData=[]} = useQuery({
   </div>
   return (
    
-      <div className={`navbar max-sm:p-0 text-white md:max-w-screen-xl max-w-screen-sm min-h-24 mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
+      <div className={`navbar  max-sm:p-0 text-white md:max-w-screen-xl max-w-screen-sm min-h-24 mx-auto   ${isSticky ? "sticky-top active" : ""}`}>
       <div className="navbar-start lg:w-[25%]">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm text-black     dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box lg:w-52 w-40" >
+          <ul tabIndex={0} className="menu sm:menu-sm text-black text-[10px]  dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box lg:w-52 w-40" >
             {
               menuItems
             }
+            <li className=" sm:hidden block ">
+         
+         <Link to={'/contactUs'}>Contact Us</Link></li>
           </ul>
         </div>
-        <Link className="text-center h-full sm:w-24 w-48 relative" to={'/'}>
+        <div className="text-center h-full sm:w-24 w-12 md:w-32 relative">
+        <Link  to={'/'}>
         <img className=" pb-0 " src={logo} alt="logo" />
-        <p className=" text-xl font-extrabold absolute -right-20 top-1">Career</p>
+        
         </Link>
+        <p className="sm:text-xs text-[10px] md:text-xl font-extrabold absolute md:-right-20 sm:top-4  -right-10 sm:-right-12 md:top-3 top-1 ">Career</p>
+        </div>
+        
       </div>
       <div className="navbar-center hidden  lg:w-2/4  lg:flex">
         <ul  className="menu menu-horizontal px-1" >
           {
             menuItems
           }
+          
         </ul>
       </div>
       <div className="navbar-end lg:w-[30%] gap-2">
 
-        <button className="btn-sm sm:btn-md btn customButton ">
+        <button className="btn-sm sm:btn-md btn customButton sm:block hidden ">
           <span className="button_curve"></span>
          <Link to={'/contactUs'}>Contact Us</Link></button>
-        <Link className="btn-sm sm:btn-md btn btn-primary" to={"http://admin.csecareer.com/login"}>login</Link>
+        <Link className="btn-sm sm:btn-md btn btn-primary mr-2" to={"http://admin.csecareer.com/login"}>login</Link>
       </div>
     </div>
    

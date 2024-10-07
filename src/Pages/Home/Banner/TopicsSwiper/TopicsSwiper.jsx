@@ -76,8 +76,8 @@ const TopicsSwiper = ({ data, inSliderNum  }) => {
                                 ></ImageWithFallback>
 
                                 </figure>
-                            <div className="card-body">
-                                <h2 className="card-title text-4xl text-[#ff52d9]">{item?.title }</h2>
+                            <div className="card-body md:text-lg lg:text-2xl sm:text-sm text-xs">
+                                <h2 className="card-title text-[#ff52d9]">{item?.title }</h2>
                                 <div className="topic-steps overflow-hidden inline-block">
                                  
                                   

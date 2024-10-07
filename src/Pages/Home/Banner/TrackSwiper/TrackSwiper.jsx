@@ -80,7 +80,7 @@ const TrackSwiper = ({ data, inSliderNum }) => {
                                 ></ImageWithFallback>
                                 </figure>
                             <div className="card-body">
-                                <h2 className="card-title text-4xl text-[#ff52d9]">{ item?.name}</h2>
+                                <h2 className="card-title md:text-lg lg:text-2xl sm:text-sm text-xs text-[#ff52d9]">{ item?.name}</h2>
                                 <div className="topic-steps overflow-hidden inline-block ">
                                     {
                                         item?.description === undefined ? <div className='inline-block text-left '>{`${item?.details?.slice(0, 200)}`} </div>: ""

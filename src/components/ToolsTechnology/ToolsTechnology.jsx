@@ -21,34 +21,36 @@ const ToolsTechnology = () => {
 
 
     return (
-        <div className="">
+        <div className="min-h-screen">
             <div className="flex flex-col gap-6 w-full h-full justify-between ">
-                <div className="w-full h-96  relative">
+                <div className="w-full   relative">
 
-                    <ImageWithFallback
+                  
+                  <ImageWithFallback
                         src={uniqueTools?.attachment}
                         alt="Description"
                         defaultSrc="https://i.ibb.co.com/Lz8HVNN/vs.jpg"
-                        className="w-full h-full rounded-lg shadow-2xl"
+                        className="w-full max-h-96 rounded-lg shadow-2xl"
                     ></ImageWithFallback>
+                 
 
 
                     <div className="text-left  pt-10 pl-6 top-0 h-full">
                         <div className="flex justify-between flex-col h-full">
 
 
-                            <div className="absolute bottom-6">
-                                <button className="btn  btn-primary  p-4  mx-2" >Apply Now</button>
-                                <Link className="btn  btn-primary  p-4  " to={`/learningContents/${query2}`}>See Contents</Link>
+                            <div className="absolute sm:bottom-6 sm:flex-none flex sm:flex-row  flex-col gap-2  bottom-0">
+                                <Link to={'/register'} className="btn md:btn btn-sm text-center   btn-primary  md:p-4 mr-2" ><span className="text-white">Apply Now</span></Link>
+                                <Link className="btn md:btn btn-sm btn-primary  md:p-4  " to={`/learningContents/${query2}`}><span className="text-white">See Contents</span></Link>
 
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div>
-                    <h1 className="text-3xl font-bold text-[#f58a35]">{uniqueTools?.name}</h1>
-                    <p className="pt-6 text-white" dangerouslySetInnerHTML={{__html:(uniqueTools?.description || "").replace(/\n/g, '<br/>')}}>
+                <div className="px-2 sm:px-4">
+                    <h1 className="lg:text-3xl md:text-lg sm:text-sm text-xs font-bold text-[#f58a35]">{uniqueTools?.name}</h1>
+                    <p className="pt-6 text-white lg:text-md md:text-sm sm:text-xs text-[10px]" dangerouslySetInnerHTML={{__html:(uniqueTools?.description || "").replace(/\n/g, '<br/>')}}>
                         
                     </p>
                 </div>

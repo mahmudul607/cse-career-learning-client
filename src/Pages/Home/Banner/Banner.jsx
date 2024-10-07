@@ -69,10 +69,10 @@ const Banner = () => {
 
 
   return (
-    <div className="banner relative md:h-[1000px] h-auto">
+    <div className="banner w-full relative md:h-[1000px] h-auto">
       <div className=" bg-[#000324]">
         <div className="grid w-full md:grid-cols-2 grid-cols-1 ">
-          <div className="col-span-1 banner_round_logo items md:text-left text-center w-full md:h-[300px] md:sticky md:top-1/4 top-8">
+          <div className="col-span-1 p-6  banner_round_logo items md:text-left text-center w-full md:h-[300px] md:sticky md:top-1/4 top-8">
             <div className="rounded-bg bg-[#232643] mx-auto md:mx-0 sm:h-[300px] sm:w-[300px] rounded-full p-8">
               <div className="inner-round-bg bg-[#131534] h-full w-full rounded-full p-12">
                 <h2 className="text-[#ff52d9] font-bold mx-4 text-xl">Learn With</h2>
@@ -94,19 +94,19 @@ const Banner = () => {
             <div className=" w-full h-full stack ">
               <div className="items-stack h-">
                 <div className="text-center border border-base-content cursor-pointer   card1 w-full h-full  bg-base-100">
-                  <div className=" absolute h-full w-full top-0 p-6 overflow-hidden ">
+                  <div className=" absolute h-full w-full top-0 md:p-4 p-1 overflow-hidden ">
 
                     <TopicsSwiper data={learningContents} className="w-full h-full mb-6" inSliderNum={1} ></TopicsSwiper>
                   </div>
                 </div>
                 <div className="text-center border border-base-content cursor-pointer   card2 h-full w-full  bg-red-600">
-                  <div className=" absolute h-full w-full top-0  p-6 overflow-hidden">
+                  <div className=" absolute h-full w-full top-0   md:p-4 p-1 overflow-hidden">
 
                     <TrackSwiper data={careerTracks} className="w-full h-full"></TrackSwiper>
                   </div>
                 </div>
                 <div className="text-center border border-base-content cursor-pointer   card3 w-full h-full  bg-base-100">
-                  <div className=" absolute h-full w-full top-0  p-6 overflow-hidden">
+                  <div className=" absolute h-full w-full top-0   md:p-4 p-1 overflow-hidden">
 
 
 

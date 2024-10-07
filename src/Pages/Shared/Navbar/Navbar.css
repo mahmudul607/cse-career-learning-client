@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .navbar .menu li a:focus, .navbar .menu li .active{ 
   color: Green; 
 
@@ -38,7 +41,7 @@
 .sticky-top {
   position: fixed;
   top: 0; 
- 
+  width: 100%;
   background: gray transparent;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
@@ -46,7 +49,8 @@
 }
 .sticky-top.active {
   top: 0;
-  height: 10%; /* Slide down to the top of the viewport */
+  height: 10%;
+  width: 100%; /* Slide down to the top of the viewport */
 
   
 }
