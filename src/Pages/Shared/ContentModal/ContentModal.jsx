@@ -6,8 +6,8 @@ const ContentModal = ({ src , onClose}) => {
 
   return (
     <>
-      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
-        <div className="bg-slate-400 min-w-[80%] max-w-[60rem] p-2 min-h-[80%] h-[80%] relative">
+      <dialog id="my_modal_5" className="modal  modal-middle w-full ">
+        <div className="bg-slate-400 w-[80%] h-[80%] relative">
 
 
 

@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 // import { Modal } from 'react-bootstrap'; // Example using react-bootstrap for modal
 import VideoContent from '../VideoContent/VideoContent';
 import { FaArrowLeftLong } from 'react-icons/fa6';
@@ -9,35 +9,35 @@ import Blog from '../Blog/Blog';
 import ContentModal from '../../../Pages/Shared/ContentModal/ContentModal';
 
 const LearningContent = () => {
-    
+
     const location = useLocation();
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
     const query2 = location.pathname.split("/")[2];
     const query = query2.split('%')[0];
-    const [activeTab, setActiveTab] = useState('blog'); 
+    const [activeTab, setActiveTab] = useState('blog');
     const [videoUrl, setVideoUrl] = useState(null)
 
-  
-        const { data: pathBlog =[]} = useQuery({
-            queryKey:['pathBlog', query2, query],
-            queryFn: async () =>{
-                if(query === query2){
-                    const res = await axiosPublic.get(`/api/v1/web/learning-contents?toolsTechnologyId=${query2}`);
-                     return res.data.data;
-                    
-                  
-                }
-                 else {
-                    const res = await axiosPublic.get(`/api/v1/web/learning-contents?careerPathId=${query}`);
-                    return res.data.data;
-                    
 
-                }
-            },
-        })
-        const videos = pathBlog.filter(content => content.type == 2);
-        const blogs = pathBlog.filter(content => content.type == 1);
+    const { data: pathBlog = [] } = useQuery({
+        queryKey: ['pathBlog', query2, query],
+        queryFn: async () => {
+            if (query === query2) {
+                const res = await axiosPublic.get(`/api/v1/web/learning-contents?toolsTechnologyId=${query2}`);
+                return res.data.data;
+
+
+            }
+            else {
+                const res = await axiosPublic.get(`/api/v1/web/learning-contents?careerPathId=${query}`);
+                return res.data.data;
+
+
+            }
+        },
+    })
+    const videos = pathBlog.filter(content => content.type == 2);
+    const blogs = pathBlog.filter(content => content.type == 1);
 
 
 
@@ -58,10 +58,10 @@ const LearningContent = () => {
         }
     };
 
-  // State to track active tab
+    // State to track active tab
 
 
-   
+
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -70,33 +70,33 @@ const LearningContent = () => {
     const handleVideoClick = (selectedVideo) => {
         setVideoUrl(selectedVideo?.video_url)
         console.log(selectedVideo)
-            document.getElementById('my_modal_5').showModal()
-            
-        
-           
-            
-        };
+        document.getElementById('my_modal_5').showModal()
 
-        const closeModal = () => {
-            setVideoUrl(null); // Clear the video URL to stop playback
-            document.getElementById('my_modal_5').close(); // Close the modal
-          };
- 
 
-    
- 
+
+
+    };
+
+    const closeModal = () => {
+        setVideoUrl(null); // Clear the video URL to stop playback
+        document.getElementById('my_modal_5').close(); // Close the modal
+    };
+
+
+
+
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen md:px-4 px-2'>
             {/* Tab Navigation */}
 
             <div>
-                <div className="header text-white text-center pb-6">
+                <div className="header text-white text-center pb-6 lg:text-md md:text-sm text-xs">
                     <h2><span className='cursor-pointer' onClick={handleGoBack2}>{pathBlog[0]?.careerTrack.name}</span> <span>{`>`}</span> <span className='cursor-pointer' onClick={handleGoBack}>{pathBlog[0]?.careerPath.name}</span></h2>
                 </div>
 
             </div>
 
-            <div className="tabs flex mx-4 mb-4 w-full ">
+            <div className="tabs flex mx-auto mb-4 w-full ">
 
                 <div className='w-5/6 sm:flex-col gap-2'>
                     <button onClick={() => handleTabChange('blog')} className={activeTab === 'blog' ? 'active btn btn-sm md:btn-md mr-2 bg-[#f57005]' : 'btn btn-sm md:btn-md mr-2'}>
@@ -139,8 +139,12 @@ const LearningContent = () => {
             </div>
 
             {/* Video Modal */}
-            <ContentModal src={videoUrl} onClose={closeModal}></ContentModal>
           
+               <div className='w-full'>
+                <ContentModal src={videoUrl} onClose={closeModal}></ContentModal>
+               
+               </div>
+        
         </div>
     );
 };
