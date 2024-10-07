@@ -35,11 +35,13 @@ const Register = () => {
         
         try {
             const response = await axiosPublic.post('/api/v1/web/register', data);
+            
             if(response.data.success==true){
+                console.log(response.data)
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: `${response.data.roleId} is registered`,
+                    title: `${data.name} is registered`,
                     showConfirmButton: false,
                     timer: 1500
 
