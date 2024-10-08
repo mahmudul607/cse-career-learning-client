@@ -17,7 +17,7 @@ const LatestReviewCarousel = () => {
 
 
     return (
-        <Carousel>
+        <Carousel autoPlay={{delay:true}} infiniteLoop>
 
             {
                 LatestContent.map(cont => <div key={cont.id}>
