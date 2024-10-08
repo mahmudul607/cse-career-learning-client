@@ -9,14 +9,14 @@ import Blog from '../Blog/Blog';
 import ContentModal from '../../../Pages/Shared/ContentModal/ContentModal';
 
 const LearningContent = () => {
-
+   
     const location = useLocation();
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
     const query2 = location.pathname.split("/")[2];
     const query = query2.split('%')[0];
     const [activeTab, setActiveTab] = useState('blog');
-    const [videoUrl, setVideoUrl] = useState(null)
+    const [videoUrl, setVideoUrl] = useState(null);
 
 
     const { data: pathBlog = [] } = useQuery({
@@ -36,12 +36,16 @@ const LearningContent = () => {
             }
         },
     })
+   
     const videos = pathBlog.filter(content => content.type == 2);
     const blogs = pathBlog.filter(content => content.type == 1);
 
 
-
-    const handleGoBack = () => {
+    let handleGoBack;
+    let handleGoBack2;
+    let handleGoBack3;
+  if(location?.state === null){
+     handleGoBack = () => {
 
         if (location.key !== 'default') {
             navigate(-1); // Go back to the previous path
@@ -49,7 +53,7 @@ const LearningContent = () => {
             navigate('/');
         }
     };
-    const handleGoBack2 = () => {
+     handleGoBack2 = () => {
 
         if (location.key !== 'default') {
             navigate(-2); // Go back to the previous path
@@ -57,10 +61,40 @@ const LearningContent = () => {
             navigate('/');
         }
     };
+  }
+
+  if(location?.state !== null){
+    handleGoBack = () => {
+
+       if (location.key !== 'default') {
+           navigate(-2); // Go back to the previous path
+       } else {
+           navigate('/');
+       }
+   };
+    handleGoBack2 = () => {
+
+       if (location.key !== 'default') {
+           navigate(-3); // Go back to the previous path
+       } else {
+           navigate('/');
+       }
+   };
+    handleGoBack3 = () => {
+
+       if (location.key !== 'default') {
+           navigate(-1); // Go back to the previous path
+       } else {
+           navigate('/');
+       }
+   };
+ }
+
+   
+  
 
     // State to track active tab
-
-
+    
 
 
     const handleTabChange = (tab) => {
@@ -71,10 +105,6 @@ const LearningContent = () => {
         setVideoUrl(selectedVideo?.video_url)
         console.log(selectedVideo)
         document.getElementById('my_modal_5').showModal()
-
-
-
-
     };
 
     const closeModal = () => {
@@ -91,13 +121,28 @@ const LearningContent = () => {
 
             <div>
                 <div className="header text-white text-center pb-6 lg:text-md md:text-sm text-xs">
-                    <h2><span className='cursor-pointer' onClick={handleGoBack2}>{pathBlog[0]?.careerTrack.name}</span> <span>{`>`}</span> <span className='cursor-pointer' onClick={handleGoBack}>{pathBlog[0]?.careerPath.name}</span></h2>
+                    <h2>
+                        <span className='cursor-pointer' onClick={handleGoBack2}>{pathBlog[0]?.careerTrack?.name}</span>
+                         <span>{` > `}</span>
+                        <span className='cursor-pointer' onClick={handleGoBack}>{pathBlog[0]?.careerPath?.name}</span>
+                        
+                      {
+                        location?.state?.category === 'toolsTechnology' ?
+                        <span><span>{` > `}</span>
+                        <span className='cursor-pointer' onClick={handleGoBack3}>{pathBlog[0]?.toolsTechnology?.name}</span></span> : null
+                      }
+                       
+                        
+                    </h2>
                 </div>
 
             </div>
-
+           {
+            location?.state ?
+            <h2 className="lg:text-2xl sm:text-lg text-sm text-white pb-6">{pathBlog[0]?.toolsTechnology?.name}</h2>: <h2 className="lg:text-2xl sm:text-lg text-sm text-white pb-6">{pathBlog[0]?.careerPath?.name}</h2>
+           }
             <div className="tabs flex mx-auto mb-4 w-full ">
-
+                    
                 <div className='w-5/6 sm:flex-col gap-2'>
                     <button onClick={() => handleTabChange('blog')} className={activeTab === 'blog' ? 'active btn btn-sm md:btn-md mr-2 bg-[#f57005]' : 'btn btn-sm md:btn-md mr-2'}>
                         Blog Content

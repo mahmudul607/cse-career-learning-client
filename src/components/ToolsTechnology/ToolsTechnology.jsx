@@ -9,7 +9,7 @@ const ToolsTechnology = () => {
     const axiosPublic = useAxiosPublic();
     const location = useLocation();
     const query2 = location.pathname.split("/")[2];
-
+    
     const { data: uniqueTools = [] } = useQuery({
         queryKey: ['uniqueTools', query2],
         queryFn: async () => {
@@ -41,7 +41,7 @@ const ToolsTechnology = () => {
 
                             <div className="absolute sm:bottom-6 sm:flex-none flex sm:flex-row  flex-col gap-2  bottom-0">
                                 <Link to={'/register'} className="btn md:btn btn-sm text-center   btn-primary  md:p-4 mr-2" ><span className="text-white">Apply Now</span></Link>
-                                <Link className="btn md:btn btn-sm btn-primary  md:p-4  " to={`/learningContents/${query2}`}><span className="text-white">See Contents</span></Link>
+                                <Link className="btn md:btn btn-sm btn-primary  md:p-4  " to={`/learningContents/${query2}`} state= {{category:'toolsTechnology'}}><span className="text-white">See Contents</span></Link>
 
                             </div>
                         </div>
